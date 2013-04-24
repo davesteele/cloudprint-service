@@ -1,0 +1,6 @@
+cloudprint (0.10-1) unstable; urgency=low
+
+  * Initial packaging (Closes: 705981)
+  * Include cloudprint-service init.d support.
+
+ -- David Steele <dsteele@gmail.com>  Tue, 23 Apr 2013 19:42:12 -0400

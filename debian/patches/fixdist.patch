@@ -1,0 +1,11 @@
+--- a/setup.py
++++ b/setup.py
+@@ -27,7 +27,7 @@
+     packages=find_packages(exclude=['ez_setup']),
+     entry_points = {
+         'console_scripts': [
+-            'cloudprint = cloudprint.cloudprint:main',
++            'cloudprint-cmd = cloudprint.cloudprint:main',
+         ],
+     },
+ )

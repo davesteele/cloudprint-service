@@ -1,0 +1,15 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cloudprint
+Source: https://github.com/armooo/cloudprint
+
+Files: *
+Copyright: 2013, Jason Michalski <armooo@armooo.net>
+License: GPL-3
+ /usr/share/common-licenses/GPL-3
+
+Files: debian/*
+Copyright: 2013, David Steele <dsteele@gmail.com>
+License: GPL-2+
+ /usr/share/common-licenses/GPL-2
+
+
