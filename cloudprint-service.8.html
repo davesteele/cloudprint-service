@@ -1,0 +1,115 @@
+<!-- Creator     : groff version 1.22.2 -->
+<!-- CreationDate: Sun Apr 28 18:51:25 2013 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>CLOUDPRINT-SERVICE</title>
+
+</head>
+<body>
+
+<h1 align="center">CLOUDPRINT-SERVICE</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em">cloudprint-service
+&minus; manage the Google Cloud Print proxy</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>cloudprintd</b>
+<i>login</i></p>
+
+<p style="margin-left:22%;">Establish login credentials
+with Cloud Print, then immediately exit. This will prompt
+for a username and password, if necessary. If the account
+has two-factor authentication enabled, then an
+application-specific password must be used. This and all
+other <b>cloudprintd</b> service commands must be run as
+root.</p>
+
+<p style="margin-left:11%;"><b>cloudprintd</b>
+<i>start</i></p>
+
+<p style="margin-left:22%;">Start the <b>cloudprintd</b>
+service. This will fail if the credentials have not been
+established. The service will normally start automatically
+when the computer is running.</p>
+
+<p style="margin-left:11%;"><b>cloudprintd</b>
+<i>stop</i></p>
+
+<p style="margin-left:22%;">Stop the <b>cloudprintd</b>
+service. Login credentials are not lost. Normally, the
+computer will continue to be shown as a valid destination.
+Any jobs spooled during that time will print when the
+service is restarted.</p>
+
+<p style="margin-left:11%;"><b>cloudprintd</b>
+<i>status</i></p>
+
+<p style="margin-left:22%;">Determine whether the service
+is running or not.</p>
+
+<p style="margin-left:11%;"><b>cloudprintd</b>
+<i>logout</i></p>
+
+<p style="margin-left:22%;">Delete the login credentials
+such that the service cannot be restarted without another
+&rsquo;login&rsquo;.</p>
+
+<p style="margin-left:11%; margin-top: 1em">(...)</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The
+<b>cloudprintd</b> services manages the operation of a
+Google Cloud Print proxy. It makes locally-defined CUPS
+printers available for use by approved Google users, both
+locally and remotely.</p>
+
+<p style="margin-left:11%; margin-top: 1em">It is
+recommended that a dedicated account be used for this
+service. Printers can be shared from that account to others
+via the printer management page at
+<i>https://www.google.com/cloudprint?#printers</i></p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>cloudprint</b></i>(1)</p>
+<hr>
+</body>
+</html>

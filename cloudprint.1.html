@@ -1,0 +1,159 @@
+<!-- Creator     : groff version 1.22.2 -->
+<!-- CreationDate: Sun Apr 28 18:51:08 2013 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>cloudprint</title>
+
+</head>
+<body>
+
+<h1 align="center">cloudprint</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#FILES">FILES</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">cloudprint
+&minus; share CUPS printers with Google Cloud Print</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>cloudprint</b>
+[<i>OPTION</i>]...</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The
+<b>cloudprint</b> script makes locally defined CUPS printers
+available to a Google account, enabling local or remote
+printing from such services as the Chrome browser, Chrome OS
+devices, or Android devices.</p>
+
+<p style="margin-left:11%; margin-top: 1em">This is a
+lower-level command. Cloud Print services would normally be
+managed through the cloudprint service.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p style="margin-top: 1em"><b>&minus;l</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p style="margin-top: 1em">log out of the Google account.
+This deletes the account identification file, requiring
+reauthentication the next time cloudprint is run.</p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>&minus;a</b>
+<i>&lt;account_file&gt;</i></p>
+
+<p style="margin-left:22%;">path to Google account ident
+data (default ~/.cloudprintauth). The format of the file is
+not public.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;c</b></p></td>
+<td width="8%"></td>
+<td width="73%">
+
+
+<p>establish credentials to the service, then exit.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;h</b></p></td>
+<td width="8%"></td>
+<td width="73%">
+
+
+<p>display help</p></td>
+<td width="5%">
+</td></tr>
+</table>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>cloudprint</b>
+will prompt for a username and password if the information
+has not been provided.</p>
+
+<p style="margin-left:11%; margin-top: 1em">If two-factor
+authentication is enabled for the account, then an
+application-specific password must be used.</p>
+
+<h2>FILES
+<a name="FILES"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i>~/.cloudprintauth</i></p>
+
+<p style="margin-left:22%;">Default location for storing
+account authentication credentials</p>
+
+
+<p style="margin-left:11%;"><i>~/.cloudprintauth.sasl</i></p>
+
+<p style="margin-left:22%;">Default location for storing
+internal authentication tokens</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>cloudprint-service(8)</b></p>
+<hr>
+</body>
+</html>
