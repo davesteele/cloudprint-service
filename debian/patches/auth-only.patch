@@ -1,3 +1,8 @@
+Description: Add an "authenticate only" option
+ This gives an init.d implementation a way to establish auth
+ without having to execute the proxy.
+From: David Steele <dsteele@gmail.com>
+
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -381,14 +381,16 @@

@@ -1,3 +1,8 @@
+Description: Change the name of the executable script in the module.
+ ... to support the Debian convention of having the script and the identically
+ named module in the same directory.
+From: David Steele <dsteele@gmail.com>
+
 --- a/setup.py
 +++ b/setup.py
 @@ -27,7 +27,7 @@
