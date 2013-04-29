@@ -7,26 +7,26 @@
 cloudprint-service \- manage the Google Cloud Print proxy
 .SH SYNOPSIS
 .TP
-\fBcloudprintd\fR \fIlogin\fR
+service \fBcloudprintd\fR \fIlogin\fR
 Establish login credentials with Cloud Print, then immediately exit. This will
 prompt for a username and password, if necessary. If the account has two-factor
 authentication enabled, then an application-specific password must be used.
 This and all other \fBcloudprintd\fR service commands must be run as root.
 .TP
-\fBcloudprintd\fR \fIstart\fR
+service \fBcloudprintd\fR \fIstart\fR
 Start the \fBcloudprintd\fR service. This will fail if the credentials have not been
 established. The service will normally start automatically when the computer
 is running.
 .TP
-\fBcloudprintd\fR \fIstop\fR
+service \fBcloudprintd\fR \fIstop\fR
 Stop the \fBcloudprintd\fR service. Login credentials are not lost. Normally,
-the computer will continue to be shown as a valid destination. Any jobs spooled
+the printer will continue to be shown as a valid destination. Any jobs spooled
 during that time will print when the service is restarted.
 .TP
-\fBcloudprintd\fR \fIstatus\fR
+service \fBcloudprintd\fR \fIstatus\fR
 Determine whether the service is running or not.
 .TP
-\fBcloudprintd\fR \fIlogout\fR
+service \fBcloudprintd\fR \fIlogout\fR
 Delete the login credentials such that the service cannot be restarted without
 another 'login'.
 
