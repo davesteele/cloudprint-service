@@ -4,8 +4,10 @@
 .TH cloudprint 1 "24 April 2013" Linux "User Commands"
 .SH NAME
 cloudprint \- share CUPS printers with Google Cloud Print
+
 .SH SYNOPSIS
 \fBcloudprint\fP [\fIOPTION\fP]...
+
 .SH DESCRIPTION
 The \fBcloudprint\fP script makes locally defined CUPS printers available to
 a Google account, enabling local or remote printing from such services as
@@ -13,6 +15,7 @@ the Chrome browser, Chrome OS devices, or Android devices.
 
 This is a lower-level command. Cloud Print services would normally be managed
 through the cloudprint service.
+
 .SH OPTIONS
 .TP
 \fB\-l\fR
@@ -31,6 +34,7 @@ display help
 \fBcloudprint\fR will prompt for a username and password if the information has not been provided.
 
 If two-factor authentication is enabled for the account, then an application-specific password must be used.
+
 .SH FILES
 .TP
 \fI~/.cloudprintauth\fR
@@ -38,5 +42,6 @@ Default location for storing account authentication credentials
 .TP
 \fI~/.cloudprintauth.sasl\fR
 Default location for storing internal authentication tokens
+
 .SH SEE ALSO
 .BR cloudprint-service(8)

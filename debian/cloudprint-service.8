@@ -5,6 +5,7 @@
 .TH CLOUDPRINT-SERVICE 8 "April 24, 2013"
 .SH NAME
 cloudprint-service \- manage the Google Cloud Print proxy
+
 .SH SYNOPSIS
 .TP
 service \fBcloudprintd\fR \fIlogin\fR
@@ -32,6 +33,7 @@ another 'login'.
 
 .in -7
 (...)
+
 .SH DESCRIPTION
 The \fBcloudprintd\fR services manages the operation of a Google Cloud Print
 proxy. It makes locally-defined CUPS printers available for use by approved
@@ -40,5 +42,6 @@ Google users, both locally and remotely.
 It is recommended that a dedicated account be used for this service. Printers
 can be shared from that account to others via the printer management page at
 \fIhttps://www.google.com/cloudprint?#printers\fR
+
 .SH SEE ALSO
 .BR cloudprint (1)
