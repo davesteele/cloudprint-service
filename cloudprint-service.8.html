@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.2 -->
-<!-- CreationDate: Sun Apr 28 18:51:25 2013 -->
+<!-- CreationDate: Mon Jun 10 21:13:44 2013 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -42,9 +42,8 @@
 </h2>
 
 
-
-<p style="margin-left:11%; margin-top: 1em"><b>cloudprintd</b>
-<i>login</i></p>
+<p style="margin-left:11%; margin-top: 1em">service
+<b>cloudprintd</b> <i>login</i></p>
 
 <p style="margin-left:22%;">Establish login credentials
 with Cloud Print, then immediately exit. This will prompt
@@ -54,7 +53,7 @@ application-specific password must be used. This and all
 other <b>cloudprintd</b> service commands must be run as
 root.</p>
 
-<p style="margin-left:11%;"><b>cloudprintd</b>
+<p style="margin-left:11%;">service <b>cloudprintd</b>
 <i>start</i></p>
 
 <p style="margin-left:22%;">Start the <b>cloudprintd</b>
@@ -62,22 +61,22 @@ service. This will fail if the credentials have not been
 established. The service will normally start automatically
 when the computer is running.</p>
 
-<p style="margin-left:11%;"><b>cloudprintd</b>
+<p style="margin-left:11%;">service <b>cloudprintd</b>
 <i>stop</i></p>
 
 <p style="margin-left:22%;">Stop the <b>cloudprintd</b>
 service. Login credentials are not lost. Normally, the
-computer will continue to be shown as a valid destination.
+printer will continue to be shown as a valid destination.
 Any jobs spooled during that time will print when the
 service is restarted.</p>
 
-<p style="margin-left:11%;"><b>cloudprintd</b>
+<p style="margin-left:11%;">service <b>cloudprintd</b>
 <i>status</i></p>
 
 <p style="margin-left:22%;">Determine whether the service
 is running or not.</p>
 
-<p style="margin-left:11%;"><b>cloudprintd</b>
+<p style="margin-left:11%;">service <b>cloudprintd</b>
 <i>logout</i></p>
 
 <p style="margin-left:22%;">Delete the login credentials
