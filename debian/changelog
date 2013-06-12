@@ -1,3 +1,10 @@
+cloudprint (0.10-3) unstable; urgency=low
+
+  * Copyright had license text for LGPL instead of the correct GPL-2+
+  * Quiet new lintian warning for init scripts calling /lib/init/*.
+
+ -- David Steele <dsteele@gmail.com>  Mon, 10 Jun 2013 22:27:07 -0400
+
 cloudprint (0.10-2) unstable; urgency=low
 
   * Add dependency on CUPS.
