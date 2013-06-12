@@ -1,3 +1,12 @@
+cloudprint (0.10-2) unstable; urgency=low
+
+  * Add dependency on CUPS.
+  * Lintian fixes.
+  * Man page fixes.
+  * Better text in copyright file.
+
+ -- David Steele <dsteele@gmail.com>  Mon, 10 Jun 2013 21:15:27 -0400
+
 cloudprint (0.10-1) unstable; urgency=low
 
   * Initial packaging (Closes: 705981)

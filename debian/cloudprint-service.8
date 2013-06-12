@@ -5,40 +5,43 @@
 .TH CLOUDPRINT-SERVICE 8 "April 24, 2013"
 .SH NAME
 cloudprint-service \- manage the Google Cloud Print proxy
+
 .SH SYNOPSIS
 .TP
-\fBcloudprint\fR \fIlogin\fR
+service \fBcloudprintd\fR \fIlogin\fR
 Establish login credentials with Cloud Print, then immediately exit. This will
 prompt for a username and password, if necessary. If the account has two-factor
 authentication enabled, then an application-specific password must be used.
-This and all other \fBcloudprint\fR service commands must be run as root.
+This and all other \fBcloudprintd\fR service commands must be run as root.
 .TP
-\fBcloudprint\fR \fIstart\fR
-Start the \fBcloudprint\fR service. This will fail if the credentials have not been
+service \fBcloudprintd\fR \fIstart\fR
+Start the \fBcloudprintd\fR service. This will fail if the credentials have not been
 established. The service will normally start automatically when the computer
 is running.
 .TP
-\fBcloudprint\fR \fIstop\fR
-Stop the \fBcloudprint\fR service. Login credentials are not lost. Normally,
-the computer will continue to be shown as a valid destination. Any jobs spooled
+service \fBcloudprintd\fR \fIstop\fR
+Stop the \fBcloudprintd\fR service. Login credentials are not lost. Normally,
+the printer will continue to be shown as a valid destination. Any jobs spooled
 during that time will print when the service is restarted.
 .TP
-\fBcloudprint\fR \fIstatus\fR
+service \fBcloudprintd\fR \fIstatus\fR
 Determine whether the service is running or not.
 .TP
-\fBcloudprint\fR \fIlogout\fR
+service \fBcloudprintd\fR \fIlogout\fR
 Delete the login credentials such that the service cannot be restarted without
 another 'login'.
 
-.in -7
+.P
 (...)
+
 .SH DESCRIPTION
-The \fBcloudprint\fR services manages the operation of a Google Cloud Print
+The \fBcloudprintd\fR services manages the operation of a Google Cloud Print
 proxy. It makes locally-defined CUPS printers available for use by approved
 Google users, both locally and remotely.
 
 It is recommended that a dedicated account be used for this service. Printers
 can be shared from that account to others via the printer management page at
 \fIhttps://www.google.com/cloudprint?#printers\fR
+
 .SH SEE ALSO
 .BR cloudprint (1)

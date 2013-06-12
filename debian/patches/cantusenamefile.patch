@@ -1,3 +1,9 @@
+Description: Remove incorrect guidance on providing username/password file.
+ The -h usage indicates that a specified account_file can contain a user name
+ and password to establish authentication. This doesn't currently work, so
+ remove the indication that it does.
+From: David Steele <dsteele@gmail.com>
+
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -379,8 +379,6 @@

@@ -1,6 +1,6 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          cloudprint-service
+# Provides:          cloudprintd
 # Required-Start:    $network $local_fs $remote_fs cups
 # Required-Stop:     $remote_fs
 # Default-Start:     2 3 4 5
@@ -15,8 +15,8 @@
 # Author: David Steele <dsteele@gmail.com>
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-DESC=cloudprint
-NAME=cloudprint
+DESC=cloudprintd
+NAME=cloudprintd
 DAEMON=/usr/bin/cloudprint
 AUTHFILE=/var/lib/cloudprint/authfile
 PIDFILE=/var/run/$NAME.pid
