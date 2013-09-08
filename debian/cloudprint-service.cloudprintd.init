@@ -16,18 +16,18 @@
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC=cloudprintd
-NAME=cloudprintd
+NAME=cloudprint
 DAEMON=/usr/bin/cloudprint
 AUTHFILE=/var/lib/cloudprint/authfile
 PIDFILE=/var/run/$NAME.pid
 DAEMON_ARGS="-d -a $AUTHFILE -p $PIDFILE"
-SCRIPTNAME=/etc/init.d/$NAME
+SCRIPTNAME=/etc/init.d/$DESC
 
 # Exit if the package is not installed
 [ -x $DAEMON ] || exit 0
 
 # Read configuration variable file if it is present
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+[ -r /etc/default/$DESC ] && . /etc/default/$DESC
 
 # Lintian says don't load this vars.sh that was provided with this skeleton
 #
