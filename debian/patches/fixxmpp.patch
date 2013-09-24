@@ -1,0 +1,90 @@
+Description: Consolidate, clarify, and adjust XMPP timeouts
+ There are multiple timeouts associated with xmpp connections.
+ This clarifies what they are, and make some adjustments.
+From: David Steele <dsteele@gmail.com>
+
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -27,9 +27,16 @@
+ CLIENT_LOGIN_URL = '/accounts/ClientLogin'
+ PRINT_CLOUD_URL = '/cloudprint/'
+ 
+-# period in seconds with which we should poll for new jobs via the HTTP api.
++# period in seconds with which we should poll for new jobs via the HTTP api,
++# when xmpp is connecting properly.
+ # 'None' to poll only on startup and when we get XMPP notifications.
+-POLL_PERIOD=30.0
++POLL_PERIOD=3600.0
++
++# wait period to retry when xmpp fails
++FAIL_RETRY=60
++
++# how often, in seconds, to send a keepalive character over xmpp
++KEEPALIVE=600.0
+ 
+ LOGGER = logging.getLogger('cloudprint')
+ LOGGER.setLevel(logging.INFO)
+@@ -350,7 +357,7 @@
+ 
+ def process_jobs(cups_connection, cpp, printers):
+     xmpp_auth = file(cpp.xmpp_auth_path).read()
+-    xmpp_conn = xmpp.XmppConnection()
++    xmpp_conn = xmpp.XmppConnection(keepalive_period=KEEPALIVE)
+ 
+     while True:
+         try:
+@@ -366,8 +373,10 @@
+             xmpp_conn.await_notification(sleeptime)
+ 
+         except Exception:
+-            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in 60 Seconds')
+-            time.sleep(60)
++            global FAIL_RETRY
++
++            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in %d Seconds') % FAIL_RETRY
++            time.sleep(FAIL_RETRY)
+ 
+ 
+ def usage():
+--- a/cloudprint/xmpp.py
++++ b/cloudprint/xmpp.py
+@@ -7,9 +7,6 @@
+ from collections import deque
+ from xml.etree.ElementTree import XMLParser, TreeBuilder
+ 
+-# frequency with which to send keepalives
+-KEEPALIVE_PERIOD=60.0
+-
+ LOGGER = logging.getLogger('cloudprint.xmpp')
+ 
+ class XmppXmlHandler(object):
+@@ -46,9 +43,10 @@
+             return None
+ 
+ class XmppConnection(object):
+-    def __init__(self):
++    def __init__(self, keepalive_period=60.0):
+         self._connected = False
+         self._wrappedsock = None
++        self._keepalive_period = keepalive_period
+ 
+     def _read_socket(self):
+         """read pending data from the socket, and send it to the XML parser.
+@@ -63,7 +61,7 @@
+             raise
+ 
+         LOGGER.debug('<<< %s' % data)
+-        self._nextkeepalive = time.time() + KEEPALIVE_PERIOD
++        self._nextkeepalive = time.time() + self._keepalive_period
+         self._xmlparser.feed(data)
+ 
+     def _write_socket(self, msg):
+@@ -71,7 +69,7 @@
+         LOGGER.debug('>>> %s' % msg)
+         try:
+             self._wrappedsock.sendall(msg)
+-            self._nextkeepalive = time.time() + KEEPALIVE_PERIOD
++            self._nextkeepalive = time.time() + self._keepalive_period
+         except Exception:
+             self._conected = False
+             raise
