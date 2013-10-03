@@ -1,0 +1,12 @@
+#!/bin/sh
+reprepro -Vb . --ignore=wrongdistribution includedeb unstable ../../cloudprint_*.deb
+reprepro -Vb . --ignore=wrongdistribution includedeb unstable ../../cloudprint-service_*.deb
+reprepro -Vb . --ignore=wrongdistribution includedeb testing ../../cloudprint_*.deb
+reprepro -Vb . --ignore=wrongdistribution includedeb testing ../../cloudprint-service_*.deb
+reprepro -Vb . --ignore=wrongdistribution includedeb raring ../../cloudprint_*.deb
+reprepro -Vb . --ignore=wrongdistribution includedeb saucy ../../cloudprint-service_*.deb
+
+rm -f dists/sid
+ln -s ./unstable dists/sid
+rm -f dists/wheezy
+ln -s ./testing dists/wheezy
