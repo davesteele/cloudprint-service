@@ -1,6 +1,12 @@
 cloudprint (0.10-4) UNRELEASED; urgency=low
 
-  *
+  * Replace the deprecated dh_installinit '--init-script'
+    option with '--name.
+  * Fix init confusion between DESC cloudprintd and NAME cloudprint.
+    - Causing service to be unable to stop
+  * Incorporate richvdh xmpp fixes (021eb567)
+    - https://github.com/armooo/cloudprint/pull/58
+    - Rework with another patch to consolidate timeout definitions.
 
  -- David Steele <dsteele@gmail.com>  Wed, 12 Jun 2013 20:36:43 -0400
 
