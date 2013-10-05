@@ -8,7 +8,7 @@ cloudprint (0.10-4) UNRELEASED; urgency=low
     - https://github.com/armooo/cloudprint/pull/58
     - Rework with another patch to consolidate timeout definitions.
 
- -- David Steele <dsteele@gmail.com>  Wed, 12 Jun 2013 20:36:43 -0400
+ -- David Steele <dsteele@gmail.com>  Fri, 04 Oct 2013 21:56:52 -0400
 
 cloudprint (0.10-3) unstable; urgency=low
 
