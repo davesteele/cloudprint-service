@@ -8,6 +8,8 @@ reprepro -Vb . --ignore=wrongdistribution includedeb raring ../../cloudprint-ser
 reprepro -Vb . --ignore=wrongdistribution includedeb saucy ../../cloudprint_*.deb
 reprepro -Vb . --ignore=wrongdistribution includedeb saucy ../../cloudprint-service_*.deb
 
+rm -rf db/
+
 rm -f dists/sid
 ln -s ./unstable dists/sid
 rm -f dists/jessie
