@@ -20,6 +20,16 @@ SignWith: default
 
 Origin: cloudprint
 Label: cloudprint
+Codename: stable
+Architectures: amd64 i386
+Components: main
+Description: Apt repository for project cloudprint
+#DebOverride: override.squeeze
+#DscOverride: override.squeeze
+SignWith: default
+
+Origin: cloudprint
+Label: cloudprint
 Codename: saucy
 Architectures: amd64 i386
 Components: universe
