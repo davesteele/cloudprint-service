@@ -12,4 +12,5 @@ override_dh_auto_install:
 override_dh_auto_build:
 
 override_dh_installinit:
-	dh_installinit --init-script=cloudprintd
+	dh_installinit --name=cloudprintd
+

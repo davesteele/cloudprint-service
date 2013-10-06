@@ -1,3 +1,15 @@
+cloudprint (0.10-4) UNRELEASED; urgency=low
+
+  * Replace the deprecated dh_installinit '--init-script'
+    option with '--name.
+  * Fix init confusion between DESC cloudprintd and NAME cloudprint.
+    - Causing service to be unable to stop
+  * Incorporate richvdh xmpp fixes (021eb567)
+    - https://github.com/armooo/cloudprint/pull/58
+    - Rework with another patch to consolidate timeout definitions.
+
+ -- David Steele <dsteele@gmail.com>  Fri, 04 Oct 2013 21:56:52 -0400
+
 cloudprint (0.10-3) unstable; urgency=low
 
   * Copyright had license text for LGPL instead of the correct GPL-2+

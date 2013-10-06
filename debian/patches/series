@@ -1,3 +1,5 @@
 fixdist.patch
 auth-only.patch
 cantusenamefile.patch
+xmpp.patch
+fixxmpp.patch
