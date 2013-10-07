@@ -1,4 +1,4 @@
-cloudprint (0.10-4) UNRELEASED; urgency=low
+cloudprint (0.10-4) unstable; urgency=low
 
   * Replace the deprecated dh_installinit '--init-script'
     option with '--name.
