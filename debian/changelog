@@ -1,4 +1,12 @@
-cloudprint (0.10-4) UNRELEASED; urgency=low
+cloudprint (0.10-5) UNRELEASED; urgency=low
+
+  * fixxmpp.patch
+    - Variables spelled wrong in xmpp.py
+    - Unhandled XMPP exception in cloudprint.py
+
+ -- David Steele <dsteele@gmail.com>  Mon, 07 Oct 2013 19:03:30 -0400
+
+cloudprint (0.10-4) unstable; urgency=low
 
   * Replace the deprecated dh_installinit '--init-script'
     option with '--name.

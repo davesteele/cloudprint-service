@@ -5,7 +5,7 @@ From: David Steele <dsteele@gmail.com>
 
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -27,9 +27,16 @@
+@@ -27,9 +27,16 @@ PRINT_CLOUD_SERVICE_ID = 'cloudprint'
  CLIENT_LOGIN_URL = '/accounts/ClientLogin'
  PRINT_CLOUD_URL = '/cloudprint/'
  
@@ -24,7 +24,7 @@ From: David Steele <dsteele@gmail.com>
  
  LOGGER = logging.getLogger('cloudprint')
  LOGGER.setLevel(logging.INFO)
-@@ -350,7 +357,7 @@
+@@ -350,7 +357,7 @@ def process_job(cups_connection, cpp, printer, job):
  
  def process_jobs(cups_connection, cpp, printers):
      xmpp_auth = file(cpp.xmpp_auth_path).read()
@@ -33,14 +33,15 @@ From: David Steele <dsteele@gmail.com>
  
      while True:
          try:
-@@ -366,8 +373,10 @@
+@@ -365,9 +372,10 @@ def process_jobs(cups_connection, cpp, printers):
+ 
              xmpp_conn.await_notification(sleeptime)
  
-         except Exception:
+-        except Exception:
 -            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in 60 Seconds')
 -            time.sleep(60)
++        except:
 +            global FAIL_RETRY
-+
 +            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in %d Seconds') % FAIL_RETRY
 +            time.sleep(FAIL_RETRY)
  
@@ -48,7 +49,7 @@ From: David Steele <dsteele@gmail.com>
  def usage():
 --- a/cloudprint/xmpp.py
 +++ b/cloudprint/xmpp.py
-@@ -7,9 +7,6 @@
+@@ -7,9 +7,6 @@ import time
  from collections import deque
  from xml.etree.ElementTree import XMLParser, TreeBuilder
  
@@ -58,7 +59,7 @@ From: David Steele <dsteele@gmail.com>
  LOGGER = logging.getLogger('cloudprint.xmpp')
  
  class XmppXmlHandler(object):
-@@ -46,9 +43,10 @@
+@@ -46,9 +43,10 @@ class XmppXmlHandler(object):
              return None
  
  class XmppConnection(object):
@@ -70,7 +71,12 @@ From: David Steele <dsteele@gmail.com>
  
      def _read_socket(self):
          """read pending data from the socket, and send it to the XML parser.
-@@ -63,7 +61,7 @@
+@@ -59,11 +57,11 @@ class XmppConnection(object):
+                 # socket closed
+                 raise Exception("xmpp socket closed")
+         except Exception:
+-            self._conected = False
++            self._connected = False
              raise
  
          LOGGER.debug('<<< %s' % data)
@@ -79,12 +85,15 @@ From: David Steele <dsteele@gmail.com>
          self._xmlparser.feed(data)
  
      def _write_socket(self, msg):
-@@ -71,7 +69,7 @@
+@@ -71,9 +69,9 @@ class XmppConnection(object):
          LOGGER.debug('>>> %s' % msg)
          try:
              self._wrappedsock.sendall(msg)
 -            self._nextkeepalive = time.time() + KEEPALIVE_PERIOD
 +            self._nextkeepalive = time.time() + self._keepalive_period
          except Exception:
-             self._conected = False
+-            self._conected = False
++            self._connected = False
              raise
+ 
+     def _msg(self, msg=None):
