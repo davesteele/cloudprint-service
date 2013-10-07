@@ -1,0 +1,48 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Origin: cloudprint
+Label: cloudprint
+Codename: stable
+Date: Sun, 06 Oct 2013 22:51:14 UTC
+Architectures: amd64 i386
+Components: main
+Description: Apt repository for project cloudprint
+MD5Sum:
+ 8a6f19c47c910f36b6b20cb18f1e1172 1461 main/binary-amd64/Packages
+ bbb8edba6c88e9077249d38de7450215 730 main/binary-amd64/Packages.gz
+ 856c5f3fa873c49055a5b19cf956446e 124 main/binary-amd64/Release
+ 8a6f19c47c910f36b6b20cb18f1e1172 1461 main/binary-i386/Packages
+ bbb8edba6c88e9077249d38de7450215 730 main/binary-i386/Packages.gz
+ 2163b1d7ff3d7993a1b7f5f828e94a46 123 main/binary-i386/Release
+SHA1:
+ 03ec4c2ed4679b77bb66a14ef4fba54c4296f19f 1461 main/binary-amd64/Packages
+ 247957bc2ae002254f0de171855a3e34ed975da8 730 main/binary-amd64/Packages.gz
+ 899273314408db3bac5e0188b8faa9fd5c13aba5 124 main/binary-amd64/Release
+ 03ec4c2ed4679b77bb66a14ef4fba54c4296f19f 1461 main/binary-i386/Packages
+ 247957bc2ae002254f0de171855a3e34ed975da8 730 main/binary-i386/Packages.gz
+ bfdc368f91c62d7f9d5a7a16772b89ece10537cc 123 main/binary-i386/Release
+SHA256:
+ bfb31f38b5540c7b29287903f1b99a33925d1959388f387499772a7a776db66e 1461 main/binary-amd64/Packages
+ 042788aa348fd879bb4ca4c1a10df50c53a356a1815e94c695823ac8879b6369 730 main/binary-amd64/Packages.gz
+ ea576ec69638fdbc9945bd1dc2fa55393b66d13e1509c9c55caeeb61830621e3 124 main/binary-amd64/Release
+ bfb31f38b5540c7b29287903f1b99a33925d1959388f387499772a7a776db66e 1461 main/binary-i386/Packages
+ 042788aa348fd879bb4ca4c1a10df50c53a356a1815e94c695823ac8879b6369 730 main/binary-i386/Packages.gz
+ a5cf18e7086517f0f9dfddfed8a1734545f8026cc82cd3b2993bfaa00171b85f 123 main/binary-i386/Release
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.20 (GNU/Linux)
+
+iQIcBAEBAgAGBQJSUeliAAoJEIoxce82YVDO/6QP/j+auLL2+lFCrAau5GIz4deQ
+k+8F83b1VpJkBZHR4RPv26jegJLer0jl6mkbyrkQ2lE6h0Y/Dml7TYWJcKHWxF+C
+lgqEq7azhhBZJBmijj7GHMutmHs6hEGfskjwF9ZdayGDRmom0ODcp29VYWNMqOl9
+gJXjZKbSXdcdfthamsna1Jprj84/qXmQ0Kza0C8yiVXpv85VzMFk/vrxfQ3NkMm4
+qvcN3jKaJ/9Tux5bchsRYmdpM9tAkeGsxd79MJQA7PyInWI2FkM8ncBRDENqZ2qJ
+g9PPA2Ddul8teUXccS9QmikHej2FPJ3ReqAV9UuP4SG+W65Ml4Oig6W+vHiBfhX8
+Yu7yJpHBkn14ZIonoWJjRHBxpfUYL47MLItu++GbxxMspZSmT0hDIhz9HxXajKvp
+n13SPU27UNG6LDy1LeuhUfiTB9txcCfEDrkbRX9n721ulSngNrBBAzZjNLeMGSM6
+03Df3mQbMU4+3rPcN29aO86ma5tEaaqYGR7RsBGNcwGJt4udVKQs9xomqiafyAoE
+yvy8Jg92DZi+eF0YGhbBa4LM6zJ5n+CUEil2oar/quSQbW2L/AIgLwnZcHruLMSK
+JtfTZUSU8FtCIriQPM/QaPvelv3MW3CPz1dYlQlMw67zeuFHazvaZgODOydrcR13
+i53szBx6DVrGoOCGVULn
+=QDZ/
+-----END PGP SIGNATURE-----
