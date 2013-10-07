@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cloudprint-debian PPA Repository</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Cloudprint-debian</h1>
+        <p>Debian packaging for the Python cloudprint proxy utility</p>
+
+        <p class="view"><a href="https://github.com/davesteele/cloudprint-debian">View the Project on GitHub <small>davesteele/cloudprint-debian</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/davesteele/cloudprint-debian/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/davesteele/cloudprint-debian/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/davesteele/cloudprint-debian">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+      <a href="/">back</a>
+        <h3>Using the cloudprint-debian repository.</h3>
+Here is how to add cloudprint to apt repository resources for your system, letting you install and
+automatically upgrade with standard tools.
+<br><br>
+First, add a reference to the cloudprint <a href="http://en.wikipedia.org/wiki/Personal_Package_Archive">PPA</a> to your /etc/apt/sources.list file (as root):<br><br>
+<pre>
+deb http://davesteele.github.io/cloudprint-debian/repo &lt;dist&gt; main
+</pre>
+... where &lt;dist&gt; is replaced with the appropriate value from this list:<br><br>
+<ul>
+<li>jessie</li>
+<li>testing</li>
+<li>wheezy</li>
+<li>stable</li>
+<li>sid</li>
+<li>unstable</li>
+<li>saucy</li>
+<li>raring</li>
+</ul>
+Add the repository key to your apt key ring:<br><br>
+<pre>
+wget http://davesteele.github.io/key-366150CE.pub.txt
+sudo apt-key add key-366150CE.pub.txt
+</pre>
+Install the packages with :<br><br>
+<pre>
+sudo apt-get update
+sudo apt-get install cloudprint cloudprint-service
+</pre>
+The packages will be updated with every 'apt-get upgrade'.
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/davesteele">davesteele</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
