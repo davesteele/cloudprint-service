@@ -71,11 +71,13 @@ From: David Steele <dsteele@gmail.com>
  
      def _read_socket(self):
          """read pending data from the socket, and send it to the XML parser.
-@@ -59,11 +57,11 @@ class XmppConnection(object):
+@@ -58,12 +56,12 @@ class XmppConnection(object):
+             if data is None or len(data) == 0:
                  # socket closed
                  raise Exception("xmpp socket closed")
-         except Exception:
+-        except Exception:
 -            self._conected = False
++        except:
 +            self._connected = False
              raise
  
@@ -90,10 +92,29 @@ From: David Steele <dsteele@gmail.com>
          try:
              self._wrappedsock.sendall(msg)
 -            self._nextkeepalive = time.time() + KEEPALIVE_PERIOD
-+            self._nextkeepalive = time.time() + self._keepalive_period
-         except Exception:
+-        except Exception:
 -            self._conected = False
++            self._nextkeepalive = time.time() + self._keepalive_period
++        except:
 +            self._connected = False
              raise
  
      def _msg(self, msg=None):
+@@ -127,7 +125,7 @@ class XmppConnection(object):
+             iq = self._msg('<iq type="set"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><resource>Armooo</resource></bind></iq>')
+             bare_jid = iq[0][0].text.split('/')[0]
+             self._msg('<iq type="set" to="%s"><subscribe xmlns="google:push"><item channel="cloudprint.google.com" from="cloudprint.google.com"/></subscribe></iq>' % bare_jid)
+-        except Exception:
++        except:
+             self.close()
+             raise
+ 
+@@ -194,7 +192,7 @@ class XmppConnection(object):
+                     LOGGER.warn("Error in xmpp connection")
+                     raise Exception("xmpp connection errror")
+ 
+-            except Exception:
++            except:
+                 self.close()
+                 raise
+ 
