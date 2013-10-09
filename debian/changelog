@@ -3,6 +3,8 @@ cloudprint (0.10-5) UNRELEASED; urgency=low
   * fixxmpp.patch
     - Variables spelled wrong in xmpp.py
     - Unhandled XMPP exception in cloudprint.py
+  * xmpprotocol.patch
+    - Update XMPP protocol to Google example (phineasgage at github).
 
  -- David Steele <dsteele@gmail.com>  Mon, 07 Oct 2013 19:03:30 -0400
 
