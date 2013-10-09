@@ -1,14 +1,10 @@
 #!/bin/sh
-reprepro -Vb . --ignore=wrongdistribution includedeb unstable ../../cloudprint_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb unstable ../../cloudprint-service_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb testing ../../cloudprint_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb testing ../../cloudprint-service_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb stable ../../cloudprint_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb stable ../../cloudprint-service_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb raring ../../cloudprint_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb raring ../../cloudprint-service_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb saucy ../../cloudprint_*.deb
-reprepro -Vb . --ignore=wrongdistribution includedeb saucy ../../cloudprint-service_*.deb
+
+for repo in unstable testing stable raring saucy ; do
+    for pkg in cloudprint cloudprint-service ; do
+        reprepro -Vb . --ignore=wrongdistribution includedeb $repo ../../$pkg\_*_all.deb
+    done
+done
 
 rm -rf db/
 
