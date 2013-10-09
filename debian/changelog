@@ -1,3 +1,13 @@
+cloudprint (0.10-5) unstable; urgency=low
+
+  * fixxmpp.patch
+    - Variables spelled wrong in xmpp.py
+    - Unhandled XMPP exception in cloudprint.py
+  * xmpprotocol.patch
+    - Update XMPP protocol to Google example (phineasgage at github).
+
+ -- David Steele <dsteele@gmail.com>  Wed, 09 Oct 2013 19:24:20 -0400
+
 cloudprint (0.10-4) unstable; urgency=low
 
   * Replace the deprecated dh_installinit '--init-script'
