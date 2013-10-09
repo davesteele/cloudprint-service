@@ -1,17 +1,17 @@
 Package: cloudprint
-Version: 0.10-4
+Version: 0.10-5
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 97
-Depends: python-cups, cups, python (>= 2.6.6-7~)
+Depends: python-cups, cups, python:any (>= 2.6.6-7~)
 Homepage: http://davesteele.github.io/cloudprint-debian/
 Priority: optional
 Section: net
-Filename: pool/universe/c/cloudprint/cloudprint_0.10-4_all.deb
-Size: 12274
-SHA256: 206588b27605e3a7dc86094bdb9683793146b7b5f75fb2603853938491b05252
-SHA1: 5aa4a01197bf89bb08c4b232f5fd8a6a892e0704
-MD5sum: 34c6fba4afc6624dbda92c427340e21d
+Filename: pool/universe/c/cloudprint/cloudprint_0.10-5_all.deb
+Size: 11644
+SHA256: a5d790c3239b2c2ef820dcf45e7915d49a2c9d410b1f41003bee375a5050ea80
+SHA1: 7b1de735269c1147cb0041b3a4e4419282a3c252
+MD5sum: 21d0b36f1f3a40dbb42b37ffe870968c
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -19,7 +19,7 @@ Description: Google Cloud Print proxy
 
 Package: cloudprint-service
 Source: cloudprint
-Version: 0.10-4
+Version: 0.10-5
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 58
@@ -28,11 +28,11 @@ Provides: cloudprintd
 Homepage: http://davesteele.github.io/cloudprint-debian/
 Priority: optional
 Section: net
-Filename: pool/universe/c/cloudprint/cloudprint-service_0.10-4_all.deb
-Size: 5912
-SHA256: 3cd70e53734ed1324c3e73c6fd0780f6b9e573b4cb7f9fd5ef7a566be0dfa6a4
-SHA1: 1414ff821621616f81d10e67865350f2d701fafc
-MD5sum: 89cd3dd5e3a6181c01997be03c65560a
+Filename: pool/universe/c/cloudprint/cloudprint-service_0.10-5_all.deb
+Size: 5822
+SHA256: a7c4825b128e29ccd05f857ded7c26fcf51905f83ed9e4b8735cc0a64e14e84e
+SHA1: 504c8aae1ebddce6323e9d8dbe06a54992c72742
+MD5sum: 3bbeddd2ea35f1388fd40a946cc66635
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via

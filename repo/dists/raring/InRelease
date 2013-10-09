@@ -4,45 +4,45 @@ Hash: SHA1
 Origin: cloudprint
 Label: cloudprint
 Codename: raring
-Date: Sun, 06 Oct 2013 22:51:14 UTC
+Date: Wed, 09 Oct 2013 23:14:06 UTC
 Architectures: amd64 i386
 Components: universe
 Description: Apt repository for project cloudprint
 MD5Sum:
- e02f1b82c2c12be9034c7ac8e425b736 1469 universe/binary-amd64/Packages
- 0b508666cb1c3f5737d0d5b32236be48 732 universe/binary-amd64/Packages.gz
+ 50aa88b3cd5434fad18a2d224a45fbee 1473 universe/binary-amd64/Packages
+ 882250c7fcb09867379e21a0838105eb 730 universe/binary-amd64/Packages.gz
  d97f7320b0b4931004be5460cd9724ea 128 universe/binary-amd64/Release
- e02f1b82c2c12be9034c7ac8e425b736 1469 universe/binary-i386/Packages
- 0b508666cb1c3f5737d0d5b32236be48 732 universe/binary-i386/Packages.gz
+ 50aa88b3cd5434fad18a2d224a45fbee 1473 universe/binary-i386/Packages
+ 882250c7fcb09867379e21a0838105eb 730 universe/binary-i386/Packages.gz
  5e3977fbc7ac6a663847b1c2aedc3d66 127 universe/binary-i386/Release
 SHA1:
- 995c52ee369b5509350cb9fbdcb28d93bbbf9b84 1469 universe/binary-amd64/Packages
- 9f3ea31541bbf1b652c211165c2d54cd0c34a6ca 732 universe/binary-amd64/Packages.gz
+ bedc007850c550ef206d1f38eb37def0fe91de19 1473 universe/binary-amd64/Packages
+ 6aa0b57609185b7bbbf7d4eb594f112919392031 730 universe/binary-amd64/Packages.gz
  16c8003e5d20d9766ac83797821047f4ac0bc365 128 universe/binary-amd64/Release
- 995c52ee369b5509350cb9fbdcb28d93bbbf9b84 1469 universe/binary-i386/Packages
- 9f3ea31541bbf1b652c211165c2d54cd0c34a6ca 732 universe/binary-i386/Packages.gz
+ bedc007850c550ef206d1f38eb37def0fe91de19 1473 universe/binary-i386/Packages
+ 6aa0b57609185b7bbbf7d4eb594f112919392031 730 universe/binary-i386/Packages.gz
  bde964819e2ef83e1d97941a92697ea8ba6510b8 127 universe/binary-i386/Release
 SHA256:
- b034e248da042f6a0fcc0a7d0228f969e7c772cad2753e0da684ca59a2012181 1469 universe/binary-amd64/Packages
- f7949273199665d3e826bcf6425b2cf87eedaaead57b14db42fbcd80027e82a2 732 universe/binary-amd64/Packages.gz
+ d42c7127b3d0bff0c2593892ec12819ecc3118ab666dc898c7298ce61b58c128 1473 universe/binary-amd64/Packages
+ 232101fdb5517d033b7dcb6aa9dd5e2861849b6beeef401e01c09d7faa9eadc3 730 universe/binary-amd64/Packages.gz
  b33de14aba0fe60cf0a5295d308397a53aceb609d046a69c94d113e98ce07cb7 128 universe/binary-amd64/Release
- b034e248da042f6a0fcc0a7d0228f969e7c772cad2753e0da684ca59a2012181 1469 universe/binary-i386/Packages
- f7949273199665d3e826bcf6425b2cf87eedaaead57b14db42fbcd80027e82a2 732 universe/binary-i386/Packages.gz
+ d42c7127b3d0bff0c2593892ec12819ecc3118ab666dc898c7298ce61b58c128 1473 universe/binary-i386/Packages
+ 232101fdb5517d033b7dcb6aa9dd5e2861849b6beeef401e01c09d7faa9eadc3 730 universe/binary-i386/Packages.gz
  287db6a883b1aacbd441f5ba57e76b241ebb269a617635664e340df922f4406c 127 universe/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.20 (GNU/Linux)
+Version: GnuPG v2.0.22 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSUeljAAoJEIoxce82YVDOV+8QAJLItE+hEglapSN5dWTKw/Gf
-isM/xmXZR6yI9JMaLZ6D2g1GRupYXo1U4SzUGUprJHohdNFvRs19/F0zvN8TKSWW
-H6b/3ESNiIkCs8//nsP5/U8PkG0UIOy2jtXfWyiLD1X9bJAfig5PtSd1HOmlszpF
-Y+/2KdFVC3ARelK52BQc3WbQ/OaVcXlCwc5pbxO7pr9KheGE8qEFGpQB6OYFFHXP
-C1bVca45ShEYhRCyQQ6BWd7q1vzBwxuK2wN4pukT+CMDc63UdcDrKCGsTgV8Rpdl
-k8xcFUoD1EY2WnHgCc6Dft+QFuYSWnQ7VOEi5I9ARdN8C8qKxNICm4SYvx1bmiQp
-RZa4l6UPPeM7VIkGw/+lW/uffG/ik/G9Wz482bZkXEeVqujtquiecqvm+Y6ecNxq
-kiaqq5lEmQFTm0JsEkbH99lV5RGx4yk/56aoyozUR1l5maCM0DqN6J5jYY6ZxeC4
-bDJm655pZT+npwHV/fRgwYeJq96jadnoUr6DE3eLmy1bLC4Vpnv27Ia//6LNzEmu
-wXJSmBs2EmsTXGHX5M/kqSu/6ZJ5TN8fetq073ZJNuMVsBlntJNf48rRHT8fUX3S
-cBHxhlkuOH5u/kJ40OOzeLpD4GrcwVdyrhZZSM8Cp+75UeptQqocOA13WgNWbDsO
-Ayd5spw2KwTABZGvgWNJ
-=bHjp
+iQIcBAEBAgAGBQJSVeM+AAoJEIoxce82YVDOL94QAKD2ksjNcv+GgKvMsBJOx/rq
+d9UyzrUEG+HFeURufW9L7rA8ExfaXQtkuv9+M8E1QhOMzt1iAglzwWJk5Em47MNQ
+Dlr2jrIPY8v5WR7iJVwcCEPnPKDtGZep2pt2nfzkSyY2KH3cIICCwxm/9Ka8huGe
+ShHJDOome48iZqcrFHv9AximqteXWLyTMDCazqGqkk3vL3jHgoKaKUzA2+deh2Uz
+IJKRM6S0a03E1lswB3UKcOMrXDOQAA74xaoz0tnAGGNuWiA5IsSoUzE2wqTDI1rA
+iGRUiMnGICiOzD7lMr9DaldNBhjVT1M9Fjy2k2YNWPMUgq0eObC5ZNBxkAgvB3Fc
+AZ1TFsQSBec0lgPmsxrwPXvGCrX3W9W0y1Y2S3/1KBRHUyR6SM9Vh/mxKX8tZdAp
+s0vDw4ItNvqr5qH7tI2nF66a+ipBYq1bCR+/7BGfybX7S2CUF86LJD+TLhWcMj4m
+xVhBHPdVVZ9kecEGNou7ZhQGfSifyBvev8HXRHESNqPqj9+MBaSXvghPhgC+Hat5
+jmPy+Lg4lVLgbEsxk2wHns4XZF/2ozxAH+FL9CwJAXIC8LSNAxgejLIwA1QCGtl6
+sntngHzTJMip4ixtLKXv8axJz/sWP0pkM+i/ktbIgkbXnCxzJxJG4xvUvrmSGFcv
+IohEWPfKceLEb8e00bsM
+=TM4H
 -----END PGP SIGNATURE-----

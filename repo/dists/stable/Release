@@ -1,28 +1,28 @@
 Origin: cloudprint
 Label: cloudprint
 Codename: stable
-Date: Sun, 06 Oct 2013 22:51:14 UTC
+Date: Wed, 09 Oct 2013 23:14:06 UTC
 Architectures: amd64 i386
 Components: main
 Description: Apt repository for project cloudprint
 MD5Sum:
- 8a6f19c47c910f36b6b20cb18f1e1172 1461 main/binary-amd64/Packages
- bbb8edba6c88e9077249d38de7450215 730 main/binary-amd64/Packages.gz
+ 8b80b1970f0cdc20c911e60accaacb28 1465 main/binary-amd64/Packages
+ d84358a700e3efc0ba58b643595cd9ba 727 main/binary-amd64/Packages.gz
  856c5f3fa873c49055a5b19cf956446e 124 main/binary-amd64/Release
- 8a6f19c47c910f36b6b20cb18f1e1172 1461 main/binary-i386/Packages
- bbb8edba6c88e9077249d38de7450215 730 main/binary-i386/Packages.gz
+ 8b80b1970f0cdc20c911e60accaacb28 1465 main/binary-i386/Packages
+ d84358a700e3efc0ba58b643595cd9ba 727 main/binary-i386/Packages.gz
  2163b1d7ff3d7993a1b7f5f828e94a46 123 main/binary-i386/Release
 SHA1:
- 03ec4c2ed4679b77bb66a14ef4fba54c4296f19f 1461 main/binary-amd64/Packages
- 247957bc2ae002254f0de171855a3e34ed975da8 730 main/binary-amd64/Packages.gz
+ be49f575cf6d47db923f2aa8890b8ae126e40847 1465 main/binary-amd64/Packages
+ 8475dff7878f686c4c06843b3eba32c2ab2e4e7f 727 main/binary-amd64/Packages.gz
  899273314408db3bac5e0188b8faa9fd5c13aba5 124 main/binary-amd64/Release
- 03ec4c2ed4679b77bb66a14ef4fba54c4296f19f 1461 main/binary-i386/Packages
- 247957bc2ae002254f0de171855a3e34ed975da8 730 main/binary-i386/Packages.gz
+ be49f575cf6d47db923f2aa8890b8ae126e40847 1465 main/binary-i386/Packages
+ 8475dff7878f686c4c06843b3eba32c2ab2e4e7f 727 main/binary-i386/Packages.gz
  bfdc368f91c62d7f9d5a7a16772b89ece10537cc 123 main/binary-i386/Release
 SHA256:
- bfb31f38b5540c7b29287903f1b99a33925d1959388f387499772a7a776db66e 1461 main/binary-amd64/Packages
- 042788aa348fd879bb4ca4c1a10df50c53a356a1815e94c695823ac8879b6369 730 main/binary-amd64/Packages.gz
+ 9b03c83839f3103e59ff5a5d5403ddb258290d44fc3ec865a5da75167e85e8d1 1465 main/binary-amd64/Packages
+ 1a694c8c87a6294860aae305288e104bab5a411a9071dfc637fdbc05de67fbd8 727 main/binary-amd64/Packages.gz
  ea576ec69638fdbc9945bd1dc2fa55393b66d13e1509c9c55caeeb61830621e3 124 main/binary-amd64/Release
- bfb31f38b5540c7b29287903f1b99a33925d1959388f387499772a7a776db66e 1461 main/binary-i386/Packages
- 042788aa348fd879bb4ca4c1a10df50c53a356a1815e94c695823ac8879b6369 730 main/binary-i386/Packages.gz
+ 9b03c83839f3103e59ff5a5d5403ddb258290d44fc3ec865a5da75167e85e8d1 1465 main/binary-i386/Packages
+ 1a694c8c87a6294860aae305288e104bab5a411a9071dfc637fdbc05de67fbd8 727 main/binary-i386/Packages.gz
  a5cf18e7086517f0f9dfddfed8a1734545f8026cc82cd3b2993bfaa00171b85f 123 main/binary-i386/Release
