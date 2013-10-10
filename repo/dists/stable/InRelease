@@ -4,45 +4,45 @@ Hash: SHA1
 Origin: cloudprint
 Label: cloudprint
 Codename: stable
-Date: Wed, 09 Oct 2013 23:14:06 UTC
+Date: Thu, 10 Oct 2013 23:47:28 UTC
 Architectures: amd64 i386
 Components: main
 Description: Apt repository for project cloudprint
 MD5Sum:
- 8b80b1970f0cdc20c911e60accaacb28 1465 main/binary-amd64/Packages
- d84358a700e3efc0ba58b643595cd9ba 727 main/binary-amd64/Packages.gz
+ d7c3d30def27d659394c9a9fe468a644 1465 main/binary-amd64/Packages
+ 743bc70283eda511a053720b4b0dd0af 728 main/binary-amd64/Packages.gz
  856c5f3fa873c49055a5b19cf956446e 124 main/binary-amd64/Release
- 8b80b1970f0cdc20c911e60accaacb28 1465 main/binary-i386/Packages
- d84358a700e3efc0ba58b643595cd9ba 727 main/binary-i386/Packages.gz
+ d7c3d30def27d659394c9a9fe468a644 1465 main/binary-i386/Packages
+ 743bc70283eda511a053720b4b0dd0af 728 main/binary-i386/Packages.gz
  2163b1d7ff3d7993a1b7f5f828e94a46 123 main/binary-i386/Release
 SHA1:
- be49f575cf6d47db923f2aa8890b8ae126e40847 1465 main/binary-amd64/Packages
- 8475dff7878f686c4c06843b3eba32c2ab2e4e7f 727 main/binary-amd64/Packages.gz
+ 0be628bbb229ac632984919d2ca301c62a6aaf56 1465 main/binary-amd64/Packages
+ d2f504b9b0aee7384195bd383fb60463ddd74963 728 main/binary-amd64/Packages.gz
  899273314408db3bac5e0188b8faa9fd5c13aba5 124 main/binary-amd64/Release
- be49f575cf6d47db923f2aa8890b8ae126e40847 1465 main/binary-i386/Packages
- 8475dff7878f686c4c06843b3eba32c2ab2e4e7f 727 main/binary-i386/Packages.gz
+ 0be628bbb229ac632984919d2ca301c62a6aaf56 1465 main/binary-i386/Packages
+ d2f504b9b0aee7384195bd383fb60463ddd74963 728 main/binary-i386/Packages.gz
  bfdc368f91c62d7f9d5a7a16772b89ece10537cc 123 main/binary-i386/Release
 SHA256:
- 9b03c83839f3103e59ff5a5d5403ddb258290d44fc3ec865a5da75167e85e8d1 1465 main/binary-amd64/Packages
- 1a694c8c87a6294860aae305288e104bab5a411a9071dfc637fdbc05de67fbd8 727 main/binary-amd64/Packages.gz
+ 29bf4e935e5817292d42c54b2fe915e96aa8f0b341abe22ea1b40b2b43d581db 1465 main/binary-amd64/Packages
+ 2e369c801891e83df5b10af16f748075fe46bf3001d93970229d90048a063554 728 main/binary-amd64/Packages.gz
  ea576ec69638fdbc9945bd1dc2fa55393b66d13e1509c9c55caeeb61830621e3 124 main/binary-amd64/Release
- 9b03c83839f3103e59ff5a5d5403ddb258290d44fc3ec865a5da75167e85e8d1 1465 main/binary-i386/Packages
- 1a694c8c87a6294860aae305288e104bab5a411a9071dfc637fdbc05de67fbd8 727 main/binary-i386/Packages.gz
+ 29bf4e935e5817292d42c54b2fe915e96aa8f0b341abe22ea1b40b2b43d581db 1465 main/binary-i386/Packages
+ 2e369c801891e83df5b10af16f748075fe46bf3001d93970229d90048a063554 728 main/binary-i386/Packages.gz
  a5cf18e7086517f0f9dfddfed8a1734545f8026cc82cd3b2993bfaa00171b85f 123 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSVeM+AAoJEIoxce82YVDObgsP/2u6+SvKOhg/fVE1NVdWxbZd
-Ahgy3aGVGN1L4b3p8U3PRq0seTIgCWlGQtCxt4MVyocuMUL7TTIXklZdO9Ao24Mm
-fHwBptGN9HQIWaWapobSu0yld4UGWGuGaXmdTfdU4hwqLV59bU4I6b8YaWd4gOSB
-W7hfkh4YMHhM4t71ayFH3J1FPvM3qYcw5OlVwG/I/LLyLPbS0ZdYK9koBcAt8Pbc
-o0KP8FtjKjlIhaVlW5hZlQvHDrnGS3xZYLJWu7fc+PrRdN5Vm68ImYVblyhxkypy
-7fl63QRF0ALefGtuplvxqsPei9PdlsdfC5XQpqeCRh6ohBC1br8n+Gqn3iKQN+lu
-9z4u7zU35uRGwPrSZiJE8K37CfYjmmbFwFUltQ8bsi9Co9+WRbgKLiNheU1aLZpK
-ONWlsw36qTV6Vg4z4NSJVUqXYcw60hn6F+xbfKaIrKxa+DBNUMqS1DATekaTNbWz
-B6lK6jShQHnOCKtJB09Uw171n7y02G/1Ub3aWwsD6lnYJCtXdUiR+WMm7dCIbrS4
-NTvmaXVP9ZmPry0u2qNO4M3DHcqaaOt3tbT279odwliaQqmRG5oQP7l8D6nORJfL
-BUGCSP3B/zi9im4Dy9QtcM7oFxirqn9pCjgkTzh9xXsTqKYek5ED8KrZOo8B65+M
-UKd+5Q+xzt9KoTsllN0Y
-=MzZc
+iQIcBAEBAgAGBQJSVzyQAAoJEIoxce82YVDO0KYP/06+0ehCNqxYaqk/fKTk5kjP
+banDWTahuQFYVSdd5+vpe20IHHGRuNerV1ZnMzS27rYLF7gtqRSfQdcKluyySXOf
+6d3Qy6j4PWyggmVSZvNxK1ACM2Yd7V+7B7PeYfPznvZeMlOcBGXXN8Uu4YK/43BF
+fGVf63vc5TS4Nl8/dr0MHXt9LlwTlDOysS5dT3RgqojDcQ9+We/TX7DaYyEqqhtL
+rNpDf9ElxTqvCq4BDEJFQueW1zyyPoZV7KxESw82BbpUp5Fc34zX3ZhlKYc35+cs
+huPAiJgWfJkxr5vNU2XSiYJrM2atcTg/vUXvKNjKI9uodCmwPXbbsl7lQcZHR23s
+zUaCg4SOgO+47lw//uRM1kUaEezM2cZ5LWOIpOh4mEcbKDP0JCoTk5562y6TG2bv
+niko9PmFdhoVONQ1sgFyP4VSsKutuexsbzKoplBzjYSCby2bXYKz51fd/yQBLi9X
+es4tia9VX3Rhe25L89GPALT1rRtkMgtOQMe2U8u6vh27b6W5aHUw3CdmBHaL2r72
+qnGXTPbrlBcIXOKoZHi4ALZjhKxl0Y81ZALyBnNtGDJONEs9wU2Pt2hcz7XjFQKU
+rBy9kJC5JqbzLFnzAuZOmjEZ7pnKZ3o6w0UOx7aUjz4nKu9/gqV+/xX/+w0nkYEu
+PpMWwxnyqPubfnAiNtYl
+=swn8
 -----END PGP SIGNATURE-----
