@@ -1,6 +1,14 @@
-Description: Update the XMPP converssation with the Cloud Print servers
-  per https://developers.google.com/cloud-print/docs/rawxmpp
-From: phineasgage on github.com
+From 84d74f9ee9e8e514946411debe77b6ec23e4d0df Mon Sep 17 00:00:00 2001
+From: phineas919 <p@server.fake>
+Date: Fri, 10 May 2013 17:18:22 +0200
+Subject: [PATCH 20/20] Updates to handle some XMPP protocol changes at
+ https://developers.google.com/cloud-print/docs/rawxmpp
+
+Conflicts:
+	cloudprint/cloudprint.py
+---
+ cloudprint/xmpp.py | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
 
 diff --git a/cloudprint/xmpp.py b/cloudprint/xmpp.py
 index 98cb830..376dd6d 100644
@@ -25,3 +33,6 @@ index 98cb830..376dd6d 100644
          except:
              self.close()
              raise
+-- 
+1.8.4.rc3
+

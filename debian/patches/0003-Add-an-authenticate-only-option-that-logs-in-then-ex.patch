@@ -1,11 +1,19 @@
-Description: Add an "authenticate only" option
- This gives an init.d implementation a way to establish auth
- without having to execute the proxy.
+From f58b53f504d9ddd91294ab644e502de925d920d2 Mon Sep 17 00:00:00 2001
 From: David Steele <dsteele@gmail.com>
+Date: Sun, 28 Apr 2013 20:53:28 -0400
+Subject: [PATCH 03/20] Add an 'authenticate only' option that logs in, then
+ exits.
 
+This facilitates implementation of an init.d service on top.
+---
+ cloudprint/cloudprint.py | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 6a3dacc..8c8c4b5 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -381,14 +381,16 @@
+@@ -381,14 +381,16 @@ def usage():
      print '-a account_file\t: path to google account ident data (default ~/.cloudprintauth)'
      print '\t\t account_file format:\t <Google username>'
      print '\t\t\t\t\t <Google password>'
@@ -23,7 +31,7 @@ From: David Steele <dsteele@gmail.com>
      saslauthfile = None
      for o, a in opts:
          if o == '-d':
-@@ -400,6 +402,8 @@
+@@ -400,6 +402,8 @@ def main():
          elif o == '-a':
              authfile = a
              saslauthfile = authfile+'.sasl'
@@ -32,18 +40,7 @@ From: David Steele <dsteele@gmail.com>
          elif o =='-h':
              usage()
              sys.exit()
-@@ -436,8 +440,8 @@
-                 account_file.close()
- 
-             else:
--                LOGGER.info('Unable to find account file')
--                return
-+                cpp.username = raw_input('Google username: ')
-+                cpp.password = getpass.getpass()
-         else:
-           cpp.username = raw_input('Google username: ')
-           cpp.password = getpass.getpass()
-@@ -457,6 +461,9 @@
+@@ -453,6 +457,9 @@ def main():
              #reset the stored auth
              cpp.set_auth('')
  
@@ -53,3 +50,6 @@ From: David Steele <dsteele@gmail.com>
      printers = cpp.get_printers()
  
      if daemon:
+-- 
+1.8.4.rc3
+
