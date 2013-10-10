@@ -1,0 +1,25 @@
+From b533b84b71a4d2968a3f653e174e9ead824ed8e9 Mon Sep 17 00:00:00 2001
+From: Richard van der Hoff <git@rvanderhoff.org.uk>
+Date: Wed, 9 Oct 2013 23:42:00 +0100
+Subject: [PATCH 17/20] Fix TypeError when xmpp connection fails
+
+---
+ cloudprint/cloudprint.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 43b3b35..6b1c569 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -374,7 +374,7 @@ def process_jobs(cups_connection, cpp, printers):
+ 
+         except:
+             global FAIL_RETRY
+-            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in %d Seconds') % FAIL_RETRY
++            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in %d Seconds' % FAIL_RETRY)
+             time.sleep(FAIL_RETRY)
+ 
+ 
+-- 
+1.8.4.rc3
+

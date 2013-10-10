@@ -1,0 +1,25 @@
+From c26a0eaa6cbcc93e22c723016ce2d79563e5d1f7 Mon Sep 17 00:00:00 2001
+From: davesteele <dsteele@gmail.com>
+Date: Mon, 7 Oct 2013 12:53:41 -0400
+Subject: [PATCH 18/20] Increase printer poll to 1/hr when XMPP working.
+
+---
+ cloudprint/cloudprint.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 6b1c569..8b35114 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -30,7 +30,7 @@ PRINT_CLOUD_URL = '/cloudprint/'
+ # period in seconds with which we should poll for new jobs via the HTTP api,
+ # when xmpp is connecting properly.
+ # 'None' to poll only on startup and when we get XMPP notifications.
+-POLL_PERIOD=30.0
++POLL_PERIOD=3600.0
+ 
+ # wait period to retry when xmpp fails
+ FAIL_RETRY=60
+-- 
+1.8.4.rc3
+

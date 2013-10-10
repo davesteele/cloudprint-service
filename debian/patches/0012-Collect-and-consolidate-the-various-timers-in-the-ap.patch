@@ -1,11 +1,21 @@
-Description: Consolidate, clarify, and adjust XMPP timeouts
- There are multiple timeouts associated with xmpp connections.
- This clarifies what they are, and make some adjustments.
+From 8418188566b16b5e0cf7c6c1f1c82ebffad2d5b7 Mon Sep 17 00:00:00 2001
 From: David Steele <dsteele@gmail.com>
+Date: Wed, 18 Sep 2013 21:37:47 -0400
+Subject: [PATCH 12/20] Collect and consolidate the various timers in the app.
 
+Poll period when xmpp is working, and when it is not, plus
+the keepalive ping time.
+(cherry picked from commit 91eae404aaa14950209dc1acc9541cc4df9a3f2a)
+---
+ cloudprint/cloudprint.py | 10 ++++++----
+ cloudprint/xmpp.py       | 10 ++++------
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 269710d..370fa89 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -27,9 +27,16 @@ PRINT_CLOUD_SERVICE_ID = 'cloudprint'
+@@ -27,7 +27,8 @@ PRINT_CLOUD_SERVICE_ID = 'cloudprint'
  CLIENT_LOGIN_URL = '/accounts/ClientLogin'
  PRINT_CLOUD_URL = '/cloudprint/'
  
@@ -13,18 +23,9 @@ From: David Steele <dsteele@gmail.com>
 +# period in seconds with which we should poll for new jobs via the HTTP api,
 +# when xmpp is connecting properly.
  # 'None' to poll only on startup and when we get XMPP notifications.
--POLL_PERIOD=30.0
-+POLL_PERIOD=3600.0
-+
-+# wait period to retry when xmpp fails
-+FAIL_RETRY=60
-+
-+# how often, in seconds, to send a keepalive character over xmpp
-+KEEPALIVE=600.0
+ POLL_PERIOD=30.0
  
- LOGGER = logging.getLogger('cloudprint')
- LOGGER.setLevel(logging.INFO)
-@@ -350,7 +357,7 @@ def process_job(cups_connection, cpp, printer, job):
+@@ -356,7 +357,7 @@ def process_job(cups_connection, cpp, printer, job):
  
  def process_jobs(cups_connection, cpp, printers):
      xmpp_auth = file(cpp.xmpp_auth_path).read()
@@ -33,20 +34,20 @@ From: David Steele <dsteele@gmail.com>
  
      while True:
          try:
-@@ -365,9 +372,10 @@ def process_jobs(cups_connection, cpp, printers):
- 
+@@ -372,8 +373,9 @@ def process_jobs(cups_connection, cpp, printers):
              xmpp_conn.await_notification(sleeptime)
  
--        except Exception:
+         except Exception:
 -            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in 60 Seconds')
 -            time.sleep(60)
-+        except:
 +            global FAIL_RETRY
 +            LOGGER.exception('ERROR: Could not Connect to Cloud Service. Will Try again in %d Seconds') % FAIL_RETRY
 +            time.sleep(FAIL_RETRY)
  
  
  def usage():
+diff --git a/cloudprint/xmpp.py b/cloudprint/xmpp.py
+index 6ec0aaf..41f4728 100644
 --- a/cloudprint/xmpp.py
 +++ b/cloudprint/xmpp.py
 @@ -7,9 +7,6 @@ import time
@@ -71,14 +72,7 @@ From: David Steele <dsteele@gmail.com>
  
      def _read_socket(self):
          """read pending data from the socket, and send it to the XML parser.
-@@ -58,12 +56,12 @@ class XmppConnection(object):
-             if data is None or len(data) == 0:
-                 # socket closed
-                 raise Exception("xmpp socket closed")
--        except Exception:
--            self._conected = False
-+        except:
-+            self._connected = False
+@@ -63,7 +61,7 @@ class XmppConnection(object):
              raise
  
          LOGGER.debug('<<< %s' % data)
@@ -87,34 +81,15 @@ From: David Steele <dsteele@gmail.com>
          self._xmlparser.feed(data)
  
      def _write_socket(self, msg):
-@@ -71,9 +69,9 @@ class XmppConnection(object):
+@@ -71,7 +69,7 @@ class XmppConnection(object):
          LOGGER.debug('>>> %s' % msg)
          try:
              self._wrappedsock.sendall(msg)
 -            self._nextkeepalive = time.time() + KEEPALIVE_PERIOD
--        except Exception:
--            self._conected = False
 +            self._nextkeepalive = time.time() + self._keepalive_period
-+        except:
-+            self._connected = False
+         except Exception:
+             self._conected = False
              raise
- 
-     def _msg(self, msg=None):
-@@ -127,7 +125,7 @@ class XmppConnection(object):
-             iq = self._msg('<iq type="set"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><resource>Armooo</resource></bind></iq>')
-             bare_jid = iq[0][0].text.split('/')[0]
-             self._msg('<iq type="set" to="%s"><subscribe xmlns="google:push"><item channel="cloudprint.google.com" from="cloudprint.google.com"/></subscribe></iq>' % bare_jid)
--        except Exception:
-+        except:
-             self.close()
-             raise
- 
-@@ -194,7 +192,7 @@ class XmppConnection(object):
-                     LOGGER.warn("Error in xmpp connection")
-                     raise Exception("xmpp connection errror")
- 
--            except Exception:
-+            except:
-                 self.close()
-                 raise
- 
+-- 
+1.8.4.rc3
+
