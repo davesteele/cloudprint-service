@@ -50,15 +50,31 @@ deb http://davesteele.github.io/cloudprint-debian/repo &lt;dist&gt; main
 </ul>
 Add the repository key to your apt key ring:<br><br>
 <pre>
-wget http://davesteele.github.io/key-366150CE.pub.txt
-sudo apt-key add key-366150CE.pub.txt
+# wget http://davesteele.github.io/key-366150CE.pub.txt
+# sudo apt-key add key-366150CE.pub.txt
 </pre>
 Install the packages with :<br><br>
 <pre>
-sudo apt-get update
-sudo apt-get install cloudprint cloudprint-service
+$ sudo apt-get update
+$ sudo apt-get install cloudprint cloudprint-service
 </pre>
 The packages will be updated with every 'apt-get upgrade'.
+<br><br>
+Login to Cloud Print (as root):<br><br>
+<pre>
+# service cloudprintd login
+Accounts with 2 factor authentication require an application-specific password
+Google username: &lt;username&gt;
+Password: &lt;password&gt;
+Updated Printer MFCJ5910DW
+...
+# service cloudprintd start
+# service cloudprintd status
+[ ok ] cloudprint is running.
+</pre>
+
+The service will start automatically from this point on.
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/davesteele">davesteele</a></p>
