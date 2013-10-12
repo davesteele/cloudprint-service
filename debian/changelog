@@ -1,3 +1,9 @@
+cloudprint (0.10-7) UNRELEASED; urgency=low
+
+  * Better cleanup of pid lock file.
+
+ -- David Steele <dsteele@gmail.com>  Fri, 11 Oct 2013 22:19:27 -0400
+
 cloudprint (0.10-6) unstable; urgency=low
 
   * Fix crash when XMPP unable to connect.
