@@ -1,28 +1,28 @@
 Origin: cloudprint
 Label: cloudprint
 Codename: raring
-Date: Thu, 10 Oct 2013 23:47:29 UTC
+Date: Sun, 13 Oct 2013 18:54:06 UTC
 Architectures: amd64 i386
 Components: universe
 Description: Apt repository for project cloudprint
 MD5Sum:
- dcd0a760f75935dcd26eef5d1db3ba5a 1473 universe/binary-amd64/Packages
- 4b2b433ce0d0116d0a812240fef20e53 732 universe/binary-amd64/Packages.gz
+ 745eab091347edd0bef6fae9879bd5cb 1484 universe/binary-amd64/Packages
+ 4c68bbb43ef73e97dc97445c53725b05 736 universe/binary-amd64/Packages.gz
  d97f7320b0b4931004be5460cd9724ea 128 universe/binary-amd64/Release
- dcd0a760f75935dcd26eef5d1db3ba5a 1473 universe/binary-i386/Packages
- 4b2b433ce0d0116d0a812240fef20e53 732 universe/binary-i386/Packages.gz
+ 745eab091347edd0bef6fae9879bd5cb 1484 universe/binary-i386/Packages
+ 4c68bbb43ef73e97dc97445c53725b05 736 universe/binary-i386/Packages.gz
  5e3977fbc7ac6a663847b1c2aedc3d66 127 universe/binary-i386/Release
 SHA1:
- ea8f3635e1be689d70d6f87427da9aa33727a629 1473 universe/binary-amd64/Packages
- cccb7eed3cd2a8bbbdcb9bf76fccd0dc73a69f75 732 universe/binary-amd64/Packages.gz
+ 262a02a3afd9e699cdc258bd20b21f47c8713902 1484 universe/binary-amd64/Packages
+ 9fa67955c4c41a6b11351a0cf293945f0120abc7 736 universe/binary-amd64/Packages.gz
  16c8003e5d20d9766ac83797821047f4ac0bc365 128 universe/binary-amd64/Release
- ea8f3635e1be689d70d6f87427da9aa33727a629 1473 universe/binary-i386/Packages
- cccb7eed3cd2a8bbbdcb9bf76fccd0dc73a69f75 732 universe/binary-i386/Packages.gz
+ 262a02a3afd9e699cdc258bd20b21f47c8713902 1484 universe/binary-i386/Packages
+ 9fa67955c4c41a6b11351a0cf293945f0120abc7 736 universe/binary-i386/Packages.gz
  bde964819e2ef83e1d97941a92697ea8ba6510b8 127 universe/binary-i386/Release
 SHA256:
- 1b97850027dce031304906be181781801cf19f7e8cbec21314c3fa96bd82f331 1473 universe/binary-amd64/Packages
- 4f8b132ee61b5b59d4f32c0d63da29813e80df46ce0efe5b980b79a479de656d 732 universe/binary-amd64/Packages.gz
+ 25fcaf38786b9d78c64ac440935a325eaca0d504143d3fa362bb35daa1304b46 1484 universe/binary-amd64/Packages
+ 6512e54eded6e9a9b3174a3cc1d433922866e86f7af817120d540def144f5dcb 736 universe/binary-amd64/Packages.gz
  b33de14aba0fe60cf0a5295d308397a53aceb609d046a69c94d113e98ce07cb7 128 universe/binary-amd64/Release
- 1b97850027dce031304906be181781801cf19f7e8cbec21314c3fa96bd82f331 1473 universe/binary-i386/Packages
- 4f8b132ee61b5b59d4f32c0d63da29813e80df46ce0efe5b980b79a479de656d 732 universe/binary-i386/Packages.gz
+ 25fcaf38786b9d78c64ac440935a325eaca0d504143d3fa362bb35daa1304b46 1484 universe/binary-i386/Packages
+ 6512e54eded6e9a9b3174a3cc1d433922866e86f7af817120d540def144f5dcb 736 universe/binary-i386/Packages.gz
  287db6a883b1aacbd441f5ba57e76b241ebb269a617635664e340df922f4406c 127 universe/binary-i386/Release
