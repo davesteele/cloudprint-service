@@ -19,3 +19,4 @@ fixdist.patch
 0018-Increase-printer-poll-to-1-hr-when-XMPP-working.patch
 0019-Remove-h-guidance-of-auth-file-format.patch
 0020-Updates-to-handle-some-XMPP-protocol-changes-at-http.patch
+0021-Remove-debug-traceback-to-log-on-XMPP-connect-err.patch
