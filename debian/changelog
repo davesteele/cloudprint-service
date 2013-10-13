@@ -1,4 +1,4 @@
-cloudprint (0.10-7) UNRELEASED; urgency=low
+cloudprint (0.10-7) unstable; urgency=low
 
   * Better cleanup of pid lock file.
   * Remove the logged debug traceback on XMPP connect errors.
