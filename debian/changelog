@@ -2,6 +2,8 @@ cloudprint (0.10-7) UNRELEASED; urgency=low
 
   * Better cleanup of pid lock file.
   * Remove the logged debug traceback on XMPP connect errors.
+  * Broaden python Depends to allow installation on stable.
+      (only unstable likes the :any modifier on python)
 
  -- David Steele <dsteele@gmail.com>  Fri, 11 Oct 2013 22:19:27 -0400
 
