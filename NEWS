@@ -1,0 +1,20 @@
+cloudprint (0.10-7) unstable; urgency=low
+
+    Use Linux to share your printers via Google Cloud Print.
+
+    This is the first public release of cloudprint-service, based on the
+    cloudprint proxy script.
+
+    Cloudprint-service adds a service to your Linux computer that makes your
+    printers available via Google Cloud Print. This can make the printer
+    persistently available to other users, other devices, or other sites,
+    under your control. Plus, no special printer drivers are needed to
+    access the shared print queue.
+
+    Cloudprint-service - http://davesteele.github.io/cloudprint-service/
+
+    This should generally work with any distribution which uses .deb
+    files for software installation.
+
+
+ -- David Steele <dsteele@gmail.com>  Thu, 17 Oct 2013 19:50:13 -0400
