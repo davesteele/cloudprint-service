@@ -1,0 +1,40 @@
+Package: cloudprint
+Version: 0.10-7
+Architecture: all
+Maintainer: David Steele <dsteele@gmail.com>
+Installed-Size: 97
+Depends: python-cups, cups, python-daemon, python (>= 2.6.6-7~)
+Homepage: http://davesteele.github.io/cloudprint-debian/
+Priority: optional
+Section: net
+Filename: pool/main/c/cloudprint/cloudprint_0.10-7_all.deb
+Size: 11832
+SHA256: 1e1489f83fcffcc2b61c73813cf6790b428c1cebe5e4e2d9a6959537f459cf19
+SHA1: a8df0f550713101195a3fd5ec35791979745fad7
+MD5sum: c9d4f24ff63df934b56e6b0d6d1651fa
+Description: Google Cloud Print proxy
+ Worker script to support a Google Cloud Print proxy. This can make
+ locally-configured printers to be accessed by local or remote users over
+ Cloud Print.
+
+Package: cloudprint-service
+Source: cloudprint
+Version: 0.10-7
+Architecture: all
+Maintainer: David Steele <dsteele@gmail.com>
+Installed-Size: 58
+Depends: cloudprint, lsb-base, sysv-rc
+Provides: cloudprintd
+Homepage: http://davesteele.github.io/cloudprint-debian/
+Priority: optional
+Section: net
+Filename: pool/main/c/cloudprint/cloudprint-service_0.10-7_all.deb
+Size: 6036
+SHA256: 20fa59e90316bf3380159af91caa312adf05820127af75ec7899844e92f673e2
+SHA1: e94b357c43133c0a90850ee906d39494f7627ea5
+MD5sum: 1f4a62afe738d914c1cbd70674eec784
+Description: provide a service for sharing printers on Google Cloud Print
+ Share locally-defined CUPS printers with the Google Cloud Print service.
+ The printers can be accessed locally or remotely by authorized users via
+ multiple platforms.
+

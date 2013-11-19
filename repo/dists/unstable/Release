@@ -1,7 +1,7 @@
 Origin: cloudprint
 Label: cloudprint
 Codename: unstable
-Date: Sun, 13 Oct 2013 18:54:04 UTC
+Date: Tue, 19 Nov 2013 16:38:02 UTC
 Architectures: amd64 i386 armhf
 Components: main
 Description: Apt repository for project cloudprint

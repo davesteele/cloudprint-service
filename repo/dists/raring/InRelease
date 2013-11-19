@@ -4,7 +4,7 @@ Hash: SHA1
 Origin: cloudprint
 Label: cloudprint
 Codename: raring
-Date: Sun, 13 Oct 2013 18:54:06 UTC
+Date: Tue, 19 Nov 2013 16:38:03 UTC
 Architectures: amd64 i386
 Components: universe
 Description: Apt repository for project cloudprint
@@ -32,17 +32,17 @@ SHA256:
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSWuxOAAoJEIoxce82YVDOQDUP/2dOcmFxOsVOgtqY3WM2OPLR
-tYdQm4DWqP83ba/P9DnvnLjaCZU5kdktM7hLhynfogezwE0/eS0/YpAA6SarmWT5
-/xpEpabH3z1IfmBaE2difS+u42hAyt7de07/cMFFBLkXZ9q7D/uK8RdbrTY3cjqU
-wmNWAdfmYpBcNw6ijV1Q1a95dqS4gpLGOHcTxd+uaDCi8Eg4euxNTo/kH4Ufb5am
-cqnmuA34ohpna3ShVzT6X4uh8dXlQOwQT1P3/LE0UhOiFsFuWdJS+vK0DZIR7G+M
-6QFTNhk9eleCJAA+IjNdwrMFWngAYMs8OB3Vfg1/PgoYGcfbx/OYosuJXZdrBdMR
-ozpF/QfZi/f8V/VV06AUCgTUjHCxzG/AoLFwFqwCjIIo4wr56i2km6Kh1nk8HCbq
-Xef8nnjbNMxVBenOHkkIOMUPw1aumceb96hFvaGNXlafoFV/CwEKfG68z+qJVeX1
-6KUGG/sUBqO9x4EmwqK+bhPtORGvkw6QnV1FUm5e0Cxh2JpFEGBX94p1UrFZlQe/
-DBG5EWiqqC2aZYIkvu0MH67uE3voaD7LyX7okjZzB5SjZOkEYG2c8/bBZmdoXGm/
-Bed7wlbtR1Died2pP0td1/ymMEjdLD9bTWPITvQXJtQlPRdl+oVhejXMkd6RQQxj
-7u6+s6rBbmOS3QWfkMia
-=tdyg
+iQIcBAEBAgAGBQJSi5PrAAoJEIoxce82YVDOh/IQAJ2kHv6PvuHr2Z92D2tuWP/t
+kmm03xkcStyGLS74IsROExopN7jblwtm8zT3IiLxDs8Uxp0C1Nal5xZq1ycxcKHM
+nCaiboMxP3SW0XaYrm0JnjAQxs37MSvB48t6zuR6s0r2xfBE0x3e3hlAyhLvlREc
+2IUi5tvCsRK4crFwi7/m3/+nwtKH5xjeXrK71ZDNFwPbb4XPdftVqy+5eiPBaCHD
+Q7YAke7Awss4T0jdDDCPwQFsORD5PMnwT41U+69aMFhthwdXR/lVfpYJEdxF47/I
+/ZO69da4/gms44osVS6QhycTGiTBjOjIut2jO4TYW2YgaMMaPNQcJzYrwLXKHvKc
+mgyJY0cI2gBrBvGVd/pgPDOS75U/weJmyTcf/Cf9ad2N0QBtx9tpUEuWrXshDNNL
+VXZ7ZKIFU/imAQrhbSXFT1nSIbr62jQmdbEYW/g9daJIbU7/rMxw6PrMpCaKyp5Z
+/GfzrJyrKY5ho5o9S52anlF7aQO2arIbBkEgVrWspgRf7cYNr6YJ6ZintHthZdSy
+nyMGzFUvozk3tA4W1PlpzYIZiEwbQG9skvta1e9WYuIS05q64RqS9IMMNARAjk7E
+6JOtoLqp8YTzLY6JxXFAvBm1akOuAilKN4ESpaQCYZhi+9C/zbXjjCv55VaeLPT3
+rOM0RjKxW5rgqES9YHpH
+=F3RE
 -----END PGP SIGNATURE-----

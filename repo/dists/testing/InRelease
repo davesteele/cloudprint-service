@@ -4,7 +4,7 @@ Hash: SHA1
 Origin: cloudprint
 Label: cloudprint
 Codename: testing
-Date: Sun, 13 Oct 2013 18:54:05 UTC
+Date: Tue, 19 Nov 2013 16:38:02 UTC
 Architectures: amd64 i386 armhf
 Components: main
 Description: Apt repository for project cloudprint
@@ -41,17 +41,17 @@ SHA256:
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSWuxNAAoJEIoxce82YVDOCF0P/2922SlBr5rvPwzTXcS3pEIc
-92ZCzpWZ7W70mpu67aph3tVXq66c9z57zqe1oESFCH0qfKQdXVvmnOw3BLKoMUHb
-aoU/ZZQxD+cBQmvNM6oKm0zLAElIHUYv7gEqivkQp7dHDmNKWwtVX24rKTYIRvie
-AgQ1Z7oAW17+ynm/NgYHkaywCr47vfwyzaIdeKnYCxvr30bO2rOnTHBRKdQBphl6
-bjGpVbquCcHly227GzxcDYNBifN9JOjMHKlKsYtexU5TJseVjtFAPUMu3cE24Ywf
-oTjTkr3ICJT5LDmxTpsyIoyUcbC6oGOn0URACjvoM05oaW8oycjYXv9nJbRRG+B/
-Wwjoz+yCCNDSmh4Q5/jIEE3Jaas15I6vrKVLUJfrA85GrZVskmN2/aW30N+ZOpnV
-3SKJ5ImQR1wH6jQujyG9eKFYZGWLPTe9+WaUjQFM4eq4ZrQHtq2WVbtxqiQKy5AZ
-CMr3ixenbbYw+bYQ+ga+clsbRPK9h86kAA3U8bvvd530nEmyDd8ehhZaZeLesNhQ
-25siCOC7RF/KfZCmaRngi0bugGzmdia/vKdIhG7YL5n15KVXAMqEbPSy23KI4CO6
-dWK7VT2d2DOTddMtIQsMStmlpjRAkSx5xq88Jn1DccQX6oLgBr31WLYoKPYU/53h
-79qiHxcCpr1eHA42ybKd
-=/+e6
+iQIcBAEBAgAGBQJSi5PqAAoJEIoxce82YVDOOTwP/35lpyINc0XsGjuONiI98JVs
+A8vhsakUpXp6qhcZ0FCT78NEsedUTlgEL6spJbTWQ/4LfJipwAm8QzwrVY18yFLR
+j+FdaewvQjVZR3xVuFSzaIxCb1gyePRpNVrCcETZfQ+/Z4zsDF7n4X3y1I1Ahl58
+OnMr+Dmcjq5Pd3Jtvc9FNExIXy7E9mq3TgSqURiH8KoZ0CzaRJT6GnAd4ELvhBOp
+ReVcWKJY8QnUkMozURom2hIuN6hp341/0FxAht2i8/UYIrGG6hshp9gKtEo2/Sbv
+ibEZFx1UQaHhgH9voNkWSWIKG+Ij7+86OvEzSl1ljwBx3NAbO+lEdN/eRw79eKIc
+bXVMea7Bsq8RZch2dR2CEIFH6RB76UdziscSIPaNHFGebvkkwRgbEhaxtYsK63LL
+LxacImjec4l+FQDoE9GXdCsjwXFkRUFENtLoE6iTQTzM3wCr56xQGwKRFX46ZV+V
+xMPWpoLytwqhYFi4b3IlX/q++kqXK0RmiwdCSQI+9AKvKe+1aBfYmzgYmFWhIrGA
+sEJhpqqj8uu2Z2dKIaNnfK6PSqeMYj0JINtzCq+zE+iiKmmzzwtFEm+pv+SdfJ+G
+fkKQNFcYAr4bfMprpuoXUXsNnQfq+vmw60Kw++ekqy2BOdC6akZeBR/S4wd9XpM/
+/TlpOWx24QzjA+BJoLBn
+=tYob
 -----END PGP SIGNATURE-----

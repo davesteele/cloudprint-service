@@ -1,8 +1,8 @@
 Origin: cloudprint
 Label: cloudprint
 Codename: stable
-Date: Sun, 13 Oct 2013 18:54:05 UTC
-Architectures: amd64 i386
+Date: Tue, 19 Nov 2013 16:38:03 UTC
+Architectures: amd64 i386 armhf
 Components: main
 Description: Apt repository for project cloudprint
 MD5Sum:
@@ -12,6 +12,9 @@ MD5Sum:
  377e69eb3ae2909751d7d60c61eed617 1476 main/binary-i386/Packages
  16d17a06a4b4ecbf3ad5aa3d0a91dab9 734 main/binary-i386/Packages.gz
  2163b1d7ff3d7993a1b7f5f828e94a46 123 main/binary-i386/Release
+ 377e69eb3ae2909751d7d60c61eed617 1476 main/binary-armhf/Packages
+ 16d17a06a4b4ecbf3ad5aa3d0a91dab9 734 main/binary-armhf/Packages.gz
+ 17f8448af325087266e751387b732197 124 main/binary-armhf/Release
 SHA1:
  d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-amd64/Packages
  dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-amd64/Packages.gz
@@ -19,6 +22,9 @@ SHA1:
  d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-i386/Packages
  dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-i386/Packages.gz
  bfdc368f91c62d7f9d5a7a16772b89ece10537cc 123 main/binary-i386/Release
+ d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-armhf/Packages
+ dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-armhf/Packages.gz
+ e1521713f8f438f731f55c29f453d5fcffacfe81 124 main/binary-armhf/Release
 SHA256:
  a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-amd64/Packages
  48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-amd64/Packages.gz
@@ -26,3 +32,6 @@ SHA256:
  a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-i386/Packages
  48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-i386/Packages.gz
  a5cf18e7086517f0f9dfddfed8a1734545f8026cc82cd3b2993bfaa00171b85f 123 main/binary-i386/Release
+ a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-armhf/Packages
+ 48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-armhf/Packages.gz
+ 36eeb52231d0848fc10ddfe1b0c3239d574284988139d783cba3988ce796667b 124 main/binary-armhf/Release

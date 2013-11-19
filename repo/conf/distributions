@@ -21,7 +21,7 @@ SignWith: default
 Origin: cloudprint
 Label: cloudprint
 Codename: stable
-Architectures: amd64 i386
+Architectures: amd64 i386 armhf
 Components: main
 Description: Apt repository for project cloudprint
 #DebOverride: override.squeeze

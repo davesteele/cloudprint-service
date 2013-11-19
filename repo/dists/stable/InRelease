@@ -4,8 +4,8 @@ Hash: SHA1
 Origin: cloudprint
 Label: cloudprint
 Codename: stable
-Date: Sun, 13 Oct 2013 18:54:05 UTC
-Architectures: amd64 i386
+Date: Tue, 19 Nov 2013 16:38:03 UTC
+Architectures: amd64 i386 armhf
 Components: main
 Description: Apt repository for project cloudprint
 MD5Sum:
@@ -15,6 +15,9 @@ MD5Sum:
  377e69eb3ae2909751d7d60c61eed617 1476 main/binary-i386/Packages
  16d17a06a4b4ecbf3ad5aa3d0a91dab9 734 main/binary-i386/Packages.gz
  2163b1d7ff3d7993a1b7f5f828e94a46 123 main/binary-i386/Release
+ 377e69eb3ae2909751d7d60c61eed617 1476 main/binary-armhf/Packages
+ 16d17a06a4b4ecbf3ad5aa3d0a91dab9 734 main/binary-armhf/Packages.gz
+ 17f8448af325087266e751387b732197 124 main/binary-armhf/Release
 SHA1:
  d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-amd64/Packages
  dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-amd64/Packages.gz
@@ -22,6 +25,9 @@ SHA1:
  d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-i386/Packages
  dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-i386/Packages.gz
  bfdc368f91c62d7f9d5a7a16772b89ece10537cc 123 main/binary-i386/Release
+ d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-armhf/Packages
+ dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-armhf/Packages.gz
+ e1521713f8f438f731f55c29f453d5fcffacfe81 124 main/binary-armhf/Release
 SHA256:
  a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-amd64/Packages
  48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-amd64/Packages.gz
@@ -29,20 +35,23 @@ SHA256:
  a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-i386/Packages
  48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-i386/Packages.gz
  a5cf18e7086517f0f9dfddfed8a1734545f8026cc82cd3b2993bfaa00171b85f 123 main/binary-i386/Release
+ a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-armhf/Packages
+ 48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-armhf/Packages.gz
+ 36eeb52231d0848fc10ddfe1b0c3239d574284988139d783cba3988ce796667b 124 main/binary-armhf/Release
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
 
-iQIcBAEBAgAGBQJSWuxOAAoJEIoxce82YVDO6sgP/R998ZOck/ZSw2BL9EFsQu9Q
-H/MIY4QYmGOhdAbv/4G9FwyiznEhZM2dfwBNhnruIydTTM71Tfy73ojWwpr7yxvP
-53kHEDUj+ZCA8gilrezGIm6Z9CkdzpX+1sWmYK4aIvyNNrJ8fravIZkbEkLFc4jw
-c7rBhZ3ee5UH/8DNajtuSqUsAgN1hX9vbxHBfMgq23zZIW6+aQ9FCZs0OpWdBrDk
-+bqY6phvt3fqo7s4oih7rFLtw7rAEBTxqTTDYnRM/Lwj+rAEpiWfHVwx0Hn8PwRx
-3/KelWwjbpt47LmeamWCvyzspz0scqZ6wpdCsPGDbrp1VX3qgseOV/LL1wlUOpcR
-Upr22Eo5y3n2P+m1MzEm77bkfSZ5G7vHnRVhTA0LULX0wD5COkdw8y4kydJ9Gtqy
-JLXJSXapWmndXpREhLmHg7bu2hR9Nsyw6NdGb33kwnhnKrRgdxTeGPTr69Ay8G7a
-MLE129P6STnI9r7YMnkR1bUlfg22vBR58j9zewCMFOSBrRfwZnLd/389BYUCBTzA
-dbza0PqETPcDHEWZvSKbdJT6okNMVMLgtKc8mBzVipsecArprOPKl43EbD7jGymS
-hyahdLuuTLVBb3P92Xeq6BupDOiJsf5F9GzF5NV+m2ix9aAC88gNuJsHFWwMPZJO
-zMB8jnoIonFCHFM60L13
-=yDUK
+iQIcBAEBAgAGBQJSi5PrAAoJEIoxce82YVDOSwEQAIpB4i5VurgQXUzxUO7t7CDs
+hbeiTKesgz4WIFO1mesZH1LwwleYmdhg9QmR3wSUyeFoxPS1Qgv7w7YGUNDCbtZR
+VkGQg5CBUIbep/OAssQWi14GXmVAn8qUTlIqL+vm6BgzPDnJyC65ptBb/xrTgPgB
+yB1rvXemC5hH5LZj0i+evNaSdn3nEwNQyvvCHhIEe8G4xFEyWMSqyQO/fXSshg5I
+bWCcI6zzU0X41gnZtd6CEZIvCl0v5DCXRWjIymmNl0O7FXjSzC0V7bg0Xpjzpz6Q
+vopKFXgO0MCAnVSegNIi7CP6b+b9rYTUyi7yMgOYJmRbtVUf8h39zgcj6VPqMwnK
+sOICWiKJ0OoOQF08Kf6VvPrRB/lP74kuG9GaU5zCA3voTVsK5G+Me/gQxQJm8B7N
+Xp34Ip7SGahW8bKsQbVVqkylClX4GFkZXLSqz2xxzxAA9iyMevPDPu4DhI8QviVq
+4sWk0fp4Ows29Qjd5aTOA73jbFz9lRqWTEdz1uhs3AzJFoNXxcmIu+vS2Qw269lk
+W1K7zxY8748eXyPOeYir4h4Ygh5r5pUob/8azwqyEqYj55YHACJifPGo1T3oZwpv
+oDSuN/2Xe48gxzHLpojKK48L5lJJFZiId4Oysf73Rc7AiZHcCRYQtEesh1MH0Dzi
+w3meymTgONYPlfg+kHZH
+=G23p
 -----END PGP SIGNATURE-----
