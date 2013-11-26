@@ -1,0 +1,55 @@
+From 968e363d31101341aa8b6744330b5dfd02b59431 Mon Sep 17 00:00:00 2001
+From: David Steele <dsteele@gmail.com>
+Date: Sat, 9 Nov 2013 17:18:22 -0500
+Subject: [PATCH 26/29] xmpp.py: Refactor xmpp failure into get_elem()
+
+---
+ cloudprint/xmpp.py | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+
+diff --git a/cloudprint/xmpp.py b/cloudprint/xmpp.py
+index 91b433f..fd2aa94 100644
+--- a/cloudprint/xmpp.py
++++ b/cloudprint/xmpp.py
+@@ -38,7 +38,13 @@ class XmppXmlHandler(object):
+         """If a top-level XML element has been completed since the last call to
+         get_elem, return it; else return None."""
+         try:
+-            return self._results.popleft()
++            elem = self._results.popleft()
++
++            if elem.tag.endswith('failure') or elem.tag.endswith('error'):
++                raise Exception("XMPP Error received - %s" % elem.tag)
++
++            return elem
++
+         except IndexError:
+             return None
+ 
+@@ -85,7 +91,6 @@ class XmppConnection(object):
+             elem = self._handler.get_elem()
+ 
+             if elem is not None:
+-                assert not elem.tag.endswith('failure') and not elem.tag.endswith('error')
+                 return elem
+ 
+             # need more data; block until it becomes available
+@@ -94,14 +99,7 @@ class XmppConnection(object):
+ 
+     def _check_for_notification(self):
+         """Check for any notifications which have already been received"""
+-        elem = self._handler.get_elem()
+-
+-        if elem:
+-            assert not elem.tag.endswith('failure') and not elem.tag.endswith('error')
+-            return True
+-        else:
+-            return False
+-
++        return(self._handler.get_elem() is not None)
+ 
+     def _send_keepalive(self):
+         LOGGER.info("Sending XMPP keepalive")
+-- 
+1.8.4.4
+

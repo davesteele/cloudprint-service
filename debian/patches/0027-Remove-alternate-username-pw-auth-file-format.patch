@@ -1,0 +1,58 @@
+From 6bfc2134af9488c618cd5925b051eeb20e648dbc Mon Sep 17 00:00:00 2001
+From: David Steele <dsteele@gmail.com>
+Date: Tue, 19 Nov 2013 21:31:07 -0500
+Subject: [PATCH 27/29] Remove alternate username/pw auth file format
+
+... in prefernce for a sasl file with optional username/pw.
+---
+ README.rst               |  2 --
+ cloudprint/cloudprint.py | 12 +++---------
+ 2 files changed, 3 insertions(+), 11 deletions(-)
+
+diff --git a/README.rst b/README.rst
+index 2a25f1a..92d06dc 100644
+--- a/README.rst
++++ b/README.rst
+@@ -16,8 +16,6 @@ Usage
+   -l              : logout of the current google account
+   -p pid_file     : path to write the pid to (default cloudprint.pid)
+   -a account_file : path to google account ident data (optional)
+-                    account_file format:  <Google username>
+-                                          <Google password>
+   -c              : establish and store login credentials, then exit
+   -h              : display this help
+ 
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 38b483a..dbe22e5 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -434,15 +434,9 @@ def main():
+         LOGGER.info('logged out')
+         return
+ 
+-    # Check if authentification is needed
++    # Check if password authentification is needed
+     if not cpp.get_saved_auth():
+-        if authfile and os.path.exists(authfile):
+-            account_file = open(authfile)
+-            cpp.username = account_file.next().rstrip()
+-            cpp.password = account_file.next().rstrip()
+-            account_file.close()
+-
+-        else:
++        if authfile is None  or not os.path.exists(authfile):
+           cpp.username = raw_input('Google username: ')
+           cpp.password = getpass.getpass()
+ 
+@@ -473,7 +467,7 @@ def main():
+             print 'daemon module required for -d'
+             print '\tyum install python-daemon, or apt-get install python-daemon, or pip install python-daemon'
+             sys.exit(1)
+-        
++
+         app = App(cups_connection=cups_connection,
+                   cpp=cpp, printers=printers,
+                   pidfile_path=os.path.abspath(pidfile))
+-- 
+1.8.4.4
+

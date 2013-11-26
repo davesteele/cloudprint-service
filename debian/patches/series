@@ -20,3 +20,11 @@ fixdist.patch
 0019-Remove-h-guidance-of-auth-file-format.patch
 0020-Updates-to-handle-some-XMPP-protocol-changes-at-http.patch
 0021-Remove-debug-traceback-to-log-on-XMPP-connect-err.patch
+0022-Harden-keepalive-processing.patch
+0023-Add-xmpp-error-check-to-_check_for_notification.patch
+0024-xmpp.py-Extend-try-block-in-await_notifications.patch
+0025-cloudprint.py-Log-when-get_rest-changes-token.patch
+0026-xmpp.py-Refactor-xmpp-failure-into-get_elem.patch
+0027-Remove-alternate-username-pw-auth-file-format.patch
+0028-Add-u-option-to-store-username-password-with-sasl.patch
+0029-Refresh-XMPP-authentication-in-process_jobs.patch
