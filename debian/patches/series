@@ -29,4 +29,5 @@ fixdist.patch
 0028-Add-u-option-to-store-username-password-with-sasl.patch
 0029-Refresh-XMPP-authentication-in-process_jobs.patch
 0030-Remove-unused-printer_id-member-in-CloudPrintProxy.patch
+0031-Add-f-fast-poll-option-mitigate-XMPP-failure.patch
 python-daemon.patch

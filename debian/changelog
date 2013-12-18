@@ -6,6 +6,7 @@ cloudprint (0.10-9) UNRELEASED; urgency=medium
   * Add two dependencies identified by Raspberry Pi.
   * Change the python Dependency back to legacy-friendly mode.
   * Set the Python path to ensure the right daemon module loaded.
+  * Add support for the fast poll option for XMPP failure workaround.
 
  -- David Steele <dsteele@gmail.com>  Wed, 18 Dec 2013 00:21:03 -0500
 

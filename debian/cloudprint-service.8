@@ -43,5 +43,10 @@ It is recommended that a dedicated account be used for this service. Printers
 can be shared from that account to others via the printer management page at
 \fIhttps://www.google.com/cloudprint?#printers\fR
 
+.SH BUGS
+There have been instances where print job notifications don't work, causing
+long delays before jobs start. Uncomment the 'FAST_POLL' line in
+\fI/etc/default/cloudprintd\fR to invoke.
+
 .SH SEE ALSO
 .BR cloudprint (1)
