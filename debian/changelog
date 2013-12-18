@@ -5,6 +5,7 @@ cloudprint (0.10-9) UNRELEASED; urgency=medium
     - Refresh SASL token on XMPP connection errors.
   * Add two dependencies identified by Raspberry Pi.
   * Change the python Dependency back to legacy-friendly mode.
+  * Set the Python path to ensure the right daemon module loaded.
 
  -- David Steele <dsteele@gmail.com>  Wed, 18 Dec 2013 00:21:03 -0500
 

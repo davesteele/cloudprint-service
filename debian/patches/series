@@ -28,3 +28,4 @@ fixdist.patch
 0027-Remove-alternate-username-pw-auth-file-format.patch
 0028-Add-u-option-to-store-username-password-with-sasl.patch
 0029-Refresh-XMPP-authentication-in-process_jobs.patch
+python-daemon.patch
