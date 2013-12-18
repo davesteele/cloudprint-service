@@ -4,6 +4,7 @@ cloudprint (0.10-9) UNRELEASED; urgency=medium
   * Add command line option to store username & password.
     - Refresh SASL token on XMPP connection errors.
   * Add two dependencies identified by Raspberry Pi.
+  * Change the python Dependency back to legacy-friendly mode.
 
  -- David Steele <dsteele@gmail.com>  Wed, 18 Dec 2013 00:21:03 -0500
 
