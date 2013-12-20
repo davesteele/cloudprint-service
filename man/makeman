@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+
+for manpg in cloudprint cloudprint-service ; do
+    (man -t $manpg|ps2pdf - $manpg.pdf);
+    man -Thtml $manpg >$manpg.html;
+done
