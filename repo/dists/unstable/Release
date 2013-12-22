@@ -1,37 +1,37 @@
 Origin: cloudprint
 Label: cloudprint
 Codename: unstable
-Date: Tue, 19 Nov 2013 16:38:02 UTC
+Date: Sun, 22 Dec 2013 17:20:38 UTC
 Architectures: amd64 i386 armhf
 Components: main
 Description: Apt repository for project cloudprint
 MD5Sum:
- 377e69eb3ae2909751d7d60c61eed617 1476 main/binary-amd64/Packages
- 16d17a06a4b4ecbf3ad5aa3d0a91dab9 734 main/binary-amd64/Packages.gz
+ 1829033fdb0b7a2b5cf706c4ea7144b1 1509 main/binary-amd64/Packages
+ 868f6181f971baa6933506d73a1acd26 748 main/binary-amd64/Packages.gz
  856c5f3fa873c49055a5b19cf956446e 124 main/binary-amd64/Release
- 377e69eb3ae2909751d7d60c61eed617 1476 main/binary-i386/Packages
- 16d17a06a4b4ecbf3ad5aa3d0a91dab9 734 main/binary-i386/Packages.gz
+ 1829033fdb0b7a2b5cf706c4ea7144b1 1509 main/binary-i386/Packages
+ 868f6181f971baa6933506d73a1acd26 748 main/binary-i386/Packages.gz
  2163b1d7ff3d7993a1b7f5f828e94a46 123 main/binary-i386/Release
- 377e69eb3ae2909751d7d60c61eed617 1476 main/binary-armhf/Packages
- 16d17a06a4b4ecbf3ad5aa3d0a91dab9 734 main/binary-armhf/Packages.gz
+ 1829033fdb0b7a2b5cf706c4ea7144b1 1509 main/binary-armhf/Packages
+ 868f6181f971baa6933506d73a1acd26 748 main/binary-armhf/Packages.gz
  17f8448af325087266e751387b732197 124 main/binary-armhf/Release
 SHA1:
- d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-amd64/Packages
- dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-amd64/Packages.gz
+ 9f286ce89408ad05897b346d5c2345cd50fbf4ea 1509 main/binary-amd64/Packages
+ 3dfe12937c93602e310b106654b0e895ea4260b3 748 main/binary-amd64/Packages.gz
  899273314408db3bac5e0188b8faa9fd5c13aba5 124 main/binary-amd64/Release
- d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-i386/Packages
- dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-i386/Packages.gz
+ 9f286ce89408ad05897b346d5c2345cd50fbf4ea 1509 main/binary-i386/Packages
+ 3dfe12937c93602e310b106654b0e895ea4260b3 748 main/binary-i386/Packages.gz
  bfdc368f91c62d7f9d5a7a16772b89ece10537cc 123 main/binary-i386/Release
- d457ebf526fca47b0a68a52087b1cb007c70ce70 1476 main/binary-armhf/Packages
- dd0d952c21d9e82f95fec9d65f5b7eb88ebdccdf 734 main/binary-armhf/Packages.gz
+ 9f286ce89408ad05897b346d5c2345cd50fbf4ea 1509 main/binary-armhf/Packages
+ 3dfe12937c93602e310b106654b0e895ea4260b3 748 main/binary-armhf/Packages.gz
  e1521713f8f438f731f55c29f453d5fcffacfe81 124 main/binary-armhf/Release
 SHA256:
- a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-amd64/Packages
- 48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-amd64/Packages.gz
+ ba7849587207a0da038140d9fc41e7e09af89df079c8faf8a2394c42ee94984e 1509 main/binary-amd64/Packages
+ de8c7cbfb066ec7555756ec009c2706c2e5da04b73816d16d076179d93a99cc2 748 main/binary-amd64/Packages.gz
  ea576ec69638fdbc9945bd1dc2fa55393b66d13e1509c9c55caeeb61830621e3 124 main/binary-amd64/Release
- a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-i386/Packages
- 48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-i386/Packages.gz
+ ba7849587207a0da038140d9fc41e7e09af89df079c8faf8a2394c42ee94984e 1509 main/binary-i386/Packages
+ de8c7cbfb066ec7555756ec009c2706c2e5da04b73816d16d076179d93a99cc2 748 main/binary-i386/Packages.gz
  a5cf18e7086517f0f9dfddfed8a1734545f8026cc82cd3b2993bfaa00171b85f 123 main/binary-i386/Release
- a1d3ad69a035f1dec3d1a0e97c391253235a4dc1be958a16f0764454f4a5c85d 1476 main/binary-armhf/Packages
- 48aeaee9e35cbdaa4d81a36e81ea345260f14eff90383f16f67f964b69951b7b 734 main/binary-armhf/Packages.gz
+ ba7849587207a0da038140d9fc41e7e09af89df079c8faf8a2394c42ee94984e 1509 main/binary-armhf/Packages
+ de8c7cbfb066ec7555756ec009c2706c2e5da04b73816d16d076179d93a99cc2 748 main/binary-armhf/Packages.gz
  36eeb52231d0848fc10ddfe1b0c3239d574284988139d783cba3988ce796667b 124 main/binary-armhf/Release
