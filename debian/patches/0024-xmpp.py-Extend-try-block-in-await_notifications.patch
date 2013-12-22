@@ -1,0 +1,70 @@
+From ca566835856b4353acb0da82b1dc355e6bd4e19b Mon Sep 17 00:00:00 2001
+From: David Steele <dsteele@gmail.com>
+Date: Thu, 31 Oct 2013 17:09:37 -0400
+Subject: [PATCH 24/29] xmpp.py: Extend try block in await_notifications
+
+There were cases where the xmpp connection was not closed when
+it probably should have been. Extend the try block so that the
+connection is explicitly closed on errors in check_for_notifications
+or select.
+---
+ cloudprint/xmpp.py | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+diff --git a/cloudprint/xmpp.py b/cloudprint/xmpp.py
+index b49b668..91b433f 100644
+--- a/cloudprint/xmpp.py
++++ b/cloudprint/xmpp.py
+@@ -166,31 +166,31 @@ class XmppConnection(object):
+             timeoutend = now + timeout
+ 
+         while True:
+-            if self._check_for_notification():
+-                return True
++            try:
++                if self._check_for_notification():
++                    return True
+ 
+-            if timeoutend is not None and timeoutend - now <= 0:
+-                # timeout
+-                return False
++                if timeoutend is not None and timeoutend - now <= 0:
++                    # timeout
++                    return False
+ 
+-            waittime = self._nextkeepalive - now
+-            LOGGER.debug("%f seconds until next keepalive" % waittime)
++                waittime = self._nextkeepalive - now
++                LOGGER.debug("%f seconds until next keepalive" % waittime)
+ 
+-            if timeoutend is not None:
+-                remaining = timeoutend - now
+-                if remaining < waittime:
+-                    waittime = remaining
+-                    LOGGER.debug("%f seconds until timeout" % waittime)
++                if timeoutend is not None:
++                    remaining = timeoutend - now
++                    if remaining < waittime:
++                        waittime = remaining
++                        LOGGER.debug("%f seconds until timeout" % waittime)
+ 
+-            if waittime < 0:
+-                waittime = 0
++                if waittime < 0:
++                    waittime = 0
+ 
+-            sock = self._xmppsock
+-            (r, w, e) = select.select([sock], [], [sock], waittime)
++                sock = self._xmppsock
++                (r, w, e) = select.select([sock], [], [sock], waittime)
+ 
+-            now = time.time()
++                now = time.time()
+ 
+-            try:
+                 if self._nextkeepalive - now <= 0:
+                     self._send_keepalive()
+ 
+-- 
+1.8.4.4
+

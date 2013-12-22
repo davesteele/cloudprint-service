@@ -1,0 +1,105 @@
+From 2ab9f4d47fdcf61b5b582924f56600295c03d0b3 Mon Sep 17 00:00:00 2001
+From: David Steele <dsteele@gmail.com>
+Date: Tue, 17 Dec 2013 21:40:42 -0500
+Subject: [PATCH 31/31] Add -f 'fast poll' option - mitigate XMPP failure
+
+Some are reporting a persistent problem with XMPP notifications:
+
+https://github.com/armooo/cloudprint/issues/48 - Issue #48
+
+The problem is persistent, and is not related to networking issues.
+
+This is an admitted hack to provide a workaround for that case.
+Invoking the '-f' command line argument causes the print queues to
+be polled every 30 seconds.
+---
+ README.rst               |  1 +
+ cloudprint/cloudprint.py | 16 +++++++++++++---
+ 2 files changed, 14 insertions(+), 3 deletions(-)
+
+--- a/README.rst
++++ b/README.rst
+@@ -19,6 +19,7 @@
+   -c              : establish and store login credentials, then exit
+   -u              : store username/password in addition to login token
+                     to avoid authentication expiration
++  -f              : 'fast poll', if notifications aren't working
+   -h              : display this help
+ 
+ Google accounts with 2 step verification enabled need to use an
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -30,7 +30,9 @@
+ # period in seconds with which we should poll for new jobs via the HTTP api,
+ # when xmpp is connecting properly.
+ # 'None' to poll only on startup and when we get XMPP notifications.
++# 'Fast Poll' is used as a workaround when notifications are not working.
+ POLL_PERIOD=3600.0
++FAST_POLL_PERIOD=30.0
+ 
+ # wait period to retry when xmpp fails
+ FAIL_RETRY=60
+@@ -54,6 +56,7 @@
+         self.username = None
+         self.password = None
+         self.storepw = False
++        self.sleeptime = 0
+ 
+     def get_auth(self):
+         if self.auth:
+@@ -369,13 +372,12 @@
+             for printer in printers:
+                 for job in printer.get_jobs():
+                     process_job(cups_connection, cpp, printer, job)
+-            sleeptime = POLL_PERIOD
+ 
+             if not xmpp_conn.is_connected():
+                 xmpp_conn.connect(XMPP_SERVER_HOST,XMPP_SERVER_PORT,
+                                   XMPP_USE_SSL,xmpp_auth)
+ 
+-            xmpp_conn.await_notification(sleeptime)
++            xmpp_conn.await_notification(cpp.sleeptime)
+ 
+         except:
+             global FAIL_RETRY
+@@ -400,10 +402,11 @@
+     print '-a account_file\t: path to google account ident data (default ~/.cloudprintauth)'
+     print '-c\t\t: establish and store login credentials, then exit'
+     print '-u\t\t: store username/password in addition to login token'
++    print '-f\t\t: use fast poll if notifications are not working'
+     print '-h\t\t: display this help'
+ 
+ def main():
+-    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cu')
++    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cuf')
+     daemon = False
+     logout = False
+     pidfile = None
+@@ -411,6 +414,7 @@
+     authonly = False
+     saslauthfile = None
+     storepw = False
++    fastpoll = False
+     for o, a in opts:
+         if o == '-d':
+             daemon = True
+@@ -425,6 +429,8 @@
+             authonly = True
+         elif o == '-u':
+             storepw = True
++        elif o == '-f':
++            fastpoll = True
+         elif o =='-h':
+             usage()
+             sys.exit()
+@@ -449,6 +455,10 @@
+     if storepw:
+         cpp.storepw = True
+ 
++    cpp.sleeptime = POLL_PERIOD
++    if fastpoll:
++        cpp.sleeptime = FAST_POLL_PERIOD
++
+     if logout:
+         cpp.del_saved_auth()
+         LOGGER.info('logged out')

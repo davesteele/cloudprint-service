@@ -1,0 +1,20 @@
+From: David Steele <dsteele@gmail.com>
+Subject: Set Pythoh path to load the right daemon
+
+Some users are having a problem with the wrong daemon module
+being loaded. Modify the Python path to ensure that
+python-daemon is the one found.
+
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -492,6 +492,10 @@
+ 
+     if daemon:
+         try:
++            # workaround to avoid overloaded module
++            prepath = '/usr/lib/pymodules/python%s.%s' % sys.version_info[0:2]
++            sys.path.insert(0, prepath)
++
+             from daemon import runner
+         except ImportError:
+             print 'daemon module required for -d'

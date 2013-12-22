@@ -1,4 +1,16 @@
-cloudprint (0.10-8) UNRELEASED; urgency=low
+cloudprint (0.10-9) unstable; urgency=low
+
+  * Harden XMPP processing.
+  * Add command line option to store username & password.
+    - Refresh SASL token on XMPP connection errors.
+  * Add two dependencies identified by Raspberry Pi.
+  * Change the python Dependency back to legacy-friendly mode.
+  * Set the Python path to ensure the right daemon module loaded.
+  * Add support for the fast poll option for XMPP failure workaround.
+
+ -- David Steele <dsteele@gmail.com>  Sun, 22 Dec 2013 12:02:59 -0500
+
+cloudprint (0.10-8) unstable; urgency=low
 
   * Update VCS and home page references to reflect github name change.
   * Add missing Depends to python-daemon.

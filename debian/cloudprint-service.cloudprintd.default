@@ -8,3 +8,6 @@
 
 # Additional options that are passed to the Daemon.
 DAEMON_OPTS=""
+
+# Fast Poll option, to work around XMPP notification problems
+#FAST_POLL='-f'
