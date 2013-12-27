@@ -17,6 +17,8 @@ mv checksums.txt.asc checksums.txt
 
 cd ..
 
+./mkjson
+
 cd man
 ./makeman
 cd ..

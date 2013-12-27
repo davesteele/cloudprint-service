@@ -1,0 +1,20 @@
+{
+    "all_pkgs": [
+        "cloudprint_0.10-2_all.deb", 
+        "cloudprint-service_0.10-2_all.deb", 
+        "cloudprint_0.10-4_all.deb", 
+        "cloudprint-service_0.10-4_all.deb", 
+        "cloudprint_0.10-5_all.deb", 
+        "cloudprint-service_0.10-5_all.deb", 
+        "cloudprint_0.10-6_all.deb", 
+        "cloudprint-service_0.10-6_all.deb", 
+        "cloudprint_0.10-7_all.deb", 
+        "cloudprint-service_0.10-7_all.deb", 
+        "cloudprint_0.10-9_all.deb", 
+        "cloudprint-service_0.10-9_all.deb"
+    ], 
+    "latest_pkgs": [
+        "cloudprint_0.10-9_all.deb", 
+        "cloudprint-service_0.10-9_all.deb"
+    ]
+}
