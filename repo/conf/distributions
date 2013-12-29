@@ -1,7 +1,7 @@
 Origin: cloudprint
 Label: cloudprint
 Codename: unstable
-Architectures: amd64 i386 armhf
+Architectures: amd64 i386 armhf armel
 Components: main
 Description: Apt repository for project cloudprint
 #DebOverride: override.squeeze
@@ -11,7 +11,7 @@ SignWith: default
 Origin: cloudprint
 Label: cloudprint
 Codename: testing
-Architectures: amd64 i386 armhf
+Architectures: amd64 i386 armhf armel
 Components: main
 Description: Apt repository for project cloudprint
 #DebOverride: override.squeeze
@@ -21,7 +21,7 @@ SignWith: default
 Origin: cloudprint
 Label: cloudprint
 Codename: stable
-Architectures: amd64 i386 armhf
+Architectures: amd64 i386 armhf armel
 Components: main
 Description: Apt repository for project cloudprint
 #DebOverride: override.squeeze

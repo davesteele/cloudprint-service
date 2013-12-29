@@ -4,8 +4,8 @@ Hash: SHA1
 Origin: cloudprint
 Label: cloudprint
 Codename: testing
-Date: Sun, 22 Dec 2013 17:20:38 UTC
-Architectures: amd64 i386 armhf
+Date: Sun, 29 Dec 2013 02:00:03 UTC
+Architectures: amd64 i386 armhf armel
 Components: main
 Description: Apt repository for project cloudprint
 MD5Sum:
@@ -18,6 +18,9 @@ MD5Sum:
  1829033fdb0b7a2b5cf706c4ea7144b1 1509 main/binary-armhf/Packages
  868f6181f971baa6933506d73a1acd26 748 main/binary-armhf/Packages.gz
  17f8448af325087266e751387b732197 124 main/binary-armhf/Release
+ 1829033fdb0b7a2b5cf706c4ea7144b1 1509 main/binary-armel/Packages
+ 868f6181f971baa6933506d73a1acd26 748 main/binary-armel/Packages.gz
+ a5b2d274022fdaa3dad43669228e69ff 124 main/binary-armel/Release
 SHA1:
  9f286ce89408ad05897b346d5c2345cd50fbf4ea 1509 main/binary-amd64/Packages
  3dfe12937c93602e310b106654b0e895ea4260b3 748 main/binary-amd64/Packages.gz
@@ -28,6 +31,9 @@ SHA1:
  9f286ce89408ad05897b346d5c2345cd50fbf4ea 1509 main/binary-armhf/Packages
  3dfe12937c93602e310b106654b0e895ea4260b3 748 main/binary-armhf/Packages.gz
  e1521713f8f438f731f55c29f453d5fcffacfe81 124 main/binary-armhf/Release
+ 9f286ce89408ad05897b346d5c2345cd50fbf4ea 1509 main/binary-armel/Packages
+ 3dfe12937c93602e310b106654b0e895ea4260b3 748 main/binary-armel/Packages.gz
+ b103e9a4ed0de86b83f8174fadc07545620a3870 124 main/binary-armel/Release
 SHA256:
  ba7849587207a0da038140d9fc41e7e09af89df079c8faf8a2394c42ee94984e 1509 main/binary-amd64/Packages
  de8c7cbfb066ec7555756ec009c2706c2e5da04b73816d16d076179d93a99cc2 748 main/binary-amd64/Packages.gz
@@ -38,20 +44,23 @@ SHA256:
  ba7849587207a0da038140d9fc41e7e09af89df079c8faf8a2394c42ee94984e 1509 main/binary-armhf/Packages
  de8c7cbfb066ec7555756ec009c2706c2e5da04b73816d16d076179d93a99cc2 748 main/binary-armhf/Packages.gz
  36eeb52231d0848fc10ddfe1b0c3239d574284988139d783cba3988ce796667b 124 main/binary-armhf/Release
+ ba7849587207a0da038140d9fc41e7e09af89df079c8faf8a2394c42ee94984e 1509 main/binary-armel/Packages
+ de8c7cbfb066ec7555756ec009c2706c2e5da04b73816d16d076179d93a99cc2 748 main/binary-armel/Packages.gz
+ 450a1c3b3b824272e59d37aca72b5d18f255caebe988ff9b2f9c6b049fc76494 124 main/binary-armel/Release
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
 
-iQIcBAEBAgAGBQJStx9mAAoJEIoxce82YVDOocoP/iXWKX/+Gr0mGcEwzaggnwOn
-RVwqA1dgP1OggXm53LhCR3IcFFQ6JcKoWJVIRyrl0uRGZ+G810Dc3xZ/gyaSqVba
-Q9XxV7wZ5RXor3mATIIkZp5dozTPnfYd5MV+NGkNCp1kdiHrCwUmXduDLOpQpY9k
-r+Kc2xwv/B9XvQOlL3dxdCKN+kiXaQdXE05bFj45MoHwuGJAdiWbVQyO92LxX55x
-bCpem5aO6XN+UDKg+dwVQV2xOlL2DnMWbl/m5MoAquzyoeOymcPBzF+ubYO42eIh
-QoXT7NjryrXK+T7/tjDpAljsxDPRE3aBcnd4qlhM41WPR/8DPE8Ke9E1uXPWVSj/
-IDakNH52BKIjGOjovWH36jld51fnCm8TXpIREFNsvXx6jOGmEv/YcJd8bxbYtzVB
-S3fCu0JxuEBBbCHTv3m58RrNCZppCcnLiMqd4gNJpcOwchgbEbE5x61e9LEm/XkL
-4A9FfW7iZd/clEhgocd0htr7HbxUmOTtjt1vA3DwtVlLNB4aGoUC9GYmyc6d/GNh
-1vqNUF9aNQPWxrEc5gpBrT2RLkpvsX5p1vqQI+PqDGOcjcvbFTj4y4O+lAsUG4o3
-zPgaxZVF7+Qfm2HKLsgGbuuaBooPoY3DH1ykA+qn9ulh8AnCRpsemSh0tR4//LLG
-/9zuyEIvxPA2lLmSs4RN
-=ZYRM
+iQIcBAEBAgAGBQJSv4IjAAoJEIoxce82YVDOjEQP/2tD39LBmvuHxOdG3+3pBlrx
+z7A7Te5LP0dx85Wk9A1Gprdx4SM5s2+DBIOYofKYH53ZyuTcA9NnBj0aHhcR7TdR
++bJwncPLODGNIJxDQVS7iFuY+bHrj1U3g9fxQf+hqtaSytcennD9ExSDrcze29SI
+c06ht5hZfHtwq5wtwaqq8AE8UpKqaPJexE2vin/20io0kVfRv2vKt9Kdf+wG7E9o
+VD/lC+vk9B1B+KYhzgwMBsjkE6dv+J1xPQXN7omRtR1/s6ObfxpP71VsNSI4qIse
+hFAEIB2gVa8a+t9Mq2hWnsxjiaKI3Ip+qk+RNScBaeVtfnzMvKnwwQhPok09L21M
+Ud4qwj/f8bqpdxJx6CJiZOXfNk4HVaHteGDgscTtVuyifFosOLGQkdd114Aho9M3
+eybDyoqftqPpNHrsTMCTM9/gWHTPZeOOam3Bej3nSXdeccWLNcTWHZBao5hrtNVn
+bg6C2TAuIzw4JVN6StGWCWzx8Kons8uawnpyCw5A1xdIdcWOyZOlZq9/9Y5yPzBL
+XoEeGaZWkkxdJkf238eP5Od4d3j4KjUWwUjiL0RKdyPVgJURx0X2+wEzFXi1hqX0
+eZ75rkmQ6EMC32TIE4rnmDHN4qPGnJHZrpuAJG+Ca+iTMYneePgG+iajtD/HNKaC
+E9a1+ii7FIFPa6h0hjrk
+=btEb
 -----END PGP SIGNATURE-----
