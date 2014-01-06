@@ -21,7 +21,8 @@ Description: Google Cloud Print proxy
 Package: cloudprint-service
 Architecture: all
 Provides: cloudprintd
-Depends: cloudprint, lsb-base, sysv-rc, ${shlibs:Depends}, ${misc:Depends}
+Depends: cloudprint, lsb-base, sysv-rc, ${shlibs:Depends}, ${misc:Depends},
+ initscripts (>= 2.88dsf-13.3)
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
