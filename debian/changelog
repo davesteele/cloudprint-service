@@ -1,3 +1,13 @@
+cloudprint (0.11-1) unstable; urgency=low
+
+  * Work with cloudprint 0.11:
+    - Delete the 0.10 series of patches.
+    - Remove support for the -u password storage option for now.
+  * Revert to the Python depends macro, for Debian sponsorship.
+  * Update debian files based on Debian policy 3.9.4 and 3.9.5.
+
+ -- David Steele <dsteele@gmail.com>  Sun, 05 Jan 2014 21:38:43 -0500
+
 cloudprint (0.10-9) unstable; urgency=low
 
   * Harden XMPP processing.

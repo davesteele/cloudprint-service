@@ -3,15 +3,15 @@ Maintainer: David Steele <dsteele@gmail.com>
 Section: net
 Priority: optional
 Build-Depends: python-setuptools (>= 0.6b3), python (>= 2.6.6-3), debhelper (>= 7.4.3)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 X-Python-Version: >= 2.6
 Homepage: http://davesteele.github.io/cloudprint-service/
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
-Vcs-Git: https://github.com/davesteele/cloudprint-service.git
+Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b release
 
 Package: cloudprint
 Architecture: all
-Depends: python-cups, cups, python-daemon, ${misc:Depends}, python (>= 2.6.6-7~),
+Depends: python-cups, cups, python-daemon, ${misc:Depends}, ${python:Depends},
  python-pkg-resources, rsyslog
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
@@ -21,7 +21,8 @@ Description: Google Cloud Print proxy
 Package: cloudprint-service
 Architecture: all
 Provides: cloudprintd
-Depends: cloudprint, lsb-base, sysv-rc, ${shlibs:Depends}, ${misc:Depends}
+Depends: cloudprint, lsb-base, sysv-rc, ${misc:Depends},
+ initscripts (>= 2.88dsf-13.3)
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
