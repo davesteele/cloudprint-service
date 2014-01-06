@@ -7,7 +7,7 @@ Standards-Version: 3.9.4
 X-Python-Version: >= 2.6
 Homepage: http://davesteele.github.io/cloudprint-service/
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
-Vcs-Git: https://github.com/davesteele/cloudprint-service.git
+Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b release
 
 Package: cloudprint
 Architecture: all
