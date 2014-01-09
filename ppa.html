@@ -35,16 +35,8 @@ automatically upgrade with standard tools.
 <br><br>
 First, add a reference to the cloudprint <a href="http://en.wikipedia.org/wiki/Personal_Package_Archive">PPA</a> to your /etc/apt/sources.list file (as root):<br><br>
 <pre>
-deb http://davesteele.github.io/cloudprint-service/repo &lt;dist&gt; main
+deb http://davesteele.github.io/cloudprint-service/repo cloudprintppa main
 </pre>
-... where &lt;dist&gt; is replaced with the appropriate value from this list:<br><br>
-<ul>
-<li>testing</li>
-<li>stable</li>
-<li>unstable</li>
-<li>saucy</li>
-<li>raring</li>
-</ul>
 Add the repository key to your apt key ring:<br><br>
 <pre>
 # wget http://davesteele.github.io/key-366150CE.pub.txt

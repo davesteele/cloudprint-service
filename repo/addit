@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for repo in unstable testing stable raring saucy ; do
+for repo in unstable testing stable raring saucy cloudprintppa ; do
     for pkg in cloudprint cloudprint-service ; do
         reprepro -Vb . --ignore=wrongdistribution includedeb $repo ../../$pkg\_*_all.deb
     done
