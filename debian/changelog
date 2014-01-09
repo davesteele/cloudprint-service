@@ -1,3 +1,12 @@
+cloudprint (0.11-2) unstable; urgency=low
+
+  * Fix bug in recovering from network outage.
+    - Fixes #9
+  * Re-add the -u username/password store option.
+    - Refresh auth using username if sasl timed out.
+
+ -- David Steele <dsteele@gmail.com>  Wed, 08 Jan 2014 19:59:11 -0500
+
 cloudprint (0.11-1) unstable; urgency=low
 
   * Work with cloudprint 0.11:

@@ -7,7 +7,7 @@ python-daemon is the one found.
 
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -484,6 +484,10 @@
+@@ -498,6 +498,10 @@
  
      if daemon:
          try:

@@ -1,2 +1,7 @@
 fixdist.patch
+0001-Disable-exception-processing-in-XMPP-close.patch
+0002-cloudprint.py-Log-when-get_rest-changes-token.patch
+0003-Remove-alternate-username-pw-auth-file-format.patch
+0004-Add-u-option-to-store-username-password-with-sasl.patch
+0005-Refresh-XMPP-authentication-in-process_jobs.patch
 python-daemon.patch
