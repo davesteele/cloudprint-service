@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.2 -->
-<!-- CreationDate: Sun Dec 22 12:16:55 2013 -->
+<!-- CreationDate: Thu Jan  9 20:01:18 2014 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -88,8 +88,14 @@ reauthentication the next time cloudprint is run.</p></td></tr>
 <i>&lt;account_file&gt;</i></p>
 
 <p style="margin-left:22%;">path to Google account ident
-data (default ~/.cloudprintauth). The format of the file is
-not public.</p>
+data (default <i>~/.cloudprintauth</i>). The format of the
+file is not public.</p>
+
+<p style="margin-left:11%;"><b>&minus;p</b>
+<i>&lt;pid_file&gt;</i></p>
+
+<p style="margin-left:22%;">path to PID file in daemon mode
+(default <i>cloudprint.pid</i>).</p>
 
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
@@ -109,6 +115,17 @@ not public.</p>
 <td width="3%">
 
 
+<p><b>&minus;f</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p>fast poll, if notifications aren&rsquo;t working.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
 <p><b>&minus;u</b></p></td>
 <td width="8%"></td>
 <td width="78%">
@@ -121,12 +138,12 @@ avoid authentication expiration.</p></td></tr>
 <td width="3%">
 
 
-<p><b>&minus;f</b></p></td>
+<p><b>&minus;v</b></p></td>
 <td width="8%"></td>
 <td width="78%">
 
 
-<p>fast poll, if notifications aren&rsquo;t working.</p></td></tr>
+<p>verbose logging.</p></td></tr>
 <tr valign="top" align="left">
 <td width="11%"></td>
 <td width="3%">
