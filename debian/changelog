@@ -1,3 +1,9 @@
+cloudprint (0.11-2.1) cloudprintppa; urgency=low
+
+  * Release for 'cloudprintppa' dist, with hw-dependent Python Dep
+
+ -- David Steele <dsteele@gmail.com>  Thu, 09 Jan 2014 19:47:14 -0500
+
 cloudprint (0.11-2) unstable; urgency=low
 
   * Fix bug in recovering from network outage.
