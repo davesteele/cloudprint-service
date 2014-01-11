@@ -48,11 +48,11 @@
       <a href="index.html">back</a>
         <h3>Archived packages.</h3>
 <ul>
-<div id="debtmpl" style="display: none;">
+<script type='text/template' id="debtmpl">
 {{#all_pkgs}}
 <li><a href="deb/{{.}}">{{.}}</a></li>
 {{/all_pkgs}}
-</div>
+</script>
 <div id="deblist"></div>
 <li><a href="deb/checksums.txt">checksums.txt</a></li>
 </ul>
