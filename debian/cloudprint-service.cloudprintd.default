@@ -9,7 +9,9 @@
 # Additional options that are passed to the Daemon.
 DAEMON_OPTS=""
 
-# Fast Poll option, to work around XMPP notification problems
+# Fast Poll option, to work around XMPP notification problems.
+# Uncomment this line if it takes an extremely long time for jobs to be
+# printed.
 #FAST_POLL='-f'
 
 # Include and exclude patterns
