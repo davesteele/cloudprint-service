@@ -18,36 +18,36 @@ through the cloudprint service.
 
 .SH OPTIONS
 .TP
-\fB\-l\fR
-log out of the Google account. This deletes the account identification file, requiring reauthentication the next time
-cloudprint is run.
-.TP
 \fB\-a\fR \fI<account_file>\fR
 path to Google account ident data (default \fI~/.cloudprintauth\fP). The format of the file is not public.
-.TP
-\fB\-p\fR \fI<pid_file>\fR
-path to PID file in daemon mode (default \fIcloudprint.pid\fP).
-.TP
-\fB\-d\fR
-run in daemon mode.
 .TP
 \fB\-c\fR
 establish credentials to the service, then exit.
 .TP
+\fB\-d\fR
+run in daemon mode.
+.TP
 \fB\-f\fR
 fast poll, if notifications aren't working.
-.TP
-\fB\-u\fR
-store username/password in addition to login token to avoid authentication expiration.
 .TP
 \fB\-i\fR \fIregexp\fR
 include local printers matching regular expression from the start of the printer name.
 .TP
-\fB\-x\fR \fIregexp\fR
-exclude local printers matching regular expression from the start of the printer name.
+\fB\-l\fR
+log out of the Google account. This deletes the account identification file, requiring reauthentication the next time
+cloudprint is run.
+.TP
+\fB\-p\fR \fI<pid_file>\fR
+path to PID file in daemon mode (default \fIcloudprint.pid\fP).
+.TP
+\fB\-u\fR
+store username/password in addition to login token to avoid authentication expiration.
 .TP
 \fB\-v\fR
 verbose logging.
+.TP
+\fB\-x\fR \fIregexp\fR
+exclude local printers matching regular expression from the start of the printer name.
 .TP
 \fB\-h\fR
 display help
