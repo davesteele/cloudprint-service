@@ -1,0 +1,60 @@
+Metadata-Version: 1.1
+Name: cloudprint
+Version: 0.11
+Summary: Google cloud print proxy for linux/OSX
+Home-page: https://github.com/armooo/cloudprint
+Author: Jason Michalski
+Author-email: armooo@armooo.net
+License: UNKNOWN
+Description: Share your CUPS printers with google's cloud print.
+        Works with linux and OS X.
+        
+        Requires
+        ---------------------------------------------------
+        python 2.6 or 2.7
+        pycups (can be tricky on OS X)
+        
+        Usage
+        ---------------------------------------------------
+        
+        ::
+        
+          cloudprint [<option> ...]
+          -d              : enable daemon mode (requires the daemon module)
+          -l              : logout of the current google account
+          -p pid_file     : path to write the pid to (default cloudprint.pid)
+          -a account_file : path to google account ident data (optional)
+                            account_file format:  <Google username>
+                                                  <Google password>
+          -c              : establish and store login credentials, then exit
+          -f              : 'fast poll', if notifications aren't working
+          -h              : display this help
+        
+        Google accounts with 2 step verification enabled need to use an
+        `application-specific password <http://www.google.com/support/accounts/bin/static.py?page=guide.cs&guide=1056283&topic=1056286>`_.
+        
+        Example
+        ---------------------------------------------------
+        
+        ::
+        
+          cloudprint
+          Google username: username@gmail.com
+          Password:
+          Added Printer Brother-HL-2170W
+        
+        Install
+        ---------------------------------------------------
+        
+        ::
+        
+          pip install cloudprint
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Printing
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)

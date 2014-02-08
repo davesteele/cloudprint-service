@@ -1,0 +1,13 @@
+COPYING
+MANIFEST.in
+README.rst
+setup.py
+cloudprint/__init__.py
+cloudprint/cloudprint.py
+cloudprint/rest.py
+cloudprint/xmpp.py
+cloudprint.egg-info/PKG-INFO
+cloudprint.egg-info/SOURCES.txt
+cloudprint.egg-info/dependency_links.txt
+cloudprint.egg-info/entry_points.txt
+cloudprint.egg-info/top_level.txt

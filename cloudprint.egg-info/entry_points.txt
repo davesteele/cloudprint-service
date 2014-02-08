@@ -1,0 +1,3 @@
+[console_scripts]
+cloudprint = cloudprint.cloudprint:main
+
