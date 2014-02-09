@@ -22,9 +22,19 @@ DAEMON=/usr/bin/cloudprint
 # Read configuration variable file if it is present
 [ -r /etc/default/$DESC ] && . /etc/default/$DESC
 
+INCLUDE_OPT=""
+
+for str in $EXCLUDE_LIST ; do \
+     INCLUDE_OPT="$INCLUDE_OPT -x $str";\
+done
+
+for str in $INCLUDE_LIST ; do \
+     INCLUDE_OPT="$INCLUDE_OPT -i $str";\
+done
+
 AUTHFILE=/var/lib/cloudprint/authfile
 PIDFILE=/var/run/$NAME.pid
-DAEMON_ARGS="-d -u -a $AUTHFILE -p $PIDFILE $FAST_POLL"
+DAEMON_ARGS="-d -u -a $AUTHFILE -p $PIDFILE $FAST_POLL $INCLUDE_OPT"
 SCRIPTNAME=/etc/init.d/$DESC
 
 # Exit if the package is not installed
@@ -69,7 +79,7 @@ do_login()
 
 	echo "Accounts with 2 factor authentication require an application-specific password"
 
-	$DAEMON -c -u -a $AUTHFILE
+	$DAEMON -c -u -a $AUTHFILE $INCLUDE_OPT
 
 }
 

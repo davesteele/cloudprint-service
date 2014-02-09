@@ -9,5 +9,16 @@
 # Additional options that are passed to the Daemon.
 DAEMON_OPTS=""
 
-# Fast Poll option, to work around XMPP notification problems
+# Fast Poll option, to work around XMPP notification problems.
+# Uncomment this line if it takes an extremely long time for jobs to be
+# printed.
 #FAST_POLL='-f'
+
+# Include and exclude patterns
+# A space-separated list of strings. If any of the printer names match
+# the string from the start of the name, that printer will be
+# excluded/included from the list of proxied printers.
+# If neither is defined, all CUPS printers are proxied.
+# EXCLUDE_LIST="GCF test"
+# INCLUDE_LIST=""
+

@@ -4,4 +4,11 @@ fixdist.patch
 0003-Remove-alternate-username-pw-auth-file-format.patch
 0004-Add-u-option-to-store-username-password-with-sasl.patch
 0005-Refresh-XMPP-authentication-in-process_jobs.patch
+0006-First-functional-include-exclude.patch
+0007-Code-cleanup-documentation.patch
+0008-Documentation-and-minor-code-cleanup.patch
+0009-Remove-debug-code.patch
+0010-Use-x-from-exclude.patch
+0011-Remove-whitespace-response-to-comment-from-armooo.patch
+0012-Catch-exception-for-invalid-regular-expressions.patch
 python-daemon.patch
