@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.2 -->
-<!-- CreationDate: Thu Jan  9 20:01:18 2014 -->
+<!-- CreationDate: Sat Feb  8 23:55:01 2014 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -67,35 +67,13 @@ managed through the cloudprint service.</p>
 </h2>
 
 
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
-<tr valign="top" align="left">
-<td width="11%"></td>
-<td width="3%">
 
-
-<p style="margin-top: 1em"><b>&minus;l</b></p></td>
-<td width="8%"></td>
-<td width="78%">
-
-
-<p style="margin-top: 1em">log out of the Google account.
-This deletes the account identification file, requiring
-reauthentication the next time cloudprint is run.</p></td></tr>
-</table>
-
-<p style="margin-left:11%;"><b>&minus;a</b>
+<p style="margin-left:11%; margin-top: 1em"><b>&minus;a</b>
 <i>&lt;account_file&gt;</i></p>
 
 <p style="margin-left:22%;">path to Google account ident
 data (default <i>~/.cloudprintauth</i>). The format of the
 file is not public.</p>
-
-<p style="margin-left:11%;"><b>&minus;p</b>
-<i>&lt;pid_file&gt;</i></p>
-
-<p style="margin-left:22%;">path to PID file in daemon mode
-(default <i>cloudprint.pid</i>).</p>
 
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
@@ -106,10 +84,25 @@ file is not public.</p>
 
 <p><b>&minus;c</b></p></td>
 <td width="8%"></td>
-<td width="78%">
+<td width="73%">
 
 
-<p>establish credentials to the service, then exit.</p></td></tr>
+<p>establish credentials to the service, then exit.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;d</b></p></td>
+<td width="8%"></td>
+<td width="73%">
+
+
+<p>run in daemon mode.</p></td>
+<td width="5%">
+</td></tr>
 <tr valign="top" align="left">
 <td width="11%"></td>
 <td width="3%">
@@ -117,10 +110,45 @@ file is not public.</p>
 
 <p><b>&minus;f</b></p></td>
 <td width="8%"></td>
+<td width="73%">
+
+
+<p>fast poll, if notifications aren&rsquo;t working.</p></td>
+<td width="5%">
+</td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>&minus;i</b>
+<i>regexp</i></p>
+
+<p style="margin-left:22%;">include local printers matching
+regular expression from the start of the printer name.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;l</b></p></td>
+<td width="8%"></td>
 <td width="78%">
 
 
-<p>fast poll, if notifications aren&rsquo;t working.</p></td></tr>
+<p>log out of the Google account. This deletes the account
+identification file, requiring reauthentication the next
+time cloudprint is run.</p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>&minus;p</b>
+<i>&lt;pid_file&gt;</i></p>
+
+<p style="margin-left:22%;">path to PID file in daemon mode
+(default <i>cloudprint.pid</i>).</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
 <td width="11%"></td>
 <td width="3%">
@@ -144,6 +172,16 @@ avoid authentication expiration.</p></td></tr>
 
 
 <p>verbose logging.</p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>&minus;x</b>
+<i>regexp</i></p>
+
+<p style="margin-left:22%;">exclude local printers matching
+regular expression from the start of the printer name.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
 <td width="11%"></td>
 <td width="3%">
@@ -151,10 +189,12 @@ avoid authentication expiration.</p></td></tr>
 
 <p><b>&minus;h</b></p></td>
 <td width="8%"></td>
-<td width="78%">
+<td width="18%">
 
 
-<p>display help</p></td></tr>
+<p>display help</p></td>
+<td width="60%">
+</td></tr>
 </table>
 
 

@@ -14,6 +14,8 @@ c0647ed12748c20a9a6f211758b04fe4  cloudprint-service_0.10-6_all.deb
 7a9db8b40857fd525a02e28f09d9239c  cloudprint-service_0.11-1_all.deb
 3497a640caee07bf5ed9e6ab595a2ca5  cloudprint-service_0.11-2.1_all.deb
 b62c6444bcd60e08121f0d182c21cee1  cloudprint-service_0.11-2_all.deb
+a7b576394134cbba133a06e03ee21bae  cloudprint-service_0.11-3.1_all.deb
+3dc189625d2d153348778fb076c23c09  cloudprint-service_0.11-3_all.deb
 2f68694cf9b47217786e911bc32d7cd0  cloudprint_0.10-1_all.deb
 698ab7e2a80489fbb3c7ffab1493d94b  cloudprint_0.10-2_all.deb
 85e0dfcf8933a12258e4ed8f54673197  cloudprint_0.10-3_all.deb
@@ -26,6 +28,8 @@ ec46131074263ab3822c9cdaf738339f  cloudprint_0.10-9_all.deb
 bbf40fe0a6016e0df351f46b54ef4dc0  cloudprint_0.11-1_all.deb
 aa85774cdd71402a52c8c90ca59bb606  cloudprint_0.11-2.1_all.deb
 1480957ee22ab8ad46e7d0866f875c1c  cloudprint_0.11-2_all.deb
+555128c68676a7c598b2cc39b6f70d85  cloudprint_0.11-3.1_all.deb
+3612a14bf74a430f9727535bff4b6c45  cloudprint_0.11-3_all.deb
 
 SHA1
 882ca96ce5fc136e3732b3cddd8fa49ee22452f5  cloudprint-service_0.10-1_all.deb
@@ -40,6 +44,8 @@ e8294b7af57161bf45ce27d75491d26162fa19d1  cloudprint-service_0.10-9_all.deb
 e4a6cbf55bf1c9c0bba569db86a948877884b159  cloudprint-service_0.11-1_all.deb
 91023472aca438ccaa40763738c63d2b4f3cc841  cloudprint-service_0.11-2.1_all.deb
 15fd8c3b7d446dd87321d0975dcbaf94a9fb8013  cloudprint-service_0.11-2_all.deb
+3a77844ff35b097884aa858fa322ebab3054b4e6  cloudprint-service_0.11-3.1_all.deb
+0afc6e6e3b5ebe4bcf95b08c902256f53f055b68  cloudprint-service_0.11-3_all.deb
 cf42aa74e159e19d75198b56b2f6b0ec5a6b4187  cloudprint_0.10-1_all.deb
 d63e322878f3e4ffe410292625ef9bdd61dff8df  cloudprint_0.10-2_all.deb
 8b5327b0767115c9dc490d2f88c370149cae01aa  cloudprint_0.10-3_all.deb
@@ -52,6 +58,8 @@ f45ada7f93f3b1ba602fe5ef8ec38e0082656338  cloudprint_0.10-8_all.deb
 dbe32272ecf6a871a4602fa09e421177cc650ef9  cloudprint_0.11-1_all.deb
 e7561b88b942532088d0777825856336d805ad9b  cloudprint_0.11-2.1_all.deb
 f9b775e6ddbe29fd343cdc4660142a94588e04d3  cloudprint_0.11-2_all.deb
+18c30af538943175baa032a85c0097a39baf5f35  cloudprint_0.11-3.1_all.deb
+ca7f48afe5bc38279c24fe56f723f3ea3b106510  cloudprint_0.11-3_all.deb
 
 SHA256
 12402337e11364fc718446b9553f383cc6cd68b02b10c2ae6c5690fe592994a4  cloudprint-service_0.10-1_all.deb
@@ -66,6 +74,8 @@ dea57c321e52d3934cb2ae57bcedb2069d58bee60d76d7b95a060825d84d9605  cloudprint-ser
 6eaa1b08117cb98fb02d713f7afd71525b22f279048d8b027ff9c684a568a4ef  cloudprint-service_0.11-1_all.deb
 9c0063e4b6e0151eb0457fb1e57688fd46fa7babb9d51759f5e1759eabc6b8ce  cloudprint-service_0.11-2.1_all.deb
 0288a00d0b10657d8970b8943a106591fe4287a5b9770d102c39be70c152ab89  cloudprint-service_0.11-2_all.deb
+5a071ff5b4a052c4d070aedb152c0170c5607d64a50944c6e7fc3f11971f34bc  cloudprint-service_0.11-3.1_all.deb
+196ccb192d365ddf2d9c1f74619a927dc1e9572a23b985392cb9bfeec2a32410  cloudprint-service_0.11-3_all.deb
 bba7ffb7f64fe50e62cd54675ce24e6d0cb0803cf565660f201cd1ac1c4b6621  cloudprint_0.10-1_all.deb
 01933af79cf35479bdb11fb2f2cceadb93f9969b510cbbde655960728fb5fcab  cloudprint_0.10-2_all.deb
 31c29f63eaac13f46ec38d3f26335c16fb433fc9a18440c44ed8db10402a0b46  cloudprint_0.10-3_all.deb
@@ -78,21 +88,23 @@ a5d790c3239b2c2ef820dcf45e7915d49a2c9d410b1f41003bee375a5050ea80  cloudprint_0.1
 dbd0d282a950f73378b03935c44fd99037f2b765d2682fc8c5fc67aaf92d44d7  cloudprint_0.11-1_all.deb
 f3aca519a19187e01d44abc21f022af8b4ffd495818f541416d1549a9fb1d77c  cloudprint_0.11-2.1_all.deb
 95e5ec836ff940327aca052376c81d8281de78e3a1856622dbdb67c7284b28de  cloudprint_0.11-2_all.deb
+d0712a6a69684c278fa3cafc0ef60b66a4ef8ddcdf9eb2414480f71c69de68f7  cloudprint_0.11-3.1_all.deb
+85a92de0bbae2263bdb603dddfec2b2a9aafa8a95d058cba6261c87d4d0f57bc  cloudprint_0.11-3_all.deb
 
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.15 (GNU/Linux)
+Version: GnuPG v1
 
-iQIcBAEBAgAGBQJSz0ZaAAoJEIoxce82YVDOOHsP/RA9pgEgfKpBLPuLHKw2jdeO
-kelVP0pEwCEjuH9Sx25HcpWY6FZqxSgWw44rY/zVqW90oUKaE5Um1mjSXXq6GWt3
-PsLy5wPUsOGvnJXGGecuNUNXSyeHSTjw/kNBgCwCYjWCYFwmEU56ibgBFO1rPUmE
-O+ZWE8LEfe3ld8oM3uJjsUO4GIBxB57KQ1fvI+Bk988Z3ilqH7AEtRTlkqhTSxwS
-WbkxJyIV7rgZP771sUKW64QT/+ow8ykUv7colOzojZCTuoTSj+CJRFJTegXEdzqT
-Cvw9N+UB5yA6qf0X1Tfj977CbAvfjcnNvWWKNl/BNK+nzrQbhUyn7Nlk5gCF0B6X
-XVB/NGO8CunzqeJw3LbJ1ZQunBN0vLJzn8kHUZFq+cX9RKYoLr8fXYVyf3rKPrga
-DX42UcgYMzhut1phARP3paSnbGouAXQVX2v+4TzfeilZvRcSNSBYQx/3Tb42gqLV
-cU4MbyvBiGt2l9xv0XVE3RSSXyoZv3vrG2F2fvIJT3cIQvX/3E+sZLrVeZJSbFu1
-RLy7VQJpVGCZsIS20hG0KdIRbvdhTsxz9zbFc26QUlF3dQXaQw2vZInOqHxbUZtT
-8q+ZQJfGR9YgooxO1aF+7tglOWqL+7qCXcMaeWJDzFOk0wTbkMBdNabX0M7XzAb5
-bWQWrOUCHwKWx4B5++CF
-=g//a
+iQIcBAEBAgAGBQJS9wohAAoJEIoxce82YVDO+poQAJXjLqwZUwj0HggWiXsroGnE
+JMGmVo3OUJhq1b46yLVGEOo1G4dou/krYtQLuXDWwQ+VHsKTGgNntF3y8109MWjg
+RTwp6GJvSbR0EpgxOFUjV1ZfKXeRZHMhT40nmMxilmxkqU1zkwPyilq3aBLMPTFf
+tzbOwA32/334teJmaBLU+/nHo01VffFhH2cPkpGHmX4j1l42XPrfmAJ8BcOMNaBk
+tZnagcWV1/U+8ckwhAiSLetSz101u1HQrS+zG1uVCWyiTWt3IEJD4aLGrFPZgSbs
+oj9bg06E+rAHdkUr/XsAaYtGg3w5MW6VsqMYsbiewhi/QrpU2Vwj7GZdXZznANxe
+wWfbE8PJ3oKMjfMHXAWl1PSzb2Is9ELf1cY8On1diU+7iDFnMPfDhIWy3pVb67ed
+xXJy3kPF69SOTQL2gNjXTZGR/hP2ppuRpFAoC9TPR/EOEXhFLbwJU8TyB1cReEvw
+5FqYRsps2C9f64UNnPvrC0V9yPa2ytBnKeRX0yW/HkO55dioGkOsorMhpdm2IiOM
+syiTortt+YAL6chfaWi4JY6itKlW5NO/9BCmhsXQ7fHWLg4lIxYqn4ZrdgT7MxYE
+zyqoBpuhCsOR0BZqxlSJjGFjZrDiA1E500QKq6Bas47WGxBR8FeSm8/l6S44gpe+
+/9YDIrSQVTPuwRfiLx9u
+=H7K4
 -----END PGP SIGNATURE-----
