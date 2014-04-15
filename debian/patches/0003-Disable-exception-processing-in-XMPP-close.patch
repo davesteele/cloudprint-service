@@ -1,7 +1,6 @@
-From 1fbe470f76cf2b997121c0299f0bfb3698ae5e10 Mon Sep 17 00:00:00 2001
 From: David Steele <dsteele@gmail.com>
 Date: Wed, 8 Jan 2014 00:49:19 -0500
-Subject: [PATCH 1/5] Disable exception processing in XMPP close()
+Subject: Disable exception processing in XMPP close()
 
 When re-establising a lost connection, it was causing an exception
 before the XMPP connection is attempted, requiring a restart to
@@ -37,6 +36,3 @@ index 64b1935..59231f4 100644
  
  
      def is_connected(self):
--- 
-1.8.5.2
-

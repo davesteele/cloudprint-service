@@ -1,7 +1,6 @@
-From ecb6d6072d4dd9213fd17986578e92fedd82435e Mon Sep 17 00:00:00 2001
 From: Stephen Blott <smblott+github@gmail.com>
 Date: Tue, 21 Jan 2014 10:10:41 +0000
-Subject: [PATCH 08/12] Documentation (and minor code cleanup).
+Subject: Documentation (and minor code cleanup).
 
 ---
  README.rst               | 23 +++++++++++++++++++++++
@@ -9,7 +8,7 @@ Subject: [PATCH 08/12] Documentation (and minor code cleanup).
  2 files changed, 35 insertions(+), 10 deletions(-)
 
 diff --git a/README.rst b/README.rst
-index db1d604..fb23eb7 100644
+index cca9e42..0f50acc 100644
 --- a/README.rst
 +++ b/README.rst
 @@ -39,6 +39,29 @@ Example
@@ -43,10 +42,10 @@ index db1d604..fb23eb7 100644
  ---------------------------------------------------
  
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 69c2837..7c891c3 100755
+index 24c5a53..2903bbf 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -297,13 +297,12 @@ class App(object):
+@@ -291,13 +291,12 @@ class App(object):
      def run(self):
          process_jobs(self.cups_connection, self.cpp, self.printers)
  
@@ -65,7 +64,7 @@ index 69c2837..7c891c3 100755
  
  def sync_printers(cups_connection, cpp):
      local_printer_names = set(cups_connection.getPrinters().keys())
-@@ -311,8 +310,11 @@ def sync_printers(cups_connection, cpp):
+@@ -305,8 +304,11 @@ def sync_printers(cups_connection, cpp):
      remote_printer_names = set(remote_printers)
  
      #Include/exclude local printers
@@ -79,10 +78,10 @@ index 69c2837..7c891c3 100755
  
      #New printers
      for printer_name in local_printer_names - remote_printer_names:
-@@ -416,8 +418,8 @@ def usage():
+@@ -402,8 +404,8 @@ def usage():
+     print '\t\t\t\t\t <Google password>'
      print '-c\t\t: establish and store login credentials, then exit'
      print '-f\t\t: use fast poll if notifications are not working'
-     print '-u\t\t: store username/password in addition to login token'
 -    print '-i regexp\t: include files matching regexp'
 -    print '-e regexp\t: exclude files matching regexp'
 +    print '-i regexp\t: include local printers matching regexp'
@@ -90,6 +89,3 @@ index 69c2837..7c891c3 100755
      print '\t\t regexp: a Python regexp, which is matched against the start of the printer name'
      print '-v\t\t: verbose logging'
      print '-h\t\t: display this help'
--- 
-1.8.5.2
-

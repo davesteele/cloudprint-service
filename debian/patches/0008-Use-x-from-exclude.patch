@@ -1,7 +1,6 @@
-From 7a6b98ef5035663c5d8c20307d3142317d960fe3 Mon Sep 17 00:00:00 2001
 From: Stephen Blott <smblott+github@gmail.com>
 Date: Tue, 21 Jan 2014 10:24:26 +0000
-Subject: [PATCH 10/12] Use -x from exclude.
+Subject: Use -x from exclude.
 
 ---
  README.rst               | 4 ++--
@@ -9,12 +8,12 @@ Subject: [PATCH 10/12] Use -x from exclude.
  2 files changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/README.rst b/README.rst
-index fb23eb7..40bbe73 100644
+index 0f50acc..4fd567b 100644
 --- a/README.rst
 +++ b/README.rst
 @@ -21,7 +21,7 @@ Usage
-   -u              : store username/password in addition to login token
-                     to avoid authentication expiration
+   -c              : establish and store login credentials, then exit
+   -f              : 'fast poll', if notifications aren't working
    -i regexp       : include files matching regexp
 -  -e regexp       : exclude filees matching regexp
 +  -x regexp       : exclude filees matching regexp
@@ -31,12 +30,12 @@ index fb23eb7..40bbe73 100644
  By default, all printers are included.  For the include and exclude options,
  the argument is a regular expression which is matched against the start of the
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 941931a..bf31425 100755
+index 87db52f..6e024ea 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -416,13 +416,13 @@ def usage():
+@@ -402,13 +402,13 @@ def usage():
+     print '-c\t\t: establish and store login credentials, then exit'
      print '-f\t\t: use fast poll if notifications are not working'
-     print '-u\t\t: store username/password in addition to login token'
      print '-i regexp\t: include local printers matching regexp'
 -    print '-e regexp\t: exclude local printers matching regexp'
 +    print '-x regexp\t: exclude local printers matching regexp'
@@ -45,13 +44,13 @@ index 941931a..bf31425 100755
      print '-h\t\t: display this help'
  
  def main():
--    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cuvfi:e:')
-+    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cuvfi:x:')
+-    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cvfi:e:')
++    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cvfi:x:')
      daemon = False
      logout = False
      pidfile = None
-@@ -454,7 +454,7 @@ def main():
-             storepw = True
+@@ -437,7 +437,7 @@ def main():
+             fastpoll = True
          elif o == '-i':
              include.append(a)
 -        elif o == '-e':
@@ -59,6 +58,3 @@ index 941931a..bf31425 100755
              exclude.append(a)
          elif o =='-h':
              usage()
--- 
-1.8.5.2
-

@@ -1,16 +1,15 @@
-From 4ec1a475e4f9b01e70c3d399d61dafbaa046c5b4 Mon Sep 17 00:00:00 2001
 From: David Steele <dsteele@gmail.com>
 Date: Tue, 19 Nov 2013 21:31:07 -0500
-Subject: [PATCH 3/5] Remove alternate username/pw auth file format
+Subject: Remove alternate username/pw auth file format
 
-... in prefernce for a sasl file with optional username/pw.
+... in preference for a sasl file with optional username/pw.
 ---
  README.rst               |  2 --
  cloudprint/cloudprint.py | 14 +++-----------
  2 files changed, 3 insertions(+), 13 deletions(-)
 
 diff --git a/README.rst b/README.rst
-index df0fd97..b8f2d53 100644
+index 4fd567b..9c8cf2f 100644
 --- a/README.rst
 +++ b/README.rst
 @@ -16,8 +16,6 @@ Usage
@@ -21,12 +20,12 @@ index df0fd97..b8f2d53 100644
 -                                          <Google password>
    -c              : establish and store login credentials, then exit
    -f              : 'fast poll', if notifications aren't working
-   -h              : display this help
+   -i regexp       : include files matching regexp
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index d116037..cc04657 100755
+index 0163837..d4bf067 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -385,8 +385,6 @@ def usage():
+@@ -402,8 +402,6 @@ def usage():
      print '-l\t\t: logout of the google account'
      print '-p pid_file\t: path to write the pid to (default cloudprint.pid)'
      print '-a account_file\t: path to google account ident data (default ~/.cloudprintauth)'
@@ -34,8 +33,8 @@ index d116037..cc04657 100755
 -    print '\t\t\t\t\t <Google password>'
      print '-c\t\t: establish and store login credentials, then exit'
      print '-f\t\t: use fast poll if notifications are not working'
-     print '-v\t\t: verbose logging'
-@@ -451,15 +449,9 @@ def main():
+     print '-i regexp\t: include local printers matching regexp'
+@@ -477,15 +475,9 @@ def main():
          LOGGER.info('logged out')
          return
  
@@ -53,7 +52,7 @@ index d116037..cc04657 100755
            cpp.username = raw_input('Google username: ')
            cpp.password = getpass.getpass()
  
-@@ -490,7 +482,7 @@ def main():
+@@ -523,7 +515,7 @@ def main():
              print 'daemon module required for -d'
              print '\tyum install python-daemon, or apt-get install python-daemon, or pip install python-daemon'
              sys.exit(1)
@@ -62,6 +61,3 @@ index d116037..cc04657 100755
          app = App(cups_connection=cups_connection,
                    cpp=cpp, printers=printers,
                    pidfile_path=os.path.abspath(pidfile))
--- 
-1.8.5.2
-

@@ -1,14 +1,13 @@
-From d2dda2bab52b25e553be068d89dba0c09b0aaba0 Mon Sep 17 00:00:00 2001
 From: Stephen Blott <smblott+github@gmail.com>
 Date: Tue, 21 Jan 2014 07:27:59 +0000
-Subject: [PATCH 06/12] First functional include/exclude.
+Subject: First functional include/exclude.
 
 ---
  cloudprint/cloudprint.py | 25 ++++++++++++++++++++++++-
  1 file changed, 24 insertions(+), 1 deletion(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 2538779..1a12065 100755
+index cdbf27f..5e15a09 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -13,6 +13,7 @@ import getpass
@@ -19,16 +18,16 @@ index 2538779..1a12065 100755
  import logging
  import logging.handlers
  
-@@ -56,6 +57,8 @@ class CloudPrintProxy(object):
+@@ -55,6 +56,8 @@ class CloudPrintProxy(object):
+         self.username = None
          self.password = None
          self.sleeptime = 0
-         self.storepw = False
 +        self.include = []
 +        self.exclude = []
  
      def get_auth(self):
          if self.auth:
-@@ -295,11 +298,22 @@ class App(object):
+@@ -289,11 +292,22 @@ class App(object):
          process_jobs(self.cups_connection, self.cpp, self.printers)
  
  
@@ -51,28 +50,28 @@ index 2538779..1a12065 100755
      #New printers
      for printer_name in local_printer_names - remote_printer_names:
          try:
-@@ -406,7 +420,7 @@ def usage():
+@@ -392,7 +406,7 @@ def usage():
      print '-h\t\t: display this help'
  
  def main():
--    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cuvf')
-+    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cuvfi:e:')
+-    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cvf')
++    opts, args = getopt.getopt(sys.argv[1:], 'dlhp:a:cvfi:e:')
      daemon = False
      logout = False
      pidfile = None
-@@ -416,6 +430,8 @@ def main():
+@@ -401,6 +415,8 @@ def main():
+     verbose = False
      saslauthfile = None
      fastpoll = False
-     storepw = False
 +    include = []
 +    exclude = []
      for o, a in opts:
          if o == '-d':
              daemon = True
-@@ -434,6 +450,10 @@ def main():
+@@ -417,6 +433,10 @@ def main():
+             verbose = True
+         elif o == '-f':
              fastpoll = True
-         elif o == '-u':
-             storepw = True
 +        elif o == '-i':
 +            include.append(a)
 +        elif o == '-e':
@@ -80,7 +79,7 @@ index 2538779..1a12065 100755
          elif o =='-h':
              usage()
              sys.exit()
-@@ -476,6 +496,9 @@ def main():
+@@ -462,6 +482,9 @@ def main():
            cpp.username = raw_input('Google username: ')
            cpp.password = getpass.getpass()
  
@@ -90,6 +89,3 @@ index 2538779..1a12065 100755
      #try to login
      while True:
          try:
--- 
-1.8.5.2
-

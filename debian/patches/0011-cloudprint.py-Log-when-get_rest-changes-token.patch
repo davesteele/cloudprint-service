@@ -1,17 +1,16 @@
-From ee8a4bd3f52a0b4ae97c97df5d974f4c3f6ad42f Mon Sep 17 00:00:00 2001
 From: David Steele <dsteele@gmail.com>
 Date: Fri, 8 Nov 2013 09:37:33 -0500
-Subject: [PATCH 2/5] cloudprint.py: Log when get_rest() changes token
+Subject: cloudprint.py: Log when get_rest() changes token
 
 ---
  cloudprint/cloudprint.py | 1 +
  1 file changed, 1 insertion(+)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index f09a354..d116037 100755
+index 2a546f2..0163837 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -140,6 +140,7 @@ class CloudPrintProxy(object):
+@@ -143,6 +143,7 @@ class CloudPrintProxy(object):
                  def f(*arg, **karg):
                      r = attr(*arg, **karg)
                      if 'update-client-auth' in r.headers:
@@ -19,6 +18,3 @@ index f09a354..d116037 100755
                          self.set_auth(r.headers['update-client-auth'])
                      return r
                  return f
--- 
-1.8.5.2
-

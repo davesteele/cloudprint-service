@@ -1,17 +1,16 @@
-From a4537dcee7e9fd859d719bdf1ae58f41c3acfe1d Mon Sep 17 00:00:00 2001
 From: Stephen Blott <smblott+github@gmail.com>
 Date: Wed, 22 Jan 2014 07:17:45 +0000
-Subject: [PATCH 11/12] Remove whitespace, response to comment from @armooo.
+Subject: Remove whitespace, response to comment from @armooo.
 
 ---
  cloudprint/cloudprint.py | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index bf31425..797bca4 100755
+index 6e024ea..36982a3 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -310,8 +310,8 @@ def sync_printers(cups_connection, cpp):
+@@ -304,8 +304,8 @@ def sync_printers(cups_connection, cpp):
      remote_printer_names = set(remote_printers)
  
      #Include/exclude local printers
@@ -22,6 +21,3 @@ index bf31425..797bca4 100755
  
      #New printers
      for printer_name in local_printer_names - remote_printer_names:
--- 
-1.8.5.2
-

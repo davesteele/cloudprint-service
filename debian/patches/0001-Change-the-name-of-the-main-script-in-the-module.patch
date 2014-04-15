@@ -1,0 +1,25 @@
+From: David Steele <dsteele@gmail.com>
+Date: Mon, 14 Apr 2014 21:21:44 -0400
+Subject: Change the name of the main script in the module
+
+To support the Debian convention of having the script and the
+identically-named module in the same directory.
+
+This is a Debian-only patch.
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index ce5f16d..d064d57 100644
+--- a/setup.py
++++ b/setup.py
+@@ -27,7 +27,7 @@ setup(
+     packages=find_packages(exclude=['ez_setup']),
+     entry_points = {
+         'console_scripts': [
+-            'cloudprint = cloudprint.cloudprint:main',
++            'cloudprint-cmd = cloudprint.cloudprint:main',
+         ],
+     },
+ )

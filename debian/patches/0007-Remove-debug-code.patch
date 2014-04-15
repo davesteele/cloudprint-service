@@ -1,17 +1,16 @@
-From bddb7dfc10f4fc90254823018aceaeb18fb0248d Mon Sep 17 00:00:00 2001
 From: Stephen Blott <smblott+github@gmail.com>
 Date: Tue, 21 Jan 2014 10:11:08 +0000
-Subject: [PATCH 09/12] Remove debug code.
+Subject: Remove debug code.
 
 ---
  cloudprint/cloudprint.py | 3 ---
  1 file changed, 3 deletions(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 7c891c3..941931a 100755
+index 2903bbf..87db52f 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -313,9 +313,6 @@ def sync_printers(cups_connection, cpp):
+@@ -307,9 +307,6 @@ def sync_printers(cups_connection, cpp):
      local_printer_names = set([ prn for prn in local_printer_names if     match_re(prn,cpp.include,True) ])
      local_printer_names = set([ prn for prn in local_printer_names if not match_re(prn,cpp.exclude     ) ])
  
@@ -21,6 +20,3 @@ index 7c891c3..941931a 100755
      #New printers
      for printer_name in local_printer_names - remote_printer_names:
          try:
--- 
-1.8.5.2
-

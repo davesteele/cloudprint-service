@@ -1,7 +1,6 @@
-From e4bc43d2f322bb37af4bc4642b51b21a67e6ae68 Mon Sep 17 00:00:00 2001
 From: Stephen Blott <smblott+github@gmail.com>
 Date: Tue, 21 Jan 2014 07:41:50 +0000
-Subject: [PATCH 07/12] Code cleanup, documentation.
+Subject: Code cleanup, documentation.
 
 ---
  README.rst               | 4 ++++
@@ -9,13 +8,13 @@ Subject: [PATCH 07/12] Code cleanup, documentation.
  2 files changed, 10 insertions(+), 3 deletions(-)
 
 diff --git a/README.rst b/README.rst
-index 91ef4ee..db1d604 100644
+index df0fd97..cca9e42 100644
 --- a/README.rst
 +++ b/README.rst
 @@ -20,6 +20,10 @@ Usage
+                                           <Google password>
+   -c              : establish and store login credentials, then exit
    -f              : 'fast poll', if notifications aren't working
-   -u              : store username/password in addition to login token
-                     to avoid authentication expiration
 +  -i regexp       : include files matching regexp
 +  -e regexp       : exclude filees matching regexp
 +                    regexp: a Python regexp, which is matched against the
@@ -24,10 +23,10 @@ index 91ef4ee..db1d604 100644
  
  Google accounts with 2 step verification enabled need to use an
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 1a12065..69c2837 100755
+index 5e15a09..24c5a53 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -298,7 +298,7 @@ class App(object):
+@@ -292,7 +292,7 @@ class App(object):
          process_jobs(self.cups_connection, self.cpp, self.printers)
  
  
@@ -36,7 +35,7 @@ index 1a12065..69c2837 100755
  def match_any(printer, regexps):
      for e in regexps:
          if re.match(e, printer, re.UNICODE):
-@@ -310,8 +310,8 @@ def sync_printers(cups_connection, cpp):
+@@ -304,8 +304,8 @@ def sync_printers(cups_connection, cpp):
      remote_printers = dict([(p.name, p) for p in cpp.get_printers()])
      remote_printer_names = set(remote_printers)
  
@@ -47,16 +46,13 @@ index 1a12065..69c2837 100755
      local_printer_names = set([ printer for printer in local_printer_names if not match_any(printer,cpp.exclude) ])
  
      #New printers
-@@ -416,6 +416,9 @@ def usage():
+@@ -402,6 +402,9 @@ def usage():
+     print '\t\t\t\t\t <Google password>'
      print '-c\t\t: establish and store login credentials, then exit'
      print '-f\t\t: use fast poll if notifications are not working'
-     print '-u\t\t: store username/password in addition to login token'
 +    print '-i regexp\t: include files matching regexp'
 +    print '-e regexp\t: exclude files matching regexp'
 +    print '\t\t regexp: a Python regexp, which is matched against the start of the printer name'
      print '-v\t\t: verbose logging'
      print '-h\t\t: display this help'
  
--- 
-1.8.5.2
-
