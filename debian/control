@@ -4,7 +4,7 @@ Section: net
 Priority: optional
 Build-Depends: python-setuptools (>= 0.6b3), python (>= 2.6.6-3), debhelper (>= 7.4.3)
 Standards-Version: 3.9.5
-X-Python-Version: >= 2.6
+X-Python-Version: >= 2.7
 Homepage: http://davesteele.github.io/cloudprint-service/
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
 Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b release
