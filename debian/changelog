@@ -2,6 +2,7 @@ cloudprint (0.11-4) unstable; urgency=low
 
   * Reworked the build process for git-buildpackage.
   * Require system-log-daemon instead of rsyslog.
+  * Update the home page and VCS URLs.
   * Update to latest upstream:
     - Use argparse, and require Python 2.7.
     - Don't specify /dev/log for the logger.
