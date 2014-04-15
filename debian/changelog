@@ -1,3 +1,19 @@
+cloudprint (0.11-4) unstable; urgency=low
+
+  * Reworked the build process for git-buildpackage.
+  * Require system-log-daemon instead of rsyslog.
+  * Update to latest upstream:
+    - Use argparse, and require Python 2.7.
+    - Don't specify /dev/log for the logger.
+
+ -- David Steele <dsteele@gmail.com>  Mon, 14 Apr 2014 22:02:29 -0400
+
+cloudprint (0.11-3.1) cloudprintppa; urgency=low
+
+  * Release for 'cloudprintppa' dist, with hw-dependent Python Dep
+
+ -- David Steele <dsteele@gmail.com>  Sat, 08 Feb 2014 23:44:57 -0500
+
 cloudprint (0.11-3) unstable; urgency=low
 
   * Add support for cloudprint -i/-x.
