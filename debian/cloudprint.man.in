@@ -1,20 +1,23 @@
 .\" Copyright 2013 David Steele <dsteele@gmail.com>
 .\" This file is part of cloudprint
 .\" Available under the terms of the GNU General Public License version 2 or later
-.TH cloudprint 1 "24 April 2013" Linux "User Commands"
+.TH PROG 1 2014-04-16 Linux "User Commands"
 .SH NAME
-cloudprint \- share CUPS printers with Google Cloud Print
+PROG \- share CUPS printers with Google Cloud Print
 
 .SH SYNOPSIS
-\fBcloudprint\fP [\fIOPTION\fP]...
+\fBPROG\fP [\fIOPTION\fP]...
 
 .SH DESCRIPTION
-The \fBcloudprint\fP script makes locally defined CUPS printers available to
+The \fBPROG\fP script makes locally defined CUPS printers available to
 a Google account, enabling local or remote printing from such services as
 the Chrome browser, Chrome OS devices, or Android devices.
 
 This is a lower-level command. Cloud Print services would normally be managed
 through the cloudprint service.
+
+The cloudprint utility is linked as cloudprintd for the cloudprint-service
+package.
 
 .SH OPTIONS
 .TP
@@ -35,7 +38,7 @@ include local printers matching regular expression from the start of the printer
 .TP
 \fB\-l\fR
 log out of the Google account. This deletes the account identification file, requiring reauthentication the next time
-cloudprint is run.
+PROG is run.
 .TP
 \fB\-p\fR \fI<pid_file>\fR
 path to PID file in daemon mode (default \fIcloudprint.pid\fP).
@@ -52,7 +55,7 @@ exclude local printers matching regular expression from the start of the printer
 \fB\-h\fR
 display help
 .PP
-\fBcloudprint\fR will prompt for a username and password if the information has not been provided.
+\fBPROG\fR will prompt for a username and password if the information has not been provided.
 
 If two-factor authentication is enabled for the account, then an application-specific password must be used.
 
@@ -65,4 +68,4 @@ Default location for storing account authentication credentials
 Default location for storing internal authentication tokens
 
 .SH SEE ALSO
-.BR cloudprint-service(8)
+.BR cloudprint-service(7), cloudprintd(8), cloudprint(1)
