@@ -17,7 +17,7 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC=cloudprintd
 NAME=cloudprint
-DAEMON=/usr/bin/cloudprint
+DAEMON=/usr/sbin/cloudprintd
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$DESC ] && . /etc/default/$DESC
