@@ -21,7 +21,17 @@ set -e
 case "$1" in
     configure)
 
-    install -d -o root -m 0700 /var/lib/cloudprint
+    install -d -o root -m 0700 /var/lib/cloudprintd
+
+    for auth in authfile authfile.sasl ; do \
+        if [ -f /var/lib/cloudprint/$auth ] ; then \
+            mv /var/lib/cloudprint/$auth /var/lib/cloudprintd/$auth; \
+        fi \
+    done
+
+    if [ -d /var/lib/cloudprint ] ; then \
+        rmdir /var/lib/cloudprint ; \
+    fi
 
     ;;
 

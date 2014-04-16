@@ -22,7 +22,7 @@ set -e
 case "$1" in
     purge|abort-install|disappear)
 
-    rm -rf /var/lib/cloudprint || true
+    rm -rf /var/lib/cloudprintd || true
 
     ;;
 

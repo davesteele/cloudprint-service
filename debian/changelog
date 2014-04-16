@@ -6,6 +6,10 @@ cloudprint (0.11-4) unstable; urgency=low
   * Update to latest upstream:
     - Use argparse, and require Python 2.7.
     - Don't specify /dev/log for the logger.
+  * Standardize 'cloudprintd' as a name:
+    - Create cloudprintd as a link to cloudprint for the init.
+    - cloudprintd man page.
+    - Store cloudprint-service auth in /var/lib/cloudprintd.
 
  -- David Steele <dsteele@gmail.com>  Mon, 14 Apr 2014 22:02:29 -0400
 
