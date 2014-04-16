@@ -1,4 +1,3 @@
 cloudprint.egg-info/*
-README.md
 debian/cloudprint.1
 debian/cloudprintd.8
