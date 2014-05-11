@@ -14,6 +14,11 @@
 
 # Author: David Steele <dsteele@gmail.com>
 
+# Copyright 2014 David Steele <dsteele@gmail.com>
+# This file is part of cloudprint
+# Available under the terms of the GNU General Public License version 2 or later
+
+
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC=cloudprintd
 NAME=cloudprint
