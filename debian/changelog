@@ -1,3 +1,11 @@
+cloudprint (0.11-5) unstable; urgency=low
+
+  * Fix init.d functionality breakage from daemon rename in 0.11-4.
+  * Incorporate upstream copyright headers.
+  * Drop the upstream log device reassignment patch.
+
+ -- David Steele <dsteele@gmail.com>  Sun, 11 May 2014 00:21:28 -0400
+
 cloudprint (0.11-4) unstable; urgency=low
 
   * Reworked the build process for git-buildpackage.
