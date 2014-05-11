@@ -16,3 +16,4 @@
 0016-Use-argparse-args.patch
 0017-Fix-broken-reference-to-authfile.patch
 0018-Do-not-give-an-address-to-SysLogHandler.patch
+0019-Add-copywrite-headers-to-source-files.patch
