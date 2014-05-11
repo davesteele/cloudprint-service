@@ -31,7 +31,7 @@ index e69de29..4ad7dff 100644
 +# You should have received a copy of the GNU General Public License
 +# along with cloudprint.  If not, see <http://www.gnu.org/licenses/>.
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 14d9368..0f4042a 100755
+index da840c1..7eb1f8c 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -1,4 +1,21 @@
