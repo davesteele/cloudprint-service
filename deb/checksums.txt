@@ -16,6 +16,9 @@ c0647ed12748c20a9a6f211758b04fe4  cloudprint-service_0.10-6_all.deb
 b62c6444bcd60e08121f0d182c21cee1  cloudprint-service_0.11-2_all.deb
 a7b576394134cbba133a06e03ee21bae  cloudprint-service_0.11-3.1_all.deb
 3dc189625d2d153348778fb076c23c09  cloudprint-service_0.11-3_all.deb
+2af4a37e14cb89d4b2c686dd04d4aeb6  cloudprint-service_0.11-4_all.deb
+0c096df17d4483cd73b62f58ccb34c4b  cloudprint-service_0.11-5.1_all.deb
+d0d6eb70db83dc112d708505ccf6395f  cloudprint-service_0.11-5_all.deb
 2f68694cf9b47217786e911bc32d7cd0  cloudprint_0.10-1_all.deb
 698ab7e2a80489fbb3c7ffab1493d94b  cloudprint_0.10-2_all.deb
 85e0dfcf8933a12258e4ed8f54673197  cloudprint_0.10-3_all.deb
@@ -30,6 +33,9 @@ aa85774cdd71402a52c8c90ca59bb606  cloudprint_0.11-2.1_all.deb
 1480957ee22ab8ad46e7d0866f875c1c  cloudprint_0.11-2_all.deb
 555128c68676a7c598b2cc39b6f70d85  cloudprint_0.11-3.1_all.deb
 3612a14bf74a430f9727535bff4b6c45  cloudprint_0.11-3_all.deb
+d19bfed93caee1b0529daf099c239307  cloudprint_0.11-4_all.deb
+6435bba0a23300ba6dcee612c94c425c  cloudprint_0.11-5.1_all.deb
+375a2f9b7b65155d3633bf3bed0978ee  cloudprint_0.11-5_all.deb
 
 SHA1
 882ca96ce5fc136e3732b3cddd8fa49ee22452f5  cloudprint-service_0.10-1_all.deb
@@ -46,6 +52,9 @@ e4a6cbf55bf1c9c0bba569db86a948877884b159  cloudprint-service_0.11-1_all.deb
 15fd8c3b7d446dd87321d0975dcbaf94a9fb8013  cloudprint-service_0.11-2_all.deb
 3a77844ff35b097884aa858fa322ebab3054b4e6  cloudprint-service_0.11-3.1_all.deb
 0afc6e6e3b5ebe4bcf95b08c902256f53f055b68  cloudprint-service_0.11-3_all.deb
+ec8ad46d4c9af0b729c629ca8712d026f8fd36c8  cloudprint-service_0.11-4_all.deb
+2dbfeb97412503180b5e82c85fbb5a14e85ba6e3  cloudprint-service_0.11-5.1_all.deb
+011f90812dfe35251c41d6cd4a2b29ce24f52ff7  cloudprint-service_0.11-5_all.deb
 cf42aa74e159e19d75198b56b2f6b0ec5a6b4187  cloudprint_0.10-1_all.deb
 d63e322878f3e4ffe410292625ef9bdd61dff8df  cloudprint_0.10-2_all.deb
 8b5327b0767115c9dc490d2f88c370149cae01aa  cloudprint_0.10-3_all.deb
@@ -60,6 +69,9 @@ e7561b88b942532088d0777825856336d805ad9b  cloudprint_0.11-2.1_all.deb
 f9b775e6ddbe29fd343cdc4660142a94588e04d3  cloudprint_0.11-2_all.deb
 18c30af538943175baa032a85c0097a39baf5f35  cloudprint_0.11-3.1_all.deb
 ca7f48afe5bc38279c24fe56f723f3ea3b106510  cloudprint_0.11-3_all.deb
+059fb26c9593701b3c11351a7e1f4085587fbeb5  cloudprint_0.11-4_all.deb
+82e11aaa6cca204dd1eed19bdd5d32b0383d1c6d  cloudprint_0.11-5.1_all.deb
+1a44a16983498953e569e62442a1767fae8ea399  cloudprint_0.11-5_all.deb
 
 SHA256
 12402337e11364fc718446b9553f383cc6cd68b02b10c2ae6c5690fe592994a4  cloudprint-service_0.10-1_all.deb
@@ -76,6 +88,9 @@ dea57c321e52d3934cb2ae57bcedb2069d58bee60d76d7b95a060825d84d9605  cloudprint-ser
 0288a00d0b10657d8970b8943a106591fe4287a5b9770d102c39be70c152ab89  cloudprint-service_0.11-2_all.deb
 5a071ff5b4a052c4d070aedb152c0170c5607d64a50944c6e7fc3f11971f34bc  cloudprint-service_0.11-3.1_all.deb
 196ccb192d365ddf2d9c1f74619a927dc1e9572a23b985392cb9bfeec2a32410  cloudprint-service_0.11-3_all.deb
+d3cbeb08b249f35d76b281549a588caa8e07f50c0a1a8b9b3e8874d603c43c86  cloudprint-service_0.11-4_all.deb
+dde088e582f3c07d6b5b974a6f14ad82b64a17151efa118922939e7f2ac9075d  cloudprint-service_0.11-5.1_all.deb
+c3036220f7caa3c0bf1600ef7d7ba0cbe6dc5fde81f0bd7d70eb2856101974bb  cloudprint-service_0.11-5_all.deb
 bba7ffb7f64fe50e62cd54675ce24e6d0cb0803cf565660f201cd1ac1c4b6621  cloudprint_0.10-1_all.deb
 01933af79cf35479bdb11fb2f2cceadb93f9969b510cbbde655960728fb5fcab  cloudprint_0.10-2_all.deb
 31c29f63eaac13f46ec38d3f26335c16fb433fc9a18440c44ed8db10402a0b46  cloudprint_0.10-3_all.deb
@@ -90,21 +105,24 @@ f3aca519a19187e01d44abc21f022af8b4ffd495818f541416d1549a9fb1d77c  cloudprint_0.1
 95e5ec836ff940327aca052376c81d8281de78e3a1856622dbdb67c7284b28de  cloudprint_0.11-2_all.deb
 d0712a6a69684c278fa3cafc0ef60b66a4ef8ddcdf9eb2414480f71c69de68f7  cloudprint_0.11-3.1_all.deb
 85a92de0bbae2263bdb603dddfec2b2a9aafa8a95d058cba6261c87d4d0f57bc  cloudprint_0.11-3_all.deb
+a879366184648dc72cd0d40e9841ffb3f47f51f70bb58743979afe62644e26f0  cloudprint_0.11-4_all.deb
+70f28191afd340d4dfb5c46d469d32c65fb2ed04c5d7ea94813d9d8e3e863acc  cloudprint_0.11-5.1_all.deb
+d7d05400ea3661b34c18401e4df8431ecd7e9fe76d70e919a6cb1bdae7d96f6d  cloudprint_0.11-5_all.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQIcBAEBAgAGBQJS9wohAAoJEIoxce82YVDO+poQAJXjLqwZUwj0HggWiXsroGnE
-JMGmVo3OUJhq1b46yLVGEOo1G4dou/krYtQLuXDWwQ+VHsKTGgNntF3y8109MWjg
-RTwp6GJvSbR0EpgxOFUjV1ZfKXeRZHMhT40nmMxilmxkqU1zkwPyilq3aBLMPTFf
-tzbOwA32/334teJmaBLU+/nHo01VffFhH2cPkpGHmX4j1l42XPrfmAJ8BcOMNaBk
-tZnagcWV1/U+8ckwhAiSLetSz101u1HQrS+zG1uVCWyiTWt3IEJD4aLGrFPZgSbs
-oj9bg06E+rAHdkUr/XsAaYtGg3w5MW6VsqMYsbiewhi/QrpU2Vwj7GZdXZznANxe
-wWfbE8PJ3oKMjfMHXAWl1PSzb2Is9ELf1cY8On1diU+7iDFnMPfDhIWy3pVb67ed
-xXJy3kPF69SOTQL2gNjXTZGR/hP2ppuRpFAoC9TPR/EOEXhFLbwJU8TyB1cReEvw
-5FqYRsps2C9f64UNnPvrC0V9yPa2ytBnKeRX0yW/HkO55dioGkOsorMhpdm2IiOM
-syiTortt+YAL6chfaWi4JY6itKlW5NO/9BCmhsXQ7fHWLg4lIxYqn4ZrdgT7MxYE
-zyqoBpuhCsOR0BZqxlSJjGFjZrDiA1E500QKq6Bas47WGxBR8FeSm8/l6S44gpe+
-/9YDIrSQVTPuwRfiLx9u
-=H7K4
+iQIcBAEBAgAGBQJTcEOJAAoJEIoxce82YVDO/OoQAIFWqduitEglFIYBRpDOy6nG
+QSK/UF7xVQ30vFM/0bUqsGX91yKpt9rfeTYuUp6CAGlPxu7OTG796O85u6keSxO7
+9DPJ4It0I6YPdzyYw101hXU5ooQNnsDe6E0RodJwI74klTnF7pH8dga3Ewz3NA+X
+nDdOUEcsQi08GDUlRxD0I96wDzttnhEhILf8mJGCWrXJlfXNiwjjnFLIEtRNd46Q
+5HYg7HmLlrgR7fvMT/wGqO4woJeDK3AlXRmXK1yep+i9OBNmHggRi6ArXmF2KFHg
+P8ztTFLkG/tjo3VawG+UuPnKuTVswcbzh+W7jawC1vrv7/nFiZsSNob5vKp0GzBv
+zX+lcpSaS8dJ5vTABIJ1It9U6xEi1+HbA1q7BT+d4SxXUJpTROXHVE1hv11dqcTm
+D6G+w0P4a2OGjIiiUovnd6XbQL3SVWvcfIuPanpr6yAXYX4l9C7J+Lu7FimKosru
+VICTKfEXppZhkbx5Lne7ifj/bBI1nDVwJ8zfZDhj/lHi7emsY3WL07zPPv+cBfYC
+32nIf6jSZNmICf2VOEkB58vVtGSzmpiaOI1SnZVwcmNPm2BHRIHjhaiMEzc7mBIp
+OBpubZ9RXlyk0unlKSoQV7SlJZimGt3ky1U10o6cvsqNb1gb1UKNvwiXQsv4PUoF
+7w3D0a7a7uPYAaTvtFOZ
+=8+wb
 -----END PGP SIGNATURE-----
