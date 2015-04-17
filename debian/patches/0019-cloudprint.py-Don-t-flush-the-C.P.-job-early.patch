@@ -1,0 +1,33 @@
+From: David Steele <dsteele@gmail.com>
+Date: Thu, 16 Apr 2015 20:50:35 -0400
+Subject: cloudprint.py: Don't flush the C.P. job early
+
+process_job() was calling Cloud Print with a finish_job message
+before submitting to CUPS. If the CUPS job failed, the Cloud Print
+job would be gone, and the queue would list the job as 'Success'.
+
+By calling Cloud Print only after calling CUPS, failures will be
+properly propagated up to the Cloud Print queue.
+---
+ cloudprint/cloudprint.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 7eb1f8c..d74df4c 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -386,12 +386,12 @@ def process_job(cups_connection, cpp, printer, job):
+         if 'request' in options: del options['request']
+         options = dict( (str(k), str(v)) for k, v in options.items() )
+ 
+-        cpp.finish_job(job['id'])
+-
+         cups_connection.printFile(printer.name, tmp.name, job['title'], options)
+         os.unlink(tmp.name)
+         LOGGER.info('SUCCESS ' + job['title'].encode('unicode-escape'))
+ 
++        cpp.finish_job(job['id'])
++
+     except:
+         cpp.fail_job(job['id'])
+         LOGGER.error('ERROR ' + job['title'].encode('unicode-escape'))
