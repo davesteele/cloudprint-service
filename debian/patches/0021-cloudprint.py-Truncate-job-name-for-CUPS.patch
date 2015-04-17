@@ -1,0 +1,27 @@
+From: David Steele <dsteele@gmail.com>
+Date: Thu, 16 Apr 2015 21:13:51 -0400
+Subject: cloudprint.py: Truncate job name for CUPS
+
+CUPS will fail if the job name is longer.
+Thanks to Alexandre Bury.
+Closes davesteele/cloudprint-service#17.
+Addresses armooo/cloudprint#89
+Addresses armooo/cloudprint#88
+---
+ cloudprint/cloudprint.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index a80d0a0..1c2222c 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -392,7 +392,8 @@ def process_job(cups_connection, cpp, printer, job):
+         if 'request' in options: del options['request']
+         options = dict( (str(k), str(v)) for k, v in options.items() )
+ 
+-        cups_connection.printFile(printer.name, tmp.name, job['title'], options)
++        # Cap the title length to 255, or cups will complain about invalid job-name
++        cups_connection.printFile(printer.name, tmp.name, job['title'][:255], options)
+         os.unlink(tmp.name)
+         LOGGER.info('SUCCESS ' + job['title'].encode('unicode-escape'))
+ 
