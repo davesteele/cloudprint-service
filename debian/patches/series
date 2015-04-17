@@ -17,3 +17,4 @@
 0017-Fix-broken-reference-to-authfile.patch
 0018-Add-copywrite-headers-to-source-files.patch
 0019-cloudprint.py-Don-t-flush-the-C.P.-job-early.patch
+0020-cloudprint.py-retry-failed-print-jobs.patch
