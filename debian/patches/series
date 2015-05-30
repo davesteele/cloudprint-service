@@ -19,3 +19,4 @@
 0019-cloudprint.py-Don-t-flush-the-C.P.-job-early.patch
 0020-cloudprint.py-retry-failed-print-jobs.patch
 0021-cloudprint.py-Truncate-job-name-for-CUPS.patch
+0022-OAuth2-support.patch
