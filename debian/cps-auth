@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ ! -n "$1" ] ; then
+    echo "Usage: $0 <google user name>";
+    exit -1;
+fi
+
+xhost local:root
+
+LUSER=`whoami`
+GUSER=$1
+sudo bash -c "rm -f /var/lib/cloudprintd/authfile; cloudprint -c -u $GUSER -a /var/lib/cloudprintd/authfile"

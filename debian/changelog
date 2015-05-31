@@ -1,3 +1,10 @@
+cloudprint (0.11-7) UNRELEASED; urgency=medium
+
+  * OAuth2 support, since the old SASL is not longer working.
+        (Closes: 787102)
+
+ -- David Steele <dsteele@gmail.com>  Sat, 30 May 2015 16:44:05 -0400
+
 cloudprint (0.11-6) unstable; urgency=low
 
   * Limit print jobs names to avoid CUPS fail (thanks Alexandre Bury).

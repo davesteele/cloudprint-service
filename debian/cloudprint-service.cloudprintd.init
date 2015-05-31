@@ -39,7 +39,7 @@ done
 
 AUTHFILE=/var/lib/cloudprintd/authfile
 PIDFILE=/var/run/$NAME.pid
-DAEMON_ARGS="-d -u -a $AUTHFILE -p $PIDFILE $FAST_POLL $INCLUDE_OPT"
+DAEMON_ARGS="-d -a $AUTHFILE -p $PIDFILE $FAST_POLL $INCLUDE_OPT"
 SCRIPTNAME=/etc/init.d/$DESC
 
 # Exit if the package is not installed
@@ -84,7 +84,7 @@ do_login()
 
 	echo "Accounts with 2 factor authentication require an application-specific password"
 
-	$DAEMON -c -u -a $AUTHFILE $INCLUDE_OPT
+	$DAEMON -c -a $AUTHFILE $INCLUDE_OPT
 
 }
 
