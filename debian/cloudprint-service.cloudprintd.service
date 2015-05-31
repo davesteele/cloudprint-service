@@ -1,0 +1,10 @@
+[Unit]
+Description=Google Cloud Print proxy service
+After=cups.service
+
+[Service]
+ExecStart=/usr/sbin/cloudprintd -a /var/lib/cloudprintd/authfile
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

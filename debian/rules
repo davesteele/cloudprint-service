@@ -4,7 +4,7 @@
 # Tue, 23 Apr 2013 19:42:12 -0400
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2,systemd
 
 override_dh_auto_install:
 	python setup.py install --root=debian/cloudprint --install-layout=deb --install-lib=/usr/share/cloudprint --install-scripts=/usr/share/cloudprint
@@ -15,7 +15,7 @@ override_dh_auto_build:
 	/bin/sed 's/cloudprintd 1/cloudprintd 8/' debian/cloudprintd.8 >debian/cloudprintd.8.tmp
 	/bin/mv debian/cloudprintd.8.tmp debian/cloudprintd.8
 
+override_dh_systemd_enable:
+	dh_systemd_enable --name=cloudprintd
 
-override_dh_installinit:
-	dh_installinit --name=cloudprintd
 

@@ -1,0 +1,22 @@
+.\" Copyright 2013-2015 David Steele <dsteele@gmail.com>
+.\" This file is part of cloudprint
+.\" Available under the terms of the GNU General Public License version 2 or later
+.TH cloudprint-auth 1 2015-05-31 Linux "User Commands"
+.SH NAME
+cloudprint-auth \- acquire OAuth2 credentials remotely for cloudprint-service
+
+.SH SYNOPSIS
+\fBcloudprint-auth\fP [\fI<user name>\fP]
+
+.SH DESCRIPTION
+The \fBcloudprint-auth\fP performs the OAuth2 authentication for \fBcloudprint\fR
+or \fBcloudprint-service\fR, and outputs the credentials to stdout, in the format
+for the cloudprint authentication file. It is intended for remote use when
+the \fBcloudprint-service\fR server does not have a graphical environment.
+
+\fBcloudprint\fR authentication files are stored by default in
+\fI~/.cloudprintauth\fR. For \fBcloudprint-service\fR, the file is at
+\fI/var/lib/cloudprint/authfile\fR.
+
+.SH SEE ALSO
+.BR cloudprint-service(7), cloudprintd(8), cloudprint(1), cps-auth(1)

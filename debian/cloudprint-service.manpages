@@ -1,2 +1,4 @@
 debian/cloudprint-service.7
 debian/cloudprintd.8
+debian/cps-auth.1
+debian/cloudprint-auth.1

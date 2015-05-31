@@ -1,15 +1,15 @@
-.\" Copyright 2013-2014 David Steele <dsteele@gmail.com>
+.\" Copyright 2013-2015 David Steele <dsteele@gmail.com>
 .\" This file is part of cloudprint
 .\" Available under the terms of the GNU General Public License version 2 or later
-.TH PROG 1 2014-04-16 Linux "User Commands"
+.TH cloudprint 1 2015-05-31 Linux "User Commands"
 .SH NAME
-PROG \- share CUPS printers with Google Cloud Print
+cloudprint \- share CUPS printers with Google Cloud Print
 
 .SH SYNOPSIS
-\fBPROG\fP [\fIOPTION\fP]...
+\fBcloudprint\fP [\fIOPTION\fP]...
 
 .SH DESCRIPTION
-The \fBPROG\fP script makes locally defined CUPS printers available to
+The \fBcloudprint\fP script makes locally defined CUPS printers available to
 a Google account, enabling local or remote printing from such services as
 the Chrome browser, Chrome OS devices, or Android devices.
 
@@ -38,13 +38,13 @@ include local printers matching regular expression from the start of the printer
 .TP
 \fB\-l\fR
 log out of the Google account. This deletes the account identification file, requiring reauthentication the next time
-PROG is run.
+cloudprint is run.
 .TP
 \fB\-p\fR \fI<pid_file>\fR
 path to PID file in daemon mode (default \fIcloudprint.pid\fP).
 .TP
-\fB\-u\fR
-store username/password in addition to login token to avoid authentication expiration.
+\fB\-u\fR \fI<user name>\fR
+the Google service user name to use if authentication is needed.
 .TP
 \fB\-v\fR
 verbose logging.
@@ -55,7 +55,7 @@ exclude local printers matching regular expression from the start of the printer
 \fB\-h\fR
 display help
 .PP
-\fBPROG\fR will prompt for a username and password if the information has not been provided.
+\fBcloudprint\fR will prompt for a username and password if the information has not been provided.
 
 If two-factor authentication is enabled for the account, then an application-specific password must be used.
 
@@ -68,4 +68,4 @@ Default location for storing account authentication credentials
 Default location for storing internal authentication tokens
 
 .SH SEE ALSO
-.BR cloudprint-service(7), cloudprintd(8), cloudprint(1)
+.BR cloudprint-service(7), cloudprintd(8), cloudprint(1), cps-auth(1)
