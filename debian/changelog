@@ -1,4 +1,11 @@
-cloudprint (0.11-7) UNRELEASED; urgency=medium
+cloudprint (0.11-8) UNRELEASED; urgency=low
+
+  * Fixes to declared dependencies.
+  * Better GUI detection.
+
+ -- David Steele <dsteele@gmail.com>  Wed, 03 Jun 2015 19:30:04 -0400
+
+cloudprint (0.11-7) unstable; urgency=low
 
   * OAuth2 support, since the old SASL is not longer working.
         (Closes: 787102)
