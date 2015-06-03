@@ -57,7 +57,6 @@ display help
 .PP
 \fBcloudprint\fR will prompt for a username and password if the information has not been provided.
 
-If two-factor authentication is enabled for the account, then an application-specific password must be used.
 
 .SH FILES
 .TP
