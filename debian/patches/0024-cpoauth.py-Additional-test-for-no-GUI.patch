@@ -1,0 +1,21 @@
+From: David Steele <dsteele@gmail.com>
+Date: Wed, 3 Jun 2015 19:11:28 -0400
+Subject: cpoauth.py: Additional test for no GUI
+
+---
+ cloudprint/cpoauth.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cloudprint/cpoauth.py b/cloudprint/cpoauth.py
+index 7178ff8..a3bc42b 100755
+--- a/cloudprint/cpoauth.py
++++ b/cloudprint/cpoauth.py
+@@ -17,7 +17,7 @@ try:
+     from gi.repository import Gdk
+     from gi.repository import GLib
+     from gi.repository import WebKit
+-except ImportError:
++except (ImportError, RuntimeError):
+     # graphical login optional
+     pass
+ 
