@@ -8,10 +8,10 @@ Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
 Filename: pool/main/c/cloudprint/cloudprint_0.11-8_all.deb
-Size: 15634
-SHA256: 15779d3bb7733f4b268647d67ee1a45a3529c9878336ac787ebfb2befacf7c03
-SHA1: ad17b39514b0ac95f31810344725b1ec4751079f
-MD5sum: 8711023ba66ed918cfb61d2369439288
+Size: 15636
+SHA256: 084d93798c162c879ce622f4917f19cb263a1a4b16bc0bd34f9e694195b42d9f
+SHA1: ecd949724355d60e919b4bad2a43c97b4de969d0
+MD5sum: 450e134c44c01b1bd77683bfc00a9e21
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -29,10 +29,10 @@ Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
 Filename: pool/main/c/cloudprint/cloudprint-service_0.11-8_all.deb
-Size: 8940
-SHA256: 71965230aa04bc13e6f3c6f81a307e3ec05d06d73196ee06c5ffd2e922b1eb72
-SHA1: 3f200dc61be5318ae76ec087b63503ab16d4d373
-MD5sum: e59d7066f87f813af717e524259358f6
+Size: 8938
+SHA256: 54e4a93f106ecd3a39518a27fa0e9638cc83a5616a0e47aa07061adab6bdbe65
+SHA1: 0617415277503f77a6bdede748767b861a8751bf
+MD5sum: 5df93e5b2e3f695f5fb44b661f8fc2e1
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
