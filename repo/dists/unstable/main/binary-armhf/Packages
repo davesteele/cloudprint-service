@@ -1,17 +1,17 @@
 Package: cloudprint
-Version: 0.11-7
+Version: 0.11-8
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
-Installed-Size: 72
+Installed-Size: 74
 Depends: python-cups, cups, python-daemon, python:any (>= 2.7), python-pkg-resources, rsyslog | system-log-daemon
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint_0.11-7_all.deb
-Size: 15486
-SHA256: 872683c66ed14b85ecd3658d903388694dd316627d09b94ff8d3f0dfee3afc3f
-SHA1: 1207a96930734d0e0d4a0a22a6e0941a5dc25b92
-MD5sum: b53a3cf3919ee272834404252d3bdc3a
+Filename: pool/main/c/cloudprint/cloudprint_0.11-8_all.deb
+Size: 15634
+SHA256: 15779d3bb7733f4b268647d67ee1a45a3529c9878336ac787ebfb2befacf7c03
+SHA1: ad17b39514b0ac95f31810344725b1ec4751079f
+MD5sum: 8711023ba66ed918cfb61d2369439288
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -19,20 +19,20 @@ Description: Google Cloud Print proxy
 
 Package: cloudprint-service
 Source: cloudprint
-Version: 0.11-7
+Version: 0.11-8
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 35
-Depends: cloudprint, init-system-helpers (>= 1.18~), initscripts (>= 2.88dsf-13.3)
+Depends: cloudprint, init-system-helpers (>= 1.18~), systemd, python-gi, python-webkit
 Provides: cloudprintd
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint-service_0.11-7_all.deb
-Size: 8976
-SHA256: fa7feed99b89cf859bf766f7abc6442af396933a6c73e93717fbcd614d23132a
-SHA1: 8c7f62242d3dd7426a8e4f9a20cac665c2d4ce5d
-MD5sum: 9040e233660b57bc3595972246c19825
+Filename: pool/main/c/cloudprint/cloudprint-service_0.11-8_all.deb
+Size: 8940
+SHA256: 71965230aa04bc13e6f3c6f81a307e3ec05d06d73196ee06c5ffd2e922b1eb72
+SHA1: 3f200dc61be5318ae76ec087b63503ab16d4d373
+MD5sum: e59d7066f87f813af717e524259358f6
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
