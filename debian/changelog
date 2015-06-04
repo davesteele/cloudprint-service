@@ -1,4 +1,4 @@
-cloudprint (0.11-8) UNRELEASED; urgency=low
+cloudprint (0.11-8) unstable; urgency=low
 
   * Fixes to declared dependencies.
   * Better GUI detection.
