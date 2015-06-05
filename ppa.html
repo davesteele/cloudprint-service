@@ -49,17 +49,12 @@ $ sudo apt-get install cloudprint cloudprint-service
 </pre>
 The packages will be updated with every 'apt-get upgrade'.
 <br><br>
-Login to Cloud Print (as root):<br><br>
+Login to Cloud Print (a browser window will appear):<br><br>
 <pre>
-# service cloudprintd login
-Accounts with 2 factor authentication require an application-specific password
-Google username: &lt;username&gt;
-Password: &lt;password&gt;
-Updated Printer MFCJ5910DW
+# cps-auth <account name>
 ...
-# service cloudprintd start
-# service cloudprintd status
-[ ok ] cloudprint is running.
+# sudo systemctl start cloudprintd.service
+# systemctl status cloudprintd.service
 </pre>
 
 The service will start automatically from this point on.
