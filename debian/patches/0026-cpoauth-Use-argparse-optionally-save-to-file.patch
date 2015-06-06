@@ -1,0 +1,65 @@
+From: David Steele <dsteele@gmail.com>
+Date: Sat, 6 Jun 2015 08:46:32 -0400
+Subject: cpoauth: Use argparse - optionally save to file
+
+Conflicts:
+	cloudprint/cpoauth.py
+
+Conflicts:
+	cloudprint/cpoauth.py
+---
+ cloudprint/cpoauth.py | 28 ++++++++++++++++++----------
+ 1 file changed, 18 insertions(+), 10 deletions(-)
+
+diff --git a/cloudprint/cpoauth.py b/cloudprint/cpoauth.py
+index 8a6cf24..17bba9a 100755
+--- a/cloudprint/cpoauth.py
++++ b/cloudprint/cpoauth.py
+@@ -12,6 +12,7 @@ import string
+ import json
+ import random
+ import webbrowser
++import argparse
+ 
+ class CPOAuth():
+     """oauth mechanism per
+@@ -119,22 +120,29 @@ class CPOAuth():
+         yield self.generate_tokens(login)
+ 
+ def main():
+-    if len(sys.argv) != 2:
+-        print "Usage: %s <account name>" % sys.argv[0]
+-        sys.exit(-1)
++    parser = argparse.ArgumentParser(
++                        description='Perform cloudprint authorization')
++    parser.add_argument('-o', dest='output', default='-',
++            help="authorization storage file",)
++    parser.add_argument('user', nargs =1,
++            help="Cloud Print user name" )
+ 
+-    login = sys.argv[1]
++    args = parser.parse_args()
++
++    login = args.user[0]
+     if '@' not in login:
+         login += '@gmail.com'
+ 
+     oauth = CPOAuth()
+-    try:
+-        access, refresh = oauth.generate_tokens(login)
++    access, refresh = oauth.generate_tokens(login)
++
++    authdata = "%s\n%s\n%s" % (login, access, refresh)
+ 
+-        print("%s\n%s\n%s" % (login, access, refresh))
+-    except NameError:
+-        print("GNOME environment required")
+-        sys.exit(-1)
++    if args.output == '-':
++        print(authdata)
++    else:
++        with open(args.output, 'w') as fp:
++            fp.write(authdata)
+ 
+ if __name__ == '__main__':
+     main()

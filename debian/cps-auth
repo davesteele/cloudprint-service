@@ -1,12 +1,16 @@
 #!/bin/bash
 
+GUSER=$1
+AUTHTEMP=/tmp/authtemp
+
 if [ ! -n "$1" ] ; then
     echo "Usage: $0 <google user name>";
     exit -1;
 fi
 
-xhost local:root
+cloudprint-auth $GUSER -o $AUTHTEMP
 
-LUSER=`whoami`
-GUSER=$1
-sudo bash -c "rm -f /var/lib/cloudprintd/authfile; cloudprint -c -u $GUSER -a /var/lib/cloudprintd/authfile"
+sudo cp $AUTHTEMP /var/lib/cloudprintd/authfile
+
+rm -f $AUTHTEMP
+

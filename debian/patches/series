@@ -22,3 +22,5 @@
 0022-OAuth2-support.patch
 0023-cpoauth.py-Proper-error-if-no-GNOME-desktop.patch
 0024-cpoauth.py-Additional-test-for-no-GUI.patch
+0025-Remove-GNOME-requirement-for-OAuth2.patch
+0026-cpoauth-Use-argparse-optionally-save-to-file.patch

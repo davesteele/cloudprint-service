@@ -1,0 +1,103 @@
+From: David Steele <dsteele@gmail.com>
+Date: Fri, 5 Jun 2015 21:18:33 -0400
+Subject: Remove GNOME requirement for OAuth2
+
+Use webbrowser to open the window, and prompt for a code copy
+from the browser window.
+---
+ cloudprint/cpoauth.py | 63 ++++++++++++---------------------------------------
+ 1 file changed, 14 insertions(+), 49 deletions(-)
+
+diff --git a/cloudprint/cpoauth.py b/cloudprint/cpoauth.py
+index a3bc42b..8a6cf24 100755
+--- a/cloudprint/cpoauth.py
++++ b/cloudprint/cpoauth.py
+@@ -11,23 +11,7 @@ import os
+ import string
+ import json
+ import random
+-
+-try:
+-    from gi.repository import Gtk
+-    from gi.repository import Gdk
+-    from gi.repository import GLib
+-    from gi.repository import WebKit
+-except (ImportError, RuntimeError):
+-    # graphical login optional
+-    pass
+-
+-def mute_stderr():
+-    sys.stderr.flush()
+-    newstderr = os.dup(2)
+-    devnull = os.open(os.devnull, os.O_WRONLY)
+-    os.dup2(devnull, 2)
+-    os.close(devnull)
+-    sys.stderr = os.fdopen(newstderr, 'w')
++import webbrowser
+ 
+ class CPOAuth():
+     """oauth mechanism per
+@@ -44,20 +28,11 @@ class CPOAuth():
+         self.scope = "https://www.googleapis.com/auth/cloudprint https://www.googleapis.com/auth/googletalk"
+         self.client_id = "875709648124-9se38ubihuo24jbddog9r787rvlh42q1.apps.googleusercontent.com"
+         self.client_secret = "Y2No0EPTJyYgZh0MjpdM8eMH"
+-        self.win_valid = False
+-
+ 
+     def get_code(self, login_hint):
+         s=string.lowercase + string.uppercase + string.digits
+         state = ''.join(random.sample(s,10))
+ 
+-        mute_stderr()
+-
+-        GLib.threads_init()
+-        win = Gtk.Window()
+-        win.set_title("")
+-        bro = WebKit.WebView()
+-
+         args = { "response_type": "code",
+              "client_id": self.client_id,
+              "redirect_uri": "urn:ietf:wg:oauth:2.0:oob",
+@@ -68,29 +43,19 @@ class CPOAuth():
+ 
+         code_url= "%s?%s" % (self.auth_endpoint, urllib.urlencode(args))
+ 
+-        bro.open(code_url)
+-        win.add(bro)
+-        win.resize(600,600)
+-
+-        self.win_valid=True
+-        def win_closed(window, self):
+-           self.win_valid = False
+-        win.connect("destroy", win_closed, self)
+-
+-        win.show_all()
+-
+-        code = None
+-        count = 0
+-        while self.win_valid:
+-            Gtk.main_iteration_do(False)
+-            bro_title = bro.get_title()
+-            if not win.get_property("visible"):
+-                count += 1
+-                if count > 100:
+-                    self.win_valid = False
+-            if bro_title and state in bro_title:
+-                code = bro_title.split("=")[-1]
+-                win.hide()
++        saveout = os.dup(1)
++        os.close(1)
++        os.open(os.devnull, os.O_RDWR)
++        saveout2 = os.dup(2)
++        os.close(2)
++        os.open(os.devnull, os.O_RDWR)
++        try:
++            webbrowser.open(code_url, 1, True)
++        finally:
++            os.dup2(saveout, 1)
++            os.dup2(saveout2, 2)
++
++        code = raw_input("Enter code from browser authentication: ")
+ 
+         return code
+ 

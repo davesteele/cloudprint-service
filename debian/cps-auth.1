@@ -9,9 +9,10 @@ cps-auth \- Perform OAuth2 authentication for cloudprint-service
 \fBcps-auth\fR [\fI<user name>\fR]
 
 .SH DESCRIPTION
-The \fBcps-auth\fR provide a sudo wrapper for entering the required OAuth2 credentials for
-\fBcloudprint-service\fR. It will launch a browser window to complete the transaction, and then store
-the credentials locally for \fBcloudprint-service\fR.
+The \fBcps-auth\fR provide a sudo wrapper for entering the required OAuth2
+credentials for \fBcloudprint-service\fR. It will launch a browser window
+to complete the transaction, request a code from the browser session, and then
+store the credentials locally for \fBcloudprint-service\fR.
 
 See \fBcloudprint-auth\fR for an alternative mechanism, if a graphical desktop is not available
 on the \fBcloudprint-service\fR server.
