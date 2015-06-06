@@ -1,3 +1,11 @@
+cloudprint (0.11-9) unstable; urgency=low
+
+  * Remove the GNOME requirement for OAuth2.
+  * Remove old sysv-init files on install.
+  * Other minor changes.
+
+ -- David Steele <dsteele@gmail.com>  Fri, 05 Jun 2015 21:25:55 -0400
+
 cloudprint (0.11-8) unstable; urgency=low
 
   * Fixes to declared dependencies.
