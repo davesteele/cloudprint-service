@@ -1,17 +1,17 @@
 Package: cloudprint
-Version: 0.11-8
+Version: 0.11-9
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 74
-Depends: python-cups, cups, python-daemon, python:any (>= 2.7), python-pkg-resources, rsyslog | system-log-daemon
+Depends: python-cups, cups, python-daemon (<= 1.6), python:any (>= 2.7), python-pkg-resources, rsyslog | system-log-daemon
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint_0.11-8_all.deb
-Size: 15636
-SHA256: 084d93798c162c879ce622f4917f19cb263a1a4b16bc0bd34f9e694195b42d9f
-SHA1: ecd949724355d60e919b4bad2a43c97b4de969d0
-MD5sum: 450e134c44c01b1bd77683bfc00a9e21
+Filename: pool/main/c/cloudprint/cloudprint_0.11-9_all.deb
+Size: 15380
+SHA256: ce56601e406ea4881eb0be826e15da9ec00a437e66141bb431b0f5e67ff22d2f
+SHA1: fbb06fb23998dff91f0a3e8d16121f1c1407024b
+MD5sum: c0994ff8c0e017758ca2dac5bcfb3481
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -19,20 +19,20 @@ Description: Google Cloud Print proxy
 
 Package: cloudprint-service
 Source: cloudprint
-Version: 0.11-8
+Version: 0.11-9
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
-Installed-Size: 35
-Depends: cloudprint, init-system-helpers (>= 1.18~), systemd, python-gi, python-webkit
+Installed-Size: 36
+Depends: cloudprint, init-system-helpers (>= 1.18~), systemd
 Provides: cloudprintd
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint-service_0.11-8_all.deb
-Size: 8938
-SHA256: 54e4a93f106ecd3a39518a27fa0e9638cc83a5616a0e47aa07061adab6bdbe65
-SHA1: 0617415277503f77a6bdede748767b861a8751bf
-MD5sum: 5df93e5b2e3f695f5fb44b661f8fc2e1
+Filename: pool/main/c/cloudprint/cloudprint-service_0.11-9_all.deb
+Size: 8814
+SHA256: c295fd9fefdcb17238fbfb92e6d9e6f2f7ee1818cd38dda3d812f28e9d955e5a
+SHA1: 7b7615ce4c9981583dc6c56029ff982237acbb12
+MD5sum: 2a0334a9356e534e880db2b8a319db78
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
