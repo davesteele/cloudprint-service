@@ -33,6 +33,13 @@ case "$1" in
         rmdir /var/lib/cloudprint ; \
     fi
 
+    if [ -e /etc/init.d/cloudprintd ] ; then \
+        rm -f /etc/init.d/cloudprintd;
+        if [ -x update-rc.d ] ; then \
+            update-rc.d cloudprintd remove; \
+        fi ; \
+    fi
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
