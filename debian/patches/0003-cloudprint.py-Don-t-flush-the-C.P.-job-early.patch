@@ -8,17 +8,20 @@ job would be gone, and the queue would list the job as 'Success'.
 
 By calling Cloud Print only after calling CUPS, failures will be
 properly propagated up to the Cloud Print queue.
+
+Conflicts:
+	cloudprint/cloudprint.py
 ---
  cloudprint/cloudprint.py | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 7eb1f8c..d74df4c 100755
+index 8878887..7812539 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -386,12 +386,12 @@ def process_job(cups_connection, cpp, printer, job):
-         if 'request' in options: del options['request']
-         options = dict( (str(k), str(v)) for k, v in options.items() )
+@@ -385,12 +385,12 @@ def process_job(cups_connection, cpp, printer, job):
+ 
+         options = dict((str(k), str(v)) for k, v in options.items())
  
 -        cpp.finish_job(job['id'])
 -
@@ -28,6 +31,6 @@ index 7eb1f8c..d74df4c 100755
  
 +        cpp.finish_job(job['id'])
 +
-     except:
+     except Exception:
          cpp.fail_job(job['id'])
-         LOGGER.error('ERROR ' + job['title'].encode('unicode-escape'))
+         LOGGER.exception('ERROR ' + job['title'].encode('unicode-escape'))

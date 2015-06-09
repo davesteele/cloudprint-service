@@ -12,12 +12,12 @@ Addresses armooo/cloudprint#88
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index a80d0a0..1c2222c 100755
+index a63eff6..c84cf00 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -392,7 +392,8 @@ def process_job(cups_connection, cpp, printer, job):
-         if 'request' in options: del options['request']
-         options = dict( (str(k), str(v)) for k, v in options.items() )
+@@ -389,7 +389,8 @@ def process_job(cups_connection, cpp, printer, job):
+ 
+         options = dict((str(k), str(v)) for k, v in options.items())
  
 -        cups_connection.printFile(printer.name, tmp.name, job['title'], options)
 +        # Cap the title length to 255, or cups will complain about invalid job-name

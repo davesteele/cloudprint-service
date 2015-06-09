@@ -12,12 +12,12 @@ This uses Debian conventions, and is therefore Debian-only.
  1 file changed, 4 insertions(+)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index f09a354..cdbf27f 100755
+index 22295a5..8878887 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -484,6 +484,10 @@ def main():
+@@ -486,6 +486,10 @@ def main():
  
-     if daemon:
+     if args.daemon:
          try:
 +            # workaround to avoid overloaded module
 +            prepath = '/usr/lib/pymodules/python%s.%s' % sys.version_info[0:2]
