@@ -1,2 +1,2 @@
 version=3
-https://pypi.python.org/pypi/cloudprint/ .+cloudprint-(.+)\.tar\.gz
+http://pypi.debian.net/cloudprint/ .+cloudprint-(.+)\.tar\.gz
