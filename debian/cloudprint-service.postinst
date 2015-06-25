@@ -40,6 +40,10 @@ case "$1" in
         fi ; \
     fi
 
+    if [ -e /etc/init.d/cloudprintd/authfile ] ; then \
+        rm -f /etc/init.d/cloudprintd/authfile;
+    fi
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

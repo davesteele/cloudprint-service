@@ -3,7 +3,7 @@ Description=Google Cloud Print proxy service
 After=cups.service
 
 [Service]
-ExecStart=/usr/sbin/cloudprintd -a /var/lib/cloudprintd/authfile
+ExecStart=/usr/sbin/cloudprintd -a /var/lib/cloudprintd/authfile.json
 Type=simple
 
 [Install]
