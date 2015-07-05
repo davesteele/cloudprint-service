@@ -1,16 +1,9 @@
 #!/bin/bash
 
-GUSER=$1
-AUTHTEMP=/tmp/authtemp
+AUTHDIR=/var/lib/cloudprintd
+AUTHFILE=$AUTHDIR/authfile.json
 
-if [ ! -n "$1" ] ; then
-    echo "Usage: $0 <google user name>";
-    exit -1;
-fi
+if [ ! -w $AUTHDIR ] ; then echo "Must run as root" ; exit 1 ; fi
 
-cloudprint-auth $GUSER -o $AUTHTEMP
-
-sudo cp $AUTHTEMP /var/lib/cloudprintd/authfile
-
-rm -f $AUTHTEMP
-
+rm -f $AUTHFILE
+cloudprint -c -a $AUTHFILE
