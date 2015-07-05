@@ -4,3 +4,4 @@
 0004-cloudprint.py-retry-failed-print-jobs.patch
 0005-cloudprint.py-Truncate-job-name-for-CUPS.patch
 0006-Update-for-new-python-deamon.patch
+0007-Spelling-claimed.patch
