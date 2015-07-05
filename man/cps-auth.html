@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Jun  6 09:27:27 2015 -->
+<!-- CreationDate: Sun Jul  5 13:01:08 2015 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -53,16 +53,14 @@ cloudprint-service</p>
 
 
 <p style="margin-left:11%; margin-top: 1em">The
-<b>cps-auth</b> provide a sudo wrapper for entering the
-required OAuth2 credentials for <b>cloudprint-service</b>.
-It will launch a browser window to complete the transaction,
-request a code from the browser session, and then store the
-credentials locally for <b>cloudprint-service</b>.</p>
+<b>cps-auth</b> provide a wrapper for entering the required
+OAuth2 credentials for <b>cloudprint-service</b>. It will
+prompt the user with a URL for claiming the printer, and
+wait for the process to complete. The credentials are stored
+for <b>cloudprint-service</b>.</p>
 
-<p style="margin-left:11%; margin-top: 1em">See
-<b>cloudprint-auth</b> for an alternative mechanism, if a
-graphical desktop is not available on the
-<b>cloudprint-service</b> server.</p>
+<p style="margin-left:11%; margin-top: 1em">The command
+must be run as root.</p>
 
 <h2>FILES
 <a name="FILES"></a>
@@ -70,7 +68,7 @@ graphical desktop is not available on the
 
 
 
-<p style="margin-left:11%; margin-top: 1em"><i>/var/lib/cloudprint/authfile</i></p>
+<p style="margin-left:11%; margin-top: 1em"><i>/var/lib/cloudprint/authfile.json</i></p>
 
 <p style="margin-left:22%;">Credential storage location</p>
 
@@ -81,7 +79,7 @@ graphical desktop is not available on the
 
 
 <p style="margin-left:11%; margin-top: 1em"><b>cloudprint-service(7),</b>cloudprintd(8),<b>cloudprint(1),</b>
-cps-auth(1), cloudprint-auth(1)</p>
+cps-auth(1)</p>
 <hr>
 </body>
 </html>
