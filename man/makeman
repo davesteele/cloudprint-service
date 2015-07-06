@@ -2,7 +2,7 @@
 
 
 
-for manpg in cloudprint cloudprint-service cloudprint-auth cps-auth ; do
+for manpg in cloudprint cloudprint-service cps-auth ; do
     (man -t $manpg|ps2pdf - $manpg.pdf);
     man -Thtml $manpg >$manpg.html;
 done

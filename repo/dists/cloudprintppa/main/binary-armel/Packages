@@ -1,5 +1,5 @@
 Package: cloudprint
-Version: 0.12-1
+Version: 0.12-2
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 64
@@ -7,11 +7,11 @@ Depends: python-cups, cups, python-daemon (>= 2.0), python (>= 2.7), python-pkg-
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint_0.12-1_all.deb
-Size: 13308
-SHA256: c93db4a938190523343ffc62e0c811595b706228e6d7884fddb66c32437f3ec0
-SHA1: d5b031528dd706fb238a0372830fa40d55e19b9e
-MD5sum: 11dbb6f7fdcd2e2e2fe846e07fff24ca
+Filename: pool/main/c/cloudprint/cloudprint_0.12-2_all.deb
+Size: 13360
+SHA256: 6ede9fc0ca9e7bff647bd55e8c65879783000957d8505645279141cd4670f4e2
+SHA1: c37b4058561698bdebf0ea6d89c164105dbf7c63
+MD5sum: 03fee367f71755b38dfd7265bda9cf92
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -19,7 +19,7 @@ Description: Google Cloud Print proxy
 
 Package: cloudprint-service
 Source: cloudprint
-Version: 0.12-1
+Version: 0.12-2
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 34
@@ -28,11 +28,11 @@ Provides: cloudprintd
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint-service_0.12-1_all.deb
-Size: 8190
-SHA256: 19b59395f054be8e30dffb4726554a250a81b5a1c4c0bcb63cfb4d6a0e07fbbe
-SHA1: 91912f330e8facd092af56af819f1578ca2e0abd
-MD5sum: c4a120b2675ca86b0839b310d74b7732
+Filename: pool/main/c/cloudprint/cloudprint-service_0.12-2_all.deb
+Size: 8288
+SHA256: 0e1a7818940c9fea18efd5bcaf9962dfc7c4b57925fe6cc456e8331156e58515
+SHA1: 8fd3ac2d6ea15b9ebc54cc86590fe06a3088373f
+MD5sum: 66c026417acded836d2aa1869c458d86
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
