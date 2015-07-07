@@ -40,10 +40,10 @@ case "$1" in
         fi ; \
     fi
 
-#   This is being called even if the upgrade is blocked - bad
-#    if [ -e /etc/init.d/cloudprintd/authfile ] ; then \
-#        rm -f /etc/init.d/cloudprintd/authfile;
-#    fi
+    if [ -e /etc/init.d/cloudprintd/authfile.json \
+            -a -e /etc/init.d/cloudprintd/authfile ] ; then \
+        rm -f /etc/init.d/cloudprintd/authfile;
+    fi
 
     ;;
 
