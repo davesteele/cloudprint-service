@@ -1,3 +1,9 @@
+cloudprint (0.12-3) unstable; urgency=low
+
+  * Clear out the old init file the right way (Closes: 791624).
+
+ -- David Steele <dsteele@gmail.com>  Mon, 06 Jul 2015 21:44:39 -0400
+
 cloudprint (0.12-2) unstable; urgency=low
 
   * Don't remove the old auth file, in case the upgrade fails.
