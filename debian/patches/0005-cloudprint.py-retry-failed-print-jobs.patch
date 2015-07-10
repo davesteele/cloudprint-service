@@ -14,7 +14,7 @@ Conflicts:
  1 file changed, 14 insertions(+), 3 deletions(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 7812539..a63eff6 100755
+index 27478d7..8ede2bf 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -56,6 +56,10 @@ FAIL_RETRY = 60

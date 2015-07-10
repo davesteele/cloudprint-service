@@ -16,7 +16,7 @@ Conflicts:
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 8878887..7812539 100755
+index d72415a..27478d7 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -385,12 +385,12 @@ def process_job(cups_connection, cpp, printer, job):

@@ -10,7 +10,7 @@ http://permalink.gmane.org/gmane.linux.debian.devel.python.modules/22964
  1 file changed, 8 insertions(+), 24 deletions(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index c84cf00..7026bdf 100755
+index a878d95..c0d6b73 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -312,21 +312,6 @@ class PrinterProxy(object):

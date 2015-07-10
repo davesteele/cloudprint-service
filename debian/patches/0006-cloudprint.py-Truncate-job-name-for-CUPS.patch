@@ -12,7 +12,7 @@ Addresses armooo/cloudprint#88
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index a63eff6..c84cf00 100755
+index 8ede2bf..a878d95 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -389,7 +389,8 @@ def process_job(cups_connection, cpp, printer, job):
