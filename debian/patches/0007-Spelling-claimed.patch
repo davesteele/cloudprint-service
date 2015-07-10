@@ -7,7 +7,7 @@ Subject: Spelling - 'claimed'
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 2975249..0105e02 100755
+index 7026bdf..14f5eaf 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -127,7 +127,7 @@ class CloudPrintAuth(object):
