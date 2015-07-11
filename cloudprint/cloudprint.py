@@ -56,6 +56,10 @@ FAIL_RETRY = 60
 # how often, in seconds, to send a keepalive character over xmpp
 KEEPALIVE = 600.0
 
+# failed job retries
+RETRIES = 1
+num_retries = 0
+
 LOGGER = logging.getLogger('cloudprint')
 LOGGER.setLevel(logging.INFO)
 
@@ -76,9 +80,8 @@ class CloudPrintAuth(object):
     @property
     def session(self):
         s = requests.session()
-        s.params['access_token'] = self._access_token
         s.headers['X-CloudPrint-Proxy'] = 'ArmoooIsAnOEM'
-        s.headers['Authorization'] = 'Authorization {0}'.format(self._access_token)
+        s.headers['Authorization'] = 'Bearer {0}'.format(self.access_token)
         return s
 
     @property
@@ -123,7 +126,7 @@ class CloudPrintAuth(object):
 
         self.xmpp_jid = poll['xmpp_jid']
         self.email = poll['user_email']
-        print 'Printer clammed by {0}.'.format(self.email)
+        print 'Printer claimed by {0}.'.format(self.email)
 
         token = requests.post(
             'https://accounts.google.com/o/oauth2/token',
@@ -189,9 +192,8 @@ class CloudPrintAuth(object):
 
 class CloudPrintProxy(object):
 
-    def __init__(self, auth, verbose=True):
+    def __init__(self, auth):
         self.auth = auth
-        self.verbose = verbose
         self.sleeptime = 0
         self.include = []
         self.exclude = []
@@ -214,8 +216,7 @@ class CloudPrintProxy(object):
                 'printerid': printer_id,
            },
         ).raise_for_status()
-        if self.verbose:
-            LOGGER.info('Deleted printer ' + printer_id)
+        LOGGER.debug('Deleted printer ' + printer_id)
 
     def add_printer(self, name, description, ppd):
         self.auth.session.post(
@@ -231,8 +232,7 @@ class CloudPrintProxy(object):
                 'capsHash': hashlib.sha1(ppd.encode('utf-8')).hexdigest(),
            },
         ).raise_for_status()
-        if self.verbose:
-            LOGGER.info('Added Printer ' + name)
+        LOGGER.debug('Added Printer ' + name)
 
     def update_printer(self, printer_id, name, description, ppd):
         self.auth.session.post(
@@ -249,8 +249,7 @@ class CloudPrintProxy(object):
                 'capsHash': hashlib.sha1(ppd.encode('utf-8')).hexdigest(),
            },
         ).raise_for_status()
-        if self.verbose:
-            LOGGER.info('Updated Printer ' + name)
+        LOGGER.debug('Updated Printer ' + name)
 
     def get_jobs(self, printer_id):
         docs = self.auth.session.post(
@@ -275,8 +274,7 @@ class CloudPrintProxy(object):
                 'status': 'DONE',
            },
         ).json()
-        if self.verbose:
-            LOGGER.info('Finished Job' + job_id)
+        LOGGER.debug('Finished Job' + job_id)
 
     def fail_job(self, job_id):
         self.auth.session.post(
@@ -287,8 +285,7 @@ class CloudPrintProxy(object):
                 'status': 'ERROR',
            },
         ).json()
-        if self.verbose:
-            LOGGER.info('Failed Job' + job_id)
+        LOGGER.debug('Failed Job' + job_id)
 
 
 class PrinterProxy(object):
@@ -306,21 +303,6 @@ class PrinterProxy(object):
 
     def delete(self):
         return self.cpp.delete_printer(self.id)
-
-
-class App(object):
-    def __init__(self, cups_connection=None, cpp=None, printers=None, pidfile_path=None):
-        self.cups_connection = cups_connection
-        self.cpp = cpp
-        self.printers = printers
-        self.pidfile_path = pidfile_path
-        self.stdin_path = '/dev/null'
-        self.stdout_path = '/dev/null'
-        self.stderr_path = '/dev/null'
-        self.pidfile_timeout = 5
-
-    def run(self):
-        process_jobs(self.cups_connection, self.cpp)
 
 
 #True if printer name matches *any* of the regular expressions in regexps
@@ -373,6 +355,8 @@ def sync_printers(cups_connection, cpp):
 
 
 def process_job(cups_connection, cpp, printer, job):
+    global num_retries
+
     try:
         pdf = cpp.auth.session.get(job['fileUrl'], stream=True)
         tmp = tempfile.NamedTemporaryFile(delete=False)
@@ -385,15 +369,22 @@ def process_job(cups_connection, cpp, printer, job):
 
         options = dict((str(k), str(v)) for k, v in options.items())
 
-        cpp.finish_job(job['id'])
-
-        cups_connection.printFile(printer.name, tmp.name, job['title'], options)
+        # Cap the title length to 255, or cups will complain about invalid job-name
+        cups_connection.printFile(printer.name, tmp.name, job['title'][:255], options)
         os.unlink(tmp.name)
         LOGGER.info('SUCCESS ' + job['title'].encode('unicode-escape'))
 
+        cpp.finish_job(job['id'])
+        num_retries = 0
+
     except Exception:
-        cpp.fail_job(job['id'])
-        LOGGER.exception('ERROR ' + job['title'].encode('unicode-escape'))
+        if num_retries >= RETRIES:
+            num_retries = 0
+            cpp.fail_job(job['id'])
+            LOGGER.error('ERROR ' + job['title'].encode('unicode-escape'))
+        else:
+            num_retries += 1
+            LOGGER.info('Job %s failed - Will retry' % job['title'].encode('unicode-escape'))
 
 
 def process_jobs(cups_connection, cpp):
@@ -451,6 +442,12 @@ def main():
         LOGGER.info('Setting DEBUG-level logging')
         LOGGER.setLevel(logging.DEBUG)
 
+        import httplib
+        httplib.HTTPConnection.debuglevel = 1
+        requests_log = logging.getLogger("requests.packages.urllib3")
+        requests_log.setLevel(logging.DEBUG)
+        requests_log.propagate = True
+
     auth = CloudPrintAuth(args.authfile)
     if args.logout:
         auth.delete()
@@ -486,21 +483,20 @@ def main():
 
     if args.daemon:
         try:
-            from daemon import runner
+            import daemon
+            import daemon.pidfile
         except ImportError:
             print 'daemon module required for -d'
-            print '\tyum install python-daemon, or apt-get install python-daemon, or pip install python-daemon'
+            print '\tyum install python-daemon, or apt-get install python-daemon, or pip install cloudprint[daemon]'
             sys.exit(1)
 
-        # XXX printers is the google list
-        app = App(
-            cups_connection=cups_connection,
-            cpp=cpp,
-            pidfile_path=os.path.abspath(args.pidfile)
+        pidfile = daemon.pidfile.TimeoutPIDLockFile(
+            path=os.path.abspath(args.pidfile),
+            timeout=5,
         )
-        sys.argv = [sys.argv[0], 'start']
-        daemon_runner = runner.DaemonRunner(app)
-        daemon_runner.do_action()
+        with daemon.DaemonContext(pidfile=pidfile):
+            process_jobs(cups_connection, cpp)
+
     else:
         process_jobs(cups_connection, cpp)
 
