@@ -1,3 +1,10 @@
+cloudprint (0.13-1) unstable; urgency=low
+
+  * Upstream update, with bug fixes
+      Closes: 792055
+
+ -- David Steele <dsteele@gmail.com>  Sat, 11 Jul 2015 01:09:04 -0400
+
 cloudprint (0.12-3) unstable; urgency=low
 
   * Clear out the old init file the right way (Closes: 791624).
