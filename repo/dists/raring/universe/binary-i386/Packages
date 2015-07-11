@@ -1,5 +1,5 @@
 Package: cloudprint
-Version: 0.12-3
+Version: 0.13-1
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 63
@@ -7,11 +7,11 @@ Depends: python-cups, cups, python-daemon (>= 2.0), python (>= 2.7), python-pkg-
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/universe/c/cloudprint/cloudprint_0.12-3_all.deb
-Size: 13248
-SHA256: aa1b3d7135f9b09463f1833c5691f36220f070af3f51b985d01eadbec2a7154a
-SHA1: b21144ac1832bcc73bb59098dbb729f74e26da8e
-MD5sum: cfa68aaf768627c91258de12519625f9
+Filename: pool/universe/c/cloudprint/cloudprint_0.13-1_all.deb
+Size: 13604
+SHA256: 574624ad956410786686d5c0419fc5be09382ee3a5f854b577deddacc734a7e9
+SHA1: d94022ca0d981ee7829b3fbf0be67f763507c4c4
+MD5sum: 157055d099345488e7c2d4769761b34b
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -19,7 +19,7 @@ Description: Google Cloud Print proxy
 
 Package: cloudprint-service
 Source: cloudprint
-Version: 0.12-3
+Version: 0.13-1
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 35
@@ -28,11 +28,11 @@ Provides: cloudprintd
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/universe/c/cloudprint/cloudprint-service_0.12-3_all.deb
-Size: 8330
-SHA256: d0b6b365bc94bf306f199e0a48beab6365a5d96a587506e1d9e05697957d8b5b
-SHA1: a1e881dd5c4622a365aa82ae7088e209f485c908
-MD5sum: e3967b79c30e8fb93da3bf78c8e120f7
+Filename: pool/universe/c/cloudprint/cloudprint-service_0.13-1_all.deb
+Size: 8386
+SHA256: 63d27ca9e08d149629e50ec1e7863a6fb18f54a15ac480565d6c0892538fe684
+SHA1: 67a1114ca8f1b7bc898227aafeac06e06ee47c4f
+MD5sum: 1fdf658dc6cff1d8f02843504a588c28
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
