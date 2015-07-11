@@ -11,11 +11,9 @@ This uses Debian conventions, and is therefore Debian-only.
  cloudprint/cloudprint.py | 4 ++++
  1 file changed, 4 insertions(+)
 
-diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 22295a5..8878887 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -486,6 +486,10 @@ def main():
+@@ -483,6 +483,10 @@
  
      if args.daemon:
          try:
@@ -23,6 +21,6 @@ index 22295a5..8878887 100755
 +            prepath = '/usr/lib/pymodules/python%s.%s' % sys.version_info[0:2]
 +            sys.path.insert(0, prepath)
 +
-             from daemon import runner
+             import daemon
+             import daemon.pidfile
          except ImportError:
-             print 'daemon module required for -d'
