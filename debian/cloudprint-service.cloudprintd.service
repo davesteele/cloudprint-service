@@ -5,6 +5,8 @@ After=cups.service
 [Service]
 ExecStart=/usr/sbin/cloudprintd -a /var/lib/cloudprintd/authfile.json
 Type=simple
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
