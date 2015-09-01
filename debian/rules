@@ -8,8 +8,10 @@
 
 override_dh_auto_install:
 	python setup.py install --root=debian/cloudprint --install-layout=deb --install-lib=/usr/share/cloudprint --install-scripts=/usr/share/cloudprint
+	find debian/cloudprint -type f -name '*.pyc' -delete
 
 override_dh_auto_build:
+	dh_auto_build
 	/bin/sed 's/PROG/cloudprint/g' debian/cloudprint.man.in >debian/cloudprint.1
 	/bin/sed 's/PROG/cloudprintd/g' debian/cloudprint.man.in >debian/cloudprintd.8
 	/bin/sed 's/cloudprintd 1/cloudprintd 8/' debian/cloudprintd.8 >debian/cloudprintd.8.tmp
