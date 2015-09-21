@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: cloudprint
-Version: 0.13
+Version: 0.14
 Summary: Google cloud print proxy for linux/OSX
 Home-page: https://github.com/armooo/cloudprint
 Author: Jason Michalski
