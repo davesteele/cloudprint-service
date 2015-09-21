@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='cloudprint',
-    version='0.13',
+    version='0.14',
     description='Google cloud print proxy for linux/OSX',
     long_description=open('README.rst').read(),
     author='Jason Michalski',
@@ -29,8 +29,9 @@ setup(
         ],
     },
     install_requires=[
-        'requests >= 2.7.0',
+        'argparse',
         'pycups',
+        'requests >= 2.7.0',
     ],
     extras_require={
         'daemon': ['python-daemon >= 2.0.0'],

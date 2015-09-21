@@ -13,6 +13,9 @@
 #
 # You should have received a copy of the GNU General Public License
 
+from __future__ import absolute_import
+from __future__ import print_function
+
 import base64
 import logging
 import ssl
@@ -32,6 +35,7 @@ class XmppXmlHandler(object):
     def __init__(self):
         self._stack = 0
         self._builder = TreeBuilder()
+        self._builder.start('root', {})
         self._results = deque()
 
     def data(self, data):
@@ -86,6 +90,7 @@ class XmppConnection(object):
             self._connected = False
             raise
 
+        data = data.decode('utf-8')
         LOGGER.debug('<<< %s' % data)
         self._xmlparser.feed(data)
 
@@ -94,7 +99,7 @@ class XmppConnection(object):
         LOGGER.debug('>>> %s' % msg)
         try:
             self._nextkeepalive = time.time() + self._keepalive_period
-            self._wrappedsock.sendall(msg)
+            self._wrappedsock.sendall(msg.encode('utf-8'))
         except:
             self._connected = False
             raise
@@ -131,7 +136,11 @@ class XmppConnection(object):
                     (host, port))
         self._xmppsock = socket.socket()
         self._wrappedsock = self._xmppsock
-        auth_string = base64.b64encode('\0{0}\0{1}'.format(auth.xmpp_jid, auth.access_token))
+        raw_auth_string = '\0{0}\0{1}'.format(
+            auth.xmpp_jid,
+            auth.access_token
+        ).encode('utf-8')
+        auth_string = base64.b64encode(raw_auth_string).decode('utf-8')
 
         try:
             self._wrappedsock = ssl.wrap_socket(self._xmppsock)
@@ -141,13 +150,43 @@ class XmppConnection(object):
             self._xmlparser = XMLParser(target=self._handler)
 
             # https://developers.google.com/cloud-print/docs/rawxmpp
-            self._msg('<stream:stream to="gmail.com" xml:lang="en" version="1.0" xmlns:stream="http://etherx.jabber.org/streams" xmlns="jabber:client">')
-            self._msg('<auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="X-OAUTH2">%s</auth>' % auth_string)
-            self._msg('<stream:stream to="gmail.com" xml:lang="en" version="1.0" xmlns:stream="http://etherx.jabber.org/streams" xmlns="jabber:client">')
-            iq = self._msg('<iq type="set" id="0"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><resource>cloud_print</resource></bind></iq>')
+            self._msg(
+                '<stream:stream to="gmail.com" xml:lang="en" version="1.0" '
+                'xmlns:stream="http://etherx.jabber.org/streams" '
+                'xmlns="jabber:client">'
+            )
+            self._msg(
+                '<auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" '
+                'mechanism="X-OAUTH2">%s</auth>'
+                % auth_string
+            )
+            self._msg(
+                '<stream:stream to="gmail.com" xml:lang="en" version="1.0" '
+                'xmlns:stream="http://etherx.jabber.org/streams" '
+                'xmlns="jabber:client">'
+            )
+            iq = self._msg(
+                '<iq type="set" id="0">'
+                '<bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">'
+                '<resource>cloud_print</resource>'
+                '</bind>'
+                '</iq>'
+            )
             bare_jid = iq[0][0].text.split('/')[0]
-            self._msg('<iq type="set" id="2"><session xmlns="urn:ietf:params:xml:ns:xmpp-session"/></iq>')
-            self._msg('<iq type="set" id="3" to="%s"><subscribe xmlns="google:push"><item channel="cloudprint.google.com" from="cloudprint.google.com"/></subscribe></iq>' % bare_jid)
+            self._msg(
+                '<iq type="set" id="2">'
+                '<session xmlns="urn:ietf:params:xml:ns:xmpp-session"/>'
+                '</iq>'
+            )
+            self._msg(
+                '<iq type="set" id="3" to="%s">'
+                '<subscribe xmlns="google:push">'
+                '<item channel="cloudprint.google.com" '
+                'from="cloudprint.google.com"/>'
+                '</subscribe>'
+                '</iq>'
+                % bare_jid
+            )
         except:
             self.close()
             raise
@@ -202,7 +241,7 @@ class XmppConnection(object):
                 if waittime < 0:
                     waittime = 0
 
-                sock = self._xmppsock
+                sock = self._wrappedsock
                 (r, w, e) = select.select([sock], [], [sock], waittime)
 
                 now = time.time()
