@@ -11,9 +11,11 @@ This uses Debian conventions, and is therefore Debian-only.
  cloudprint/cloudprint.py | 4 ++++
  1 file changed, 4 insertions(+)
 
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 1eaebc0..46ee367 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -483,6 +483,10 @@
+@@ -595,6 +595,10 @@ def main():
  
      if args.daemon:
          try:

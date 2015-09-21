@@ -1,5 +1,5 @@
 From: David Steele <dsteele@gmail.com>
-Date: Thu, 9 Jul 2015 22:05:44 -0400
+Date: Mon, 21 Sep 2015 19:32:27 -0400
 Subject: Specify /dev/log as the logging target for daemon
 
 Debian disables the default UDP port, by default.
@@ -7,14 +7,16 @@ Debian disables the default UDP port, by default.
  cloudprint/cloudprint.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 46ee367..6ecdc28 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -432,7 +432,7 @@
- 
-     # if daemon, log to syslog, otherwise log to stdout
-     if args.daemon:
--        handler = logging.handlers.SysLogHandler()
-+        handler = logging.handlers.SysLogHandler(address='/dev/log')
-         handler.setFormatter(logging.Formatter(fmt='cloudprint.py: %(message)s'))
-     else:
-         handler = logging.StreamHandler(sys.stdout)
+@@ -538,7 +538,7 @@ def main():
+                 address=args.syslog_address
+             )
+         else:
+-            handler = logging.handlers.SysLogHandler()
++            handler = logging.handlers.SysLogHandler(address='/dev/log')
+         handler.setFormatter(
+             logging.Formatter(fmt='cloudprint.py: %(message)s')
+         )
