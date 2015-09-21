@@ -1,3 +1,10 @@
+cloudprint (0.14-1) unstable; urgency=low
+
+  * New upstream release.
+  * Clear .pyc files from install (Closes: 797505)
+
+ -- David Steele <dsteele@gmail.com>  Mon, 21 Sep 2015 19:18:12 -0400
+
 cloudprint (0.13-1) unstable; urgency=low
 
   * Upstream update, with bug fixes
