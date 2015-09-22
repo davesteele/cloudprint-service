@@ -1,0 +1,21 @@
+From: David Steele <dsteele@gmail.com>
+Date: Mon, 21 Sep 2015 20:01:35 -0400
+Subject: Add cps-auth hint on login failure
+
+---
+ cloudprint/cloudprint.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 0e1ce4a..9873c64 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -136,7 +136,7 @@ class CloudPrintAuth(object):
+             if poll['success']:
+                 break
+         else:
+-            print('The login request timedout')
++            print('The login request timed out. Use cps-auth to update login?')
+             sys.exit(-1)
+ 
+         self.xmpp_jid = poll['xmpp_jid']

@@ -1,3 +1,5 @@
 0001-Change-the-name-of-the-main-script-in-the-module.patch
 0002-Set-Python-path-to-load-the-right-daemon.patch
 0003-Specify-dev-log-as-the-logging-target-for-daemon.patch
+0004-Exit-on-login-failure.patch
+0005-Add-cps-auth-hint-on-login-failure.patch

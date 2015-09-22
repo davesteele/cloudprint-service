@@ -1,0 +1,20 @@
+From: David Steele <dsteele@gmail.com>
+Date: Mon, 21 Sep 2015 19:59:16 -0400
+Subject: Exit on login failure
+
+---
+ cloudprint/cloudprint.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 6ecdc28..0e1ce4a 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -137,6 +137,7 @@ class CloudPrintAuth(object):
+                 break
+         else:
+             print('The login request timedout')
++            sys.exit(-1)
+ 
+         self.xmpp_jid = poll['xmpp_jid']
+         self.email = poll['user_email']
