@@ -9,7 +9,7 @@ cloudprint \- share CUPS printers with Google Cloud Print
 \fBcloudprint\fP [\fIOPTION\fP]...
 
 .SH DESCRIPTION
-The \fBcloudprint\fP script makes locally defined CUPS printers available to
+The \fBcloudprint\fP script makes locally-defined CUPS printers available to
 a Google account, enabling local or remote printing from such services as
 the Chrome browser, Chrome OS devices, or Android devices.
 
@@ -21,41 +21,40 @@ package.
 
 .SH OPTIONS
 .TP
-\fB\-a\fR \fI<account_file>\fR
+\fB\-a\fR \fI<account_file>\fR, \fB\-\-account_file\fR \fI<account_file>\fR
 path to Google account ident data (default \fI~/.cloudprintauth\fP). The format of the file is not public.
 .TP
-\fB\-c\fR
+\fB\-c\fR, \fB\-\-credentials\fR
 establish credentials to the service, then exit.
 .TP
-\fB\-d\fR
+\fB\-d\fR, \fB\-\-daemon\fR
 run in daemon mode.
 .TP
-\fB\-f\fR
+\fB\-f\fR, \fB\-\-fastpoll\fR
 fast poll, if notifications aren't working.
 .TP
-\fB\-i\fR \fIregexp\fR
+\fB\-i\fR \fIregexp\fR, \fB\-\-include\fR \fIregexp\fR
 include local printers matching regular expression from the start of the printer name.
 .TP
-\fB\-l\fR
+\fB\-l\fR, \fB\-\-logout\fR
 log out of the Google account. This deletes the account identification file, requiring reauthentication the next time
 cloudprint is run.
 .TP
-\fB\-p\fR \fI<pid_file>\fR
+\fB\-p\fR \fI<pid_file>\fR, \fB\-\-pidfile\fR \fI<pid_file>\fR
 path to PID file in daemon mode (default \fIcloudprint.pid\fP).
 .TP
-\fB\-u\fR \fI<user name>\fR
-the Google service user name to use if authentication is needed.
 .TP
-\fB\-v\fR
+\fB\-v\fR, \fB\-\-verbose\fR
 verbose logging.
 .TP
-\fB\-x\fR \fIregexp\fR
+\fB\-x\fR \fIregexp\fR, \fB\-\-exclude\fR \fIregexp\fR
 exclude local printers matching regular expression from the start of the printer name.
 .TP
-\fB\-h\fR
+\fB\-h\fR, \fB\-\-help\fR
 display help
 .PP
-\fBcloudprint\fR will prompt for a username and password if the information has not been provided.
+\fBcloudprint\fR will provide a URL to claim the printer, if credentials have not
+been established.
 
 
 .SH FILES
@@ -63,8 +62,8 @@ display help
 \fI~/.cloudprintauth\fR
 Default location for storing account authentication credentials
 .TP
-\fI~/.cloudprintauth.sasl\fR
-Default location for storing internal authentication tokens
+\fI/etc/cloudprint.conf\fR, \fI~/.cloudprint.conf\fR
+Configuration file containing additional command-line parameters for \fBcloudprint\fR.
 
 .SH SEE ALSO
 .BR cloudprint-service(7), cps-auth(1)
