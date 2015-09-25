@@ -7,9 +7,11 @@ Debian disables the default UDP port, by default.
  cloudprint/cloudprint.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index f4a5d2d..295da5f 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -432,7 +432,7 @@
+@@ -432,7 +432,7 @@ def main():
  
      # if daemon, log to syslog, otherwise log to stdout
      if args.daemon:

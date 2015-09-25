@@ -1,19 +1,18 @@
-From: David Steele <dsteele@gmail.com>
-Date: Mon, 14 Apr 2014 21:21:45 -0400
+From: David Steele <daves@jessie>
+Date: Fri, 25 Sep 2015 22:41:02 -0400
 Subject: Set Python path to load the right daemon
 
-Some users are having a problem with the wrong daemon module
-being loaded. Modify the Python path to ensure that
-python-daemon is the one found.
-
-This uses Debian conventions, and is therefore Debian-only.
+Some users were reporting problems with loading the wrong daemon module.
+Modify the python path to ensure that python-daemon is the one found.
 ---
  cloudprint/cloudprint.py | 4 ++++
  1 file changed, 4 insertions(+)
 
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 2df3d58..f4a5d2d 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
-@@ -483,6 +483,10 @@
+@@ -483,6 +483,10 @@ def main():
  
      if args.daemon:
          try:
