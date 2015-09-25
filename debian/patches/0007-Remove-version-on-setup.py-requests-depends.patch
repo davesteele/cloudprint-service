@@ -1,0 +1,23 @@
+From: David Steele <dsteele@gmail.com>
+Date: Fri, 25 Sep 2015 18:59:45 -0400
+Subject: Remove version on setup.py 'requests' depends
+
+This caused the compiled deb to be uninstallable on older
+distributions.
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 339a430..74e535a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -31,7 +31,7 @@ setup(
+     install_requires=[
+         'argparse',
+         'pycups',
+-        'requests >= 2.7.0',
++        'requests',
+     ],
+     extras_require={
+         'daemon': ['python-daemon >= 2.0.0'],
