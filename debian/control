@@ -23,7 +23,7 @@ Description: Google Cloud Print proxy
 Package: cloudprint-service
 Architecture: all
 Provides: cloudprintd
-Depends: cloudprint, ${misc:Depends}, systemd
+Depends: cloudprint, ${misc:Depends},
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
