@@ -3,3 +3,4 @@
 0003-Specify-dev-log-as-the-logging-target-for-daemon.patch
 0004-Allow-older-python-requests.patch
 0005-Revert-Update-for-new-python-deamon.patch
+0006-setup.py-specify-old-version-of-python-daemon.patch

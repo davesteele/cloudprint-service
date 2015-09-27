@@ -12,7 +12,7 @@ Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b master
 
 Package: cloudprint
 Architecture: all
-Depends: python-cups, cups, python-daemon, ${misc:Depends},
+Depends: python-cups, cups, python-daemon (<< 2.0), ${misc:Depends},
  ${python:Depends}, python-pkg-resources, rsyslog | system-log-daemon,
  python-requests
 Description: Google Cloud Print proxy
