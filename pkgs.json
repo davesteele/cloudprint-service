@@ -1,5 +1,7 @@
 {
     "all_pkgs": [
+        "cloudprint-service_0.14-3_all.deb", 
+        "cloudprint_0.14-3_all.deb", 
         "cloudprint-service_0.14-2_all.deb", 
         "cloudprint_0.14-2_all.deb", 
         "cloudprint-service_0.14-1_all.deb", 
@@ -58,7 +60,7 @@
         "cloudprint_0.10-1_all.deb"
     ], 
     "latest_pkgs": [
-        "cloudprint-service_0.14-2_all.deb", 
-        "cloudprint_0.14-2_all.deb"
+        "cloudprint-service_0.14-3_all.deb", 
+        "cloudprint_0.14-3_all.deb"
     ]
 }
