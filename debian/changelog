@@ -2,7 +2,7 @@ cloudprint (0.13-1+deb8u1) UNRELEASED; urgency=medium
 
   * Modify for Jessie
     - Brings OAuth support to Jessie.
-      (Closes: 799227, 800082)
+      (Closes: 799227)
     - Remove version requirement on python-requests.
     - Revert back to support for older python-daemon module.
 
