@@ -1,3 +1,9 @@
+cloudprint (0.14-3) stable; urgency=medium
+
+  * Add dependency for python-configargparse.
+
+ -- David Steele <dsteele@gmail.com>  Sun, 27 Sep 2015 09:40:25 -0400
+
 cloudprint (0.14-2) unstable; urgency=low
 
   * Add support for cloudprint parameters in a config file.
