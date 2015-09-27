@@ -1,17 +1,17 @@
 Package: cloudprint
-Version: 0.14-1
+Version: 0.14-2
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
-Installed-Size: 63
+Installed-Size: 66
 Depends: python-cups, cups, python-daemon (>= 2.0), python (>= 2.7), python-pkg-resources, rsyslog | system-log-daemon, python-requests
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/universe/c/cloudprint/cloudprint_0.14-1_all.deb
-Size: 13872
-SHA256: 93d3ec28f30b9b5b82550933d7beac154264313304444a2ac61188390a981a9a
-SHA1: aacfa0b036d58768f99bbdc71a41f6a18eaa8523
-MD5sum: 5cbff7be49f5e8c1e11e51a2946e4020
+Filename: pool/universe/c/cloudprint/cloudprint_0.14-2_all.deb
+Size: 14212
+SHA256: f4e65ce7aee08a23bf14fa438a86dc01c988d67c26fa5bb8674313d0e4be7015
+SHA1: cfc263434d0bf2403a1a00f52832fe175098799c
+MD5sum: 9f246d7155a9d75086175dc3b0efe4ed
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -19,7 +19,7 @@ Description: Google Cloud Print proxy
 
 Package: cloudprint-service
 Source: cloudprint
-Version: 0.14-1
+Version: 0.14-2
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
 Installed-Size: 35
@@ -28,11 +28,11 @@ Provides: cloudprintd
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/universe/c/cloudprint/cloudprint-service_0.14-1_all.deb
-Size: 8470
-SHA256: c79e2c84fdcdf4113589870788172a2409cc0251e6fccaf48a5d186ef551ce38
-SHA1: 0a6cfbb9a912d03112c2c6c53f8e4db1e463c939
-MD5sum: b6a6d582e7ffcdcbbc38633d61787296
+Filename: pool/universe/c/cloudprint/cloudprint-service_0.14-2_all.deb
+Size: 8530
+SHA256: 59a7fc494df0f2c3dbf462edb9997b4f984bc4c3bb0e141cbe36072a03f68b14
+SHA1: f7b323a95dddcc595dd7740379070fe64f74b2cc
+MD5sum: e8e41e1163ee95aa7100dd59fd19fd35
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via

@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Mon Sep 21 21:18:29 2015 -->
+<!-- CreationDate: Sun Sep 27 01:43:18 2015 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -53,7 +53,7 @@
 
 
 <p style="margin-left:11%; margin-top: 1em">The
-<b>cloudprint</b> script makes locally defined CUPS printers
+<b>cloudprint</b> script makes locally-defined CUPS printers
 available to a Google account, enabling local or remote
 printing from such services as the Chrome browser, Chrome OS
 devices, or Android devices.</p>
@@ -73,134 +73,72 @@ package.</p>
 
 
 <p style="margin-left:11%; margin-top: 1em"><b>&minus;a</b>
+<i>&lt;account_file&gt;</i>,
+<b>&minus;&minus;account_file</b>
 <i>&lt;account_file&gt;</i></p>
 
 <p style="margin-left:22%;">path to Google account ident
 data (default <i>~/.cloudprintauth</i>). The format of the
 file is not public.</p>
 
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
-<tr valign="top" align="left">
-<td width="11%"></td>
-<td width="3%">
+<p style="margin-left:11%;"><b>&minus;c</b>,
+<b>&minus;&minus;credentials</b></p>
 
+<p style="margin-left:22%;">establish credentials to the
+service, then exit.</p>
 
-<p><b>&minus;c</b></p></td>
-<td width="8%"></td>
-<td width="73%">
+<p style="margin-left:11%;"><b>&minus;d</b>,
+<b>&minus;&minus;daemon</b></p>
 
+<p style="margin-left:22%;">run in daemon mode.</p>
 
-<p>establish credentials to the service, then exit.</p></td>
-<td width="5%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="11%"></td>
-<td width="3%">
+<p style="margin-left:11%;"><b>&minus;f</b>,
+<b>&minus;&minus;fastpoll</b></p>
 
+<p style="margin-left:22%;">fast poll, if notifications
+aren&rsquo;t working.</p>
 
-<p><b>&minus;d</b></p></td>
-<td width="8%"></td>
-<td width="73%">
-
-
-<p>run in daemon mode.</p></td>
-<td width="5%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="11%"></td>
-<td width="3%">
-
-
-<p><b>&minus;f</b></p></td>
-<td width="8%"></td>
-<td width="73%">
-
-
-<p>fast poll, if notifications aren&rsquo;t working.</p></td>
-<td width="5%">
-</td></tr>
-</table>
-
-<p style="margin-left:11%;"><b>&minus;i</b>
-<i>regexp</i></p>
+<p style="margin-left:11%;"><b>&minus;i</b> <i>regexp</i>,
+<b>&minus;&minus;include</b> <i>regexp</i></p>
 
 <p style="margin-left:22%;">include local printers matching
 regular expression from the start of the printer name.</p>
 
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
-<tr valign="top" align="left">
-<td width="11%"></td>
-<td width="3%">
+<p style="margin-left:11%;"><b>&minus;l</b>,
+<b>&minus;&minus;logout</b></p>
 
-
-<p><b>&minus;l</b></p></td>
-<td width="8%"></td>
-<td width="78%">
-
-
-<p>log out of the Google account. This deletes the account
-identification file, requiring reauthentication the next
-time cloudprint is run.</p></td></tr>
-</table>
+<p style="margin-left:22%;">log out of the Google account.
+This deletes the account identification file, requiring
+reauthentication the next time cloudprint is run.</p>
 
 <p style="margin-left:11%;"><b>&minus;p</b>
+<i>&lt;pid_file&gt;</i>, <b>&minus;&minus;pidfile</b>
 <i>&lt;pid_file&gt;</i></p>
 
 <p style="margin-left:22%;">path to PID file in daemon mode
 (default <i>cloudprint.pid</i>).</p>
 
-<p style="margin-left:11%;"><b>&minus;u</b> <i>&lt;user
-name&gt;</i></p>
 
-<p style="margin-left:22%;">the Google service user name to
-use if authentication is needed.</p>
+<p style="margin-left:11%; margin-top: 1em"><b>&minus;v</b>,
+<b>&minus;&minus;verbose</b></p>
 
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
-<tr valign="top" align="left">
-<td width="11%"></td>
-<td width="3%">
+<p style="margin-left:22%;">verbose logging.</p>
 
-
-<p><b>&minus;v</b></p></td>
-<td width="8%"></td>
-<td width="24%">
-
-
-<p>verbose logging.</p></td>
-<td width="54%">
-</td></tr>
-</table>
-
-<p style="margin-left:11%;"><b>&minus;x</b>
-<i>regexp</i></p>
+<p style="margin-left:11%;"><b>&minus;x</b> <i>regexp</i>,
+<b>&minus;&minus;exclude</b> <i>regexp</i></p>
 
 <p style="margin-left:22%;">exclude local printers matching
 regular expression from the start of the printer name.</p>
 
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
-<tr valign="top" align="left">
-<td width="11%"></td>
-<td width="3%">
+<p style="margin-left:11%;"><b>&minus;h</b>,
+<b>&minus;&minus;help</b></p>
 
-
-<p><b>&minus;h</b></p></td>
-<td width="8%"></td>
-<td width="18%">
-
-
-<p>display help</p></td>
-<td width="60%">
-</td></tr>
-</table>
+<p style="margin-left:22%;">display help</p>
 
 
 <p style="margin-left:11%; margin-top: 1em"><b>cloudprint</b>
-will prompt for a username and password if the information
-has not been provided.</p>
+will provide a URL to claim the printer, if credentials have
+not been established.</p>
 
 <h2>FILES
 <a name="FILES"></a>
@@ -213,11 +151,12 @@ has not been provided.</p>
 <p style="margin-left:22%;">Default location for storing
 account authentication credentials</p>
 
+<p style="margin-left:11%;"><i>/etc/cloudprint.conf</i>,
+<i>~/.cloudprint.conf</i></p>
 
-<p style="margin-left:11%;"><i>~/.cloudprintauth.sasl</i></p>
-
-<p style="margin-left:22%;">Default location for storing
-internal authentication tokens</p>
+<p style="margin-left:22%;">Configuration file containing
+additional command-line parameters for
+<b>cloudprint</b>.</p>
 
 <h2>SEE ALSO
 <a name="SEE ALSO"></a>
