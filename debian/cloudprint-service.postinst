@@ -33,9 +33,6 @@ case "$1" in
         rmdir /var/lib/cloudprint ; \
     fi
 
-    if [ -e /etc/init.d/cloudprintd/authfile.json \
-            -a -e /etc/init.d/cloudprintd/authfile ] ; then \
-        rm -f /etc/init.d/cloudprintd/authfile;
     fi
 
     ;;
