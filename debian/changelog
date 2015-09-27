@@ -1,4 +1,4 @@
-cloudprint (0.13-1+deb8u3) UNRELEASED; urgency=medium
+cloudprint (0.13-1+deb8u1) UNRELEASED; urgency=medium
 
   * Modify for Jessie
     - Brings OAuth support to Jessie.
