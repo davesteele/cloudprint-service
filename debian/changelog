@@ -5,6 +5,7 @@ cloudprint (0.13-1+deb8u1) UNRELEASED; urgency=medium
       (Closes: 799227)
     - Remove version requirement on python-requests.
     - Revert back to support for older python-daemon module.
+    - Revert from systemd to init script.
 
  -- David Steele <dsteele@gmail.com>  Thu, 24 Sep 2015 21:35:16 -0400
 
@@ -54,6 +55,7 @@ cloudprint (0.11-7) unstable; urgency=low
 
   * OAuth2 support, since the old SASL is not longer working.
         (Closes: 787102)
+  * Replace sysv init with systemd.
 
  -- David Steele <dsteele@gmail.com>  Sat, 30 May 2015 16:44:05 -0400
 
