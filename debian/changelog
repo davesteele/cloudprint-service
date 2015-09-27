@@ -1,4 +1,4 @@
-cloudprint (0.14-2) UNRELEASED; urgency=medium
+cloudprint (0.14-2) unstable; urgency=low
 
   * Add support for cloudprint parameters in a config file.
   * Remove version requirement on setup.py 'requests' dependency.
