@@ -54,7 +54,6 @@ cloudprint (0.11-7) unstable; urgency=low
 
   * OAuth2 support, since the old SASL is not longer working.
         (Closes: 787102)
-  * Replace sysv init with systemd.
 
  -- David Steele <dsteele@gmail.com>  Sat, 30 May 2015 16:44:05 -0400
 
