@@ -1,0 +1,9 @@
+cloudprint (0.13-1+deb8u1) UNRELEASED; urgency=medium
+
+    Cloudprint has been updated to use the OAuth2 authentication mechanism.
+    The program will attemp to log in. If it is not successful, it will
+    print a URL that can be used in a graphical browser to claim the printers
+    for a particular user account. cloudprint-service users can use the
+    cps-auth script to establish credentials. 
+
+ -- David Steele <dsteele@gmail.com>  Sun, 27 Sep 2015 17:12:28 -0400
