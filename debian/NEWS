@@ -1,4 +1,4 @@
-cloudprint (0.13-1+deb8u1) UNRELEASED; urgency=medium
+cloudprint (0.13-1+deb8u1) stable; urgency=medium
 
     Cloudprint has been updated to use the OAuth2 authentication mechanism.
     The program will attemp to log in. If it is not successful, it will
