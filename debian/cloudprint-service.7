@@ -9,10 +9,9 @@ cloudprint-service \- manage the Google Cloud Print proxy
 .SH SYNOPSIS
 .TP
 service \fBcloudprintd\fR \fIlogin\fR
-Establish login credentials with Cloud Print, then immediately exit. This will
-prompt for a username and password, if necessary. If the account has two-factor
-authentication enabled, then an application-specific password must be used.
-This and all other \fBcloudprintd\fR service commands must be run as root.
+Verify that Cloud Print login credentials are established. If so, it will
+immediately exit. Otherwise, it will print a URL that can be used to claim
+the local printer(s), and wait for the user to complete the process.
 .TP
 service \fBcloudprintd\fR \fIstart\fR
 Start the \fBcloudprintd\fR service. This will fail if the credentials have not been
@@ -38,10 +37,6 @@ another 'login'.
 The \fBcloudprintd\fR services manages the operation of a Google Cloud Print
 proxy. It makes locally-defined CUPS printers available for use by approved
 Google users, both locally and remotely.
-
-It is recommended that a dedicated account be used for this service. Printers
-can be shared from that account to others via the printer management page at
-\fIhttps://www.google.com/cloudprint?#printers\fR
 
 Authentication credentials can be established using the wrapper script
 \fBcps-auth\fR.
