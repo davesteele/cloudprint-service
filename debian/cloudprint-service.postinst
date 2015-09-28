@@ -33,8 +33,6 @@ case "$1" in
         rmdir /var/lib/cloudprint ; \
     fi
 
-    fi
-
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
