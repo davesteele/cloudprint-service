@@ -82,8 +82,6 @@ do_login()
 	rm -f $AUTHFILE || true
 	rm -f $AUTHFILE.sasl || true
 
-	echo "Accounts with 2 factor authentication require an application-specific password"
-
 	$DAEMON -c -a $AUTHFILE $INCLUDE_OPT
 
 }
