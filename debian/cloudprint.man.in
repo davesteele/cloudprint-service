@@ -60,11 +60,8 @@ display help
 
 .SH FILES
 .TP
-\fI~/.cloudprintauth\fR
+\fI~/.cloudprintauth.json\fR
 Default location for storing account authentication credentials
-.TP
-\fI~/.cloudprintauth.sasl\fR
-Default location for storing internal authentication tokens
 
 .SH SEE ALSO
 .BR cloudprint-service(7), cloudprintd(8), cloudprint(1)
