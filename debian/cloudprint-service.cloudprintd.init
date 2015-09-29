@@ -37,7 +37,7 @@ for str in $INCLUDE_LIST ; do \
      INCLUDE_OPT="$INCLUDE_OPT -i $str";\
 done
 
-AUTHFILE=/var/lib/cloudprintd/authfile
+AUTHFILE=/var/lib/cloudprintd/authfile.json
 PIDFILE=/var/run/$NAME.pid
 DAEMON_ARGS="-d -a $AUTHFILE -p $PIDFILE $FAST_POLL $INCLUDE_OPT"
 SCRIPTNAME=/etc/init.d/$DESC
