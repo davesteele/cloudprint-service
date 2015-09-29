@@ -1,4 +1,4 @@
-cloudprint (0.14-3) stable; urgency=medium
+cloudprint (0.14-3) unstable; urgency=low
 
   * Add dependency for python-configargparse.
 
