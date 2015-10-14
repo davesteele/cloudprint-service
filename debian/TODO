@@ -1,4 +1,0 @@
-
-- restore INCLUDE/EXCLUDE with a systemd wrapper script
-- replace GNOME requirement with X, by using webbrowser and xwininfo
-- merge with armoo OAUth2
