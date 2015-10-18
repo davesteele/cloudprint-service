@@ -1,5 +1,0 @@
-Component: main
-Origin: cloudprint
-Label: cloudprint
-Architecture: armhf
-Description: Apt repository for project cloudprint

@@ -1,5 +1,0 @@
-Component: universe
-Origin: cloudprint
-Label: cloudprint
-Architecture: i386
-Description: Apt repository for project cloudprint

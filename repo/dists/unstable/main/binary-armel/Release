@@ -1,5 +1,0 @@
-Component: main
-Origin: cloudprint
-Label: cloudprint
-Architecture: armel
-Description: Apt repository for project cloudprint
