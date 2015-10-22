@@ -24,6 +24,8 @@
     function dotemplate(data, textstatus, jqXHR ) {
         $.Mustache.addFromDom('debtmpl');
         $('#deblist').mustache('debtmpl', data);
+        $.Mustache.addFromDom('debstabletmpl');
+        $('#debstablelist').mustache('debstabletmpl', data);
     }
 
     $(document).ready(function() {
@@ -68,9 +70,18 @@
 <li><a href="deb/{{.}}">{{.}}</a></li>
 {{/latest_pkgs}}
 </script>
+<script type='text/template' id="debstabletmpl">
+{{#latest_stable}}
+<li><a href="deb/{{.}}">{{.}}</a></li>
+{{/latest_stable}}
+</script>
 <li>Targetting Debian Testing and Sid (requires systemd, and python-daemon >= 2.0)</li>
 <ul>
 <div id="deblist"></div>
+</ul>
+<li>Targetting Debian Stable/Jessie (doesn't require systemd, and python-daemon must be < 2.0)</li>
+<ul>
+<dif id="debstablelist></div>
 </ul>
 <li><a href="archive.html">Package Archive</a></li>
 </ul>
