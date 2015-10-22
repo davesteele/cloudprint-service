@@ -22,11 +22,3 @@ cd ..
 cd man
 ./makeman
 cd ..
-
-cd repo
-./clearit
-./addit
-cd ..
-
-
-
