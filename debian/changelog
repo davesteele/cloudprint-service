@@ -1,3 +1,9 @@
+cloudprint (0.13-1+deb8u1+ppa1) cloudprintppa; urgency=low
+
+  * PPA version of stable release - no multiarch dependencies.
+
+ -- David Steele <dsteele@gmail.com>  Wed, 21 Oct 2015 22:01:14 -0400
+
 cloudprint (0.13-1+deb8u1) stable; urgency=medium
 
   * Modify for Jessie
