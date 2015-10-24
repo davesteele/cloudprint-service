@@ -1,0 +1,28 @@
+#!/usr/bin/python
+
+import datetime
+import time
+import cups
+import sys
+
+timeout = 30
+
+start = datetime.datetime.now()
+
+while True:
+    try:
+        cups_connection = cups.Connection()
+        printers = cups_connection.getPrinters()
+
+        sys.exit(0)
+    except RuntimeError:
+        pass
+
+    time.sleep(1)
+
+    if (datetime.datetime.now() - start).total_seconds() > timeout:
+        print('No CUPS found')
+        sys.exit(1)
+
+
+
