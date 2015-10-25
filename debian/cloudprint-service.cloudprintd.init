@@ -69,6 +69,8 @@ do_start()
 		return 2
 	fi
 
+    waitforcups
+
 	start-stop-daemon --start --quiet --pidfile $PIDFILE --startas $DAEMON \
 		--name $DESC --test > /dev/null \
 		|| return 1

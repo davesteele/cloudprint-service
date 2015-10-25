@@ -1,1 +1,2 @@
 debian/cps-auth usr/bin
+debian/waitforcups usr/bin
