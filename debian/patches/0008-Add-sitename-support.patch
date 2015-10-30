@@ -1,0 +1,91 @@
+From: David Steele <dsteele@gmail.com>
+Date: Thu, 29 Oct 2015 20:04:14 -0400
+Subject: Add sitename support
+
+---
+ README.rst               |  1 +
+ cloudprint/cloudprint.py | 24 +++++++++++++++++++++++-
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+
+diff --git a/README.rst b/README.rst
+index 93f3410..e99c40e 100644
+--- a/README.rst
++++ b/README.rst
+@@ -28,6 +28,7 @@ Usage
+   -x regexp       : exclude filees matching regexp
+                     regexp: a Python regexp, which is matched against the
+                             start of the printer name
++  -s sitename     : one-word site-name that will prefix printers
+   -h              : display this help
+ 
+ Google accounts with 2 step verification enabled need to use an
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index c76f703..cb68dcf 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -195,6 +195,7 @@ class CloudPrintProxy(object):
+     def __init__(self, auth):
+         self.auth = auth
+         self.sleeptime = 0
++        self.site = ''
+         self.include = []
+         self.exclude = []
+ 
+@@ -206,7 +207,15 @@ class CloudPrintProxy(object):
+                 'proxy': self.auth.guid,
+             },
+         ).json()
+-        return [PrinterProxy(self, p['id'], p['name']) for p in printers['printers']]
++        return [
++            PrinterProxy(
++                self,
++                p['id'],
++                re.sub('^' + self.site + '-', '', p['name'])
++            )
++            for p in printers['printers']
++        ]
++
+ 
+     def delete_printer(self, printer_id):
+         self.auth.session.post(
+@@ -219,6 +228,8 @@ class CloudPrintProxy(object):
+         LOGGER.debug('Deleted printer ' + printer_id)
+ 
+     def add_printer(self, name, description, ppd):
++        if self.site:
++            name = self.site + '-' + name
+         self.auth.session.post(
+             PRINT_CLOUD_URL + 'register',
+             {
+@@ -235,6 +246,8 @@ class CloudPrintProxy(object):
+         LOGGER.debug('Added Printer ' + name)
+ 
+     def update_printer(self, printer_id, name, description, ppd):
++        if self.site:
++            name = self.site + '-' + name
+         self.auth.session.post(
+             PRINT_CLOUD_URL + 'update',
+             {
+@@ -488,6 +501,14 @@ def parse_args():
+         action='store_true',
+         help='verbose logging',
+     )
++    parser.add_argument(
++        '-s', '--sitename',
++        metavar='sitename',
++        dest='site',
++        default='',
++        help='one-word site-name that will prefix printers',
++    )
++
+     return parser.parse_args()
+ 
+ 
+@@ -527,6 +548,7 @@ def main():
+ 
+     cpp.include = args.include
+     cpp.exclude = args.exclude
++    cpp.site = args.site
+ 
+     printers = cups_connection.getPrinters().keys()
+     if not printers:

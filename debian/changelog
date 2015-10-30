@@ -2,6 +2,7 @@ cloudprint (0.13-1+deb8u1+ppa2) UNRELEASED; urgency=medium
 
   * Add a waitforcups script to guarantee startup.
   * Add support for cloudprint parameters in a config file.
+  * Add support to prepend a site name to all printer names.
 
  -- David Steele <dsteele@gmail.com>  Sat, 24 Oct 2015 20:16:37 -0400
 
