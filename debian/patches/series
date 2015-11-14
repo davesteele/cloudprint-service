@@ -5,3 +5,4 @@
 0005-Add-cps-auth-hint-on-login-failure.patch
 0006-Use-ConfigArgParse-to-support-config-files.patch
 0007-Remove-version-on-setup.py-requests-depends.patch
+0008-Add-site-name-prefix-for-multi-site-support.patch
