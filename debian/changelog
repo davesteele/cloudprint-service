@@ -1,3 +1,12 @@
+cloudprint (0.14-5) unstable; urgency=low
+
+  * Add site name prefix support.
+  * Debian
+    - get-orig-source support.
+    - DEP8 continuous integration support.
+
+ -- David Steele <dsteele@gmail.com>  Mon, 14 Dec 2015 21:25:48 -0500
+
 cloudprint (0.14-4) unstable; urgency=low
 
   * 0.14-3 uploaded to wrong dist. Bump to retry.
