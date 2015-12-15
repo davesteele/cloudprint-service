@@ -9,12 +9,14 @@ X-Python-Version: >= 2.7
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
 Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b master
+Testsuite: autopkgtest
 
 Package: cloudprint
 Architecture: all
 Depends: python-cups, cups, python-daemon (>= 2.0), ${misc:Depends},
  python (>= 2.7), python-pkg-resources, rsyslog | system-log-daemon,
- python-requests, python-configargparse,
+ python-requests, python-configargparse, python3-configargparse,
+ python3-cups,
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over

@@ -1,0 +1,7 @@
+Tests: dotest, dotest3
+Depends: @,
+         python-pytest, python3-pytest,
+         python3-all,
+         python-mock, python3-mock,
+         python-requests-mock, python3-requests-mock,
+         python3-configargparse, python3-cups,
