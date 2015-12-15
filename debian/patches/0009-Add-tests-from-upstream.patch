@@ -1,0 +1,582 @@
+From: David Steele <dsteele@gmail.com>
+Date: Mon, 14 Dec 2015 19:12:11 -0500
+Subject: Add tests from upstream
+
+---
+ conftest.py                |  57 +++++++++++++++
+ test/test_auth.py          | 118 +++++++++++++++++++++++++++++++
+ test/test_print_proxy.py   | 168 +++++++++++++++++++++++++++++++++++++++++++++
+ test/test_printer_proxy.py |  46 +++++++++++++
+ test/test_process_jobs.py  |  88 ++++++++++++++++++++++++
+ test/test_sync.py          |  50 ++++++++++++++
+ 6 files changed, 527 insertions(+)
+ create mode 100644 conftest.py
+ create mode 100644 test/test_auth.py
+ create mode 100644 test/test_print_proxy.py
+ create mode 100644 test/test_printer_proxy.py
+ create mode 100644 test/test_process_jobs.py
+ create mode 100644 test/test_sync.py
+
+diff --git a/conftest.py b/conftest.py
+new file mode 100644
+index 0000000..d93308c
+--- /dev/null
++++ b/conftest.py
+@@ -0,0 +1,57 @@
++import mock
++import pytest
++import requests as requests_lib
++
++import requests_mock
++
++
++@pytest.yield_fixture
++def requests():
++    with requests_mock.Mocker() as m:
++        yield m
++
++
++@pytest.fixture
++def cpp(monkeypatch):
++    printers = {}
++
++    def add_printer(name):
++        printer = mock.Mock(name='cpp printer ' + name)
++        printer.name = name
++        printers[name] = printer
++        return printer
++
++    cpp = mock.Mock(name='cpp')
++    cpp.auth.session = requests_lib
++    cpp.get_printers.side_effect = lambda: list(printers.values())
++    cpp.include = []
++    cpp.exclude = []
++
++    def get_printer_info(cpp, name):
++        try:
++            printer = printers[name]
++            return printer.ppd, printer.description
++        except KeyError:
++            return None, None
++
++    monkeypatch.setattr(
++        'cloudprint.cloudprint.get_printer_info',
++        get_printer_info,
++    )
++
++    cpp.test_add_printer = add_printer
++    return cpp
++
++
++@pytest.fixture
++def cups():
++    printers = {}
++
++    def add_printer(name):
++        printers[name] = 1
++
++    cups = mock.Mock(name='cups')
++    cups.getPrinters.side_effect = printers.copy
++
++    cups.test_add_printer = add_printer
++    return cups
+diff --git a/test/test_auth.py b/test/test_auth.py
+new file mode 100644
+index 0000000..f087158
+--- /dev/null
++++ b/test/test_auth.py
+@@ -0,0 +1,118 @@
++import datetime
++import json
++
++from cloudprint.cloudprint import (
++    CLIENT_ID,
++    PRINT_CLOUD_URL,
++    CloudPrintAuth,
++)
++
++
++def test_login(tmpdir, requests):
++    requests.post(
++        PRINT_CLOUD_URL + 'register',
++        json={
++            'token_duration': 30,
++            'complete_invite_url': 'http://doit',
++            'polling_url': 'http://poll',
++        },
++    )
++
++    requests.get(
++        'http://poll' + CLIENT_ID,
++        json={
++            'success': True,
++            'xmpp_jid': 'my_xmpp',
++            'user_email': 'me@example.com',
++            'authorization_code': 'auth-123abc',
++        },
++    )
++
++    requests.post(
++        'https://accounts.google.com/o/oauth2/token',
++        [
++            {
++                'json': {
++                    'refresh_token': 'refresh-123abc',
++                }
++            },
++            {
++                'json': {
++                    'access_token': 'access_token-123abc',
++                    'expires_in': 15,
++                }
++            },
++        ]
++    )
++
++    auth_path = tmpdir.join('auth')
++    auth = CloudPrintAuth(str(auth_path))
++    auth.AUTH_POLL_PERIOD = 0
++    auth.login('name', 'description', 'ppd')
++
++    with auth_path.open() as auth_file:
++        auth_data = json.load(auth_file)
++        assert auth_data['email'] == 'me@example.com'
++        assert auth_data['xmpp_jid'] == 'my_xmpp'
++        assert auth_data['refresh_token'] == 'refresh-123abc'
++
++    assert auth.access_token == 'access_token-123abc'
++
++
++def test_no_auth(tmpdir):
++    auth_path = tmpdir.join('auth')
++    auth = CloudPrintAuth(str(auth_path))
++
++    assert auth.no_auth()
++
++    auth_path.ensure()
++
++    assert not auth.no_auth()
++
++
++def test_refresh(tmpdir, requests):
++    requests.post(
++        'https://accounts.google.com/o/oauth2/token',
++        json={
++            'access_token': 'access_token-123abc',
++            'expires_in': 15,
++        }
++    )
++
++    auth_path = tmpdir.join('auth')
++    auth = CloudPrintAuth(str(auth_path))
++    auth._access_token = 'dead'
++    auth.refresh_token = 'refresh-123abc'
++    auth.exp_time = datetime.datetime.fromtimestamp(0)
++
++    assert auth.access_token == 'access_token-123abc'
++
++
++def test_load(tmpdir, requests):
++    requests.post(
++        'https://accounts.google.com/o/oauth2/token',
++        json={
++            'access_token': 'access_token-123abc',
++            'expires_in': 15,
++        }
++    )
++
++    auth_path = tmpdir.join('auth')
++    with auth_path.open('w') as auth_file:
++        json.dump(
++            {
++                'guid': 'guid123',
++                'email': 'example@example.com',
++                'xmpp_jid': 'my_xmpp',
++                'refresh_token': 'refresh_123',
++            },
++            auth_file,
++        )
++
++    auth = CloudPrintAuth(str(auth_path))
++    auth.load()
++
++    assert auth.guid == 'guid123'
++    assert auth.email == 'example@example.com'
++    assert auth.xmpp_jid == 'my_xmpp'
++    assert auth.refresh_token == 'refresh_123'
+diff --git a/test/test_print_proxy.py b/test/test_print_proxy.py
+new file mode 100644
+index 0000000..ab7416d
+--- /dev/null
++++ b/test/test_print_proxy.py
+@@ -0,0 +1,168 @@
++try:
++    import urlparse as parse
++except ImportError:
++    from urllib import parse
++
++import mock
++import pytest
++import requests
++
++from cloudprint.cloudprint import (
++    CloudPrintProxy,
++    PRINT_CLOUD_URL,
++)
++
++
++@pytest.fixture(params=('', 'prefix'))
++def proxy(request):
++    auth = mock.Mock(session=requests)
++    proxy = CloudPrintProxy(auth)
++    proxy.site = request.param
++    return proxy
++
++
++@pytest.fixture
++def add_site(proxy):
++    def add_site(name):
++        if not proxy.site:
++            return name
++        else:
++            return '{0}-{1}'.format(proxy.site, name)
++    return add_site
++
++
++@pytest.fixture
++def remove_site(proxy):
++    def remove_site(name):
++        if not proxy.site:
++            return name
++        else:
++            return name.replace(proxy.site + '-', '')
++    return remove_site
++
++
++def test_get_printers(proxy, requests, remove_site):
++    requests.post(
++        PRINT_CLOUD_URL + 'list',
++        json={
++            'printers': [
++                {
++                    'id': '1',
++                    'name': 'printer 1',
++                },
++                {
++                    'id': '2',
++                    'name': 'printer 2',
++                },
++            ]
++        },
++    )
++
++    printers = proxy.get_printers()
++
++    assert printers[0].id == '1'
++    assert remove_site(printers[0].name) == 'printer 1'
++    assert printers[1].id == '2'
++    assert remove_site(printers[1].name) == 'printer 2'
++
++
++def test_delete_printer(proxy, requests):
++    requests.post(
++        PRINT_CLOUD_URL + 'delete',
++        status_code=200,
++    )
++
++    proxy.delete_printer('1')
++
++    data = parse.parse_qs(requests.request_history[0].text)
++    assert data['printerid'][0] == '1'
++
++
++def test_add_printer(proxy, requests, add_site):
++    requests.post(
++        PRINT_CLOUD_URL + 'register',
++        status_code=200,
++    )
++
++    proxy.add_printer(
++        name='printer_name',
++        description='printer_description',
++        ppd='printer_ppd',
++    )
++
++    data = parse.parse_qs(requests.request_history[0].text)
++    assert data['printer'][0] == add_site('printer_name')
++    assert data['description'][0] == 'printer_description'
++    assert data['capabilities'][0] == 'printer_ppd'
++    assert data['defaults'][0] == 'printer_ppd'
++
++
++def test_update_printer(proxy, requests, add_site):
++    requests.post(
++        PRINT_CLOUD_URL + 'update',
++        status_code=200,
++    )
++
++    proxy.update_printer(
++        printer_id='1',
++        name='printer_name',
++        description='printer_description',
++        ppd='printer_ppd',
++    )
++
++    data = parse.parse_qs(requests.request_history[0].text)
++    assert data['printerid'][0] == '1'
++    assert data['printer'][0] == add_site('printer_name')
++    assert data['description'][0] == 'printer_description'
++    assert data['capabilities'][0] == 'printer_ppd'
++    assert data['defaults'][0] == 'printer_ppd'
++
++
++def test_get_jobs(proxy, requests):
++    requests.post(
++        PRINT_CLOUD_URL + 'fetch',
++        json={
++            'jobs': [
++                'job1',
++                'job2',
++            ]
++        }
++    )
++
++    jobs = proxy.get_jobs(
++        printer_id='1',
++    )
++
++    data = parse.parse_qs(requests.request_history[0].text)
++    assert data['printerid'][0] == '1'
++    assert jobs == ['job1', 'job2']
++
++
++def test_finish_job(proxy, requests):
++    requests.post(
++        PRINT_CLOUD_URL + 'control',
++        json={},
++    )
++
++    proxy.finish_job(
++        job_id='1',
++    )
++
++    data = parse.parse_qs(requests.request_history[0].text)
++    assert data['jobid'][0] == '1'
++    assert data['status'][0] == 'DONE'
++
++
++def test_fail_job(proxy, requests):
++    requests.post(
++        PRINT_CLOUD_URL + 'control',
++        json={},
++    )
++
++    proxy.fail_job(
++        job_id='1',
++    )
++
++    data = parse.parse_qs(requests.request_history[0].text)
++    assert data['jobid'][0] == '1'
++    assert data['status'][0] == 'ERROR'
+diff --git a/test/test_printer_proxy.py b/test/test_printer_proxy.py
+new file mode 100644
+index 0000000..fd2f131
+--- /dev/null
++++ b/test/test_printer_proxy.py
+@@ -0,0 +1,46 @@
++import mock
++import pytest
++
++from cloudprint.cloudprint import PrinterProxy
++
++
++@pytest.fixture
++def cpp():
++    return mock.Mock(name='cpp')
++
++
++@pytest.fixture
++def printer_proxy(cpp):
++    return PrinterProxy(
++        cpp=cpp,
++        printer_id='1',
++        name='printer 1',
++    )
++
++
++def test_get_jobs(cpp, printer_proxy):
++    printer_proxy.get_jobs()
++
++    cpp.get_jobs.assert_called_with(printer_proxy.id)
++
++
++def test_update(cpp, printer_proxy):
++    printer_proxy.update(
++        description='printer_description',
++        ppd='printer_ppd',
++    )
++
++    cpp.update_printer.assert_called_with(
++        printer_proxy.id,
++        printer_proxy.name,
++        'printer_description',
++        'printer_ppd',
++    )
++
++
++def test_delete(cpp, printer_proxy):
++    printer_proxy.delete()
++
++    cpp.delete_printer.assert_called_with(
++        printer_proxy.id,
++    )
+diff --git a/test/test_process_jobs.py b/test/test_process_jobs.py
+new file mode 100644
+index 0000000..2d9f34f
+--- /dev/null
++++ b/test/test_process_jobs.py
+@@ -0,0 +1,88 @@
++import mock
++import pytest
++
++from cloudprint import cloudprint
++
++
++@pytest.fixture
++def xmpp_conn(monkeypatch):
++    XmppConnection = mock.Mock(name='XmppConnection')
++    monkeypatch.setattr('cloudprint.xmpp.XmppConnection', XmppConnection)
++    return XmppConnection.return_value
++
++
++def test_print(requests, cups, cpp, xmpp_conn):
++    cloudprint.num_retries = 0
++
++    printer = cpp.test_add_printer('printer')
++    printer.get_jobs.return_value = [{
++        'fileUrl': 'http://print_job.pdf',
++        'ticketUrl': 'http://ticket',
++        'title': '*' * 300,
++        'id': 'job_1',
++    }]
++
++    xmpp_conn.is_connected.return_value = True
++
++    requests.get('http://print_job.pdf', text='This is a PDF')
++    requests.get(
++        'http://ticket',
++        json={
++            'request': '',
++            'a': 1,
++            'b': 2,
++        },
++    )
++
++    cloudprint.process_jobs_once(cups, cpp, xmpp_conn)
++
++    cups.printFile.assert_called_with(
++        'printer',
++        mock.ANY,
++        '*' * 255,
++        {
++            'a': '1',
++            'b': '2',
++        },
++    )
++    cpp.finish_job.assert_called_with('job_1')
++    assert xmpp_conn.await_notification.called
++    assert cloudprint.num_retries == 0
++
++
++def test_retry(requests, cups, cpp, xmpp_conn):
++    cloudprint.num_retries = 0
++
++    printer = cpp.test_add_printer('printer')
++    printer.get_jobs.return_value = [{
++        'fileUrl': 'http://print_job.pdf',
++        'ticketUrl': 'http://ticket',
++        'title': '*' * 300,
++        'id': 'job_1',
++    }]
++
++    requests.get(url='http://print_job.pdf', status_code=500)
++
++    cloudprint.process_jobs_once(cups, cpp, xmpp_conn)
++
++    assert cloudprint.num_retries == 1
++
++
++def test_failed(requests, cups, cpp, xmpp_conn):
++    cloudprint.num_retries = 0
++
++    printer = cpp.test_add_printer('printer')
++    printer.get_jobs.return_value = [{
++        'fileUrl': 'http://print_job.pdf',
++        'ticketUrl': 'http://ticket',
++        'title': '*' * 300,
++        'id': 'job_1',
++    }]
++
++    requests.get(url='http://print_job.pdf', status_code=500)
++
++    for _ in range(cloudprint.RETRIES + 1):
++        cloudprint.process_jobs_once(cups, cpp, xmpp_conn)
++
++    cpp.fail_job.assert_called_with('job_1')
++    assert cloudprint.num_retries == 0
+diff --git a/test/test_sync.py b/test/test_sync.py
+new file mode 100644
+index 0000000..ef2f8f4
+--- /dev/null
++++ b/test/test_sync.py
+@@ -0,0 +1,50 @@
++import mock
++
++from cloudprint import cloudprint
++
++
++def test_get_printer_info(tmpdir):
++    ppd_path = tmpdir.join('ppd')
++    ppd_path.write('this is a ppd')
++
++    cups = mock.Mock(name='cups')
++    cups.getPPD.return_value = str(ppd_path)
++    cups.getPrinterAttributes.return_value = {
++        'printer-info': mock.sentinel.desc
++    }
++
++    ppd, description = cloudprint.get_printer_info(cups, 'foo')
++
++    assert ppd == 'this is a ppd'
++    assert description == mock.sentinel.desc
++
++    cups.getPPD.assert_called_with('foo')
++    cups.getPrinterAttributes.assert_called_with('foo')
++
++
++def test_sync_add_printer(cups, cpp):
++    cups.test_add_printer('new')
++
++    cloudprint.sync_printers(cups, cpp)
++
++    cpp.add_printer.assert_called_with('new', mock.ANY, mock.ANY)
++
++
++def test_sync_rm_printer(cups, cpp):
++    old_printer = cpp.test_add_printer('old')
++
++    cloudprint.sync_printers(cups, cpp)
++
++    old_printer.delete.assert_called_with()
++
++
++def test_sync_update_printer(cups, cpp):
++    cups.test_add_printer('old')
++    old_printer = cpp.test_add_printer('old')
++
++    cloudprint.sync_printers(cups, cpp)
++
++    old_printer.update.assert_called_with(
++        old_printer.description,
++        old_printer.ppd,
++    )
