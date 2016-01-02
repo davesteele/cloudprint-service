@@ -1,4 +1,10 @@
-cloudprint (0.13-1+deb8u1) stable; urgency=medium
+cloudprint (0.13-1+deb8u2) stable; urgency=medium
+
+  * Fixed a spelling error in NEWS.
+
+ -- David Steele <dsteele@gmail.com>  Fri, 01 Jan 2016 20:46:29 -0500
+
+cloudprint (0.13-1+deb8u1) UNRELEASED; urgency=medium
 
   * Modify for Jessie
     - Brings OAuth support to Jessie.
