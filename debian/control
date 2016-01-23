@@ -18,6 +18,7 @@ Package: cloudprint
 Architecture: all
 Depends: python-cups,
          cups,
+         openssl,
          python-daemon (>= 2.0),
          ${misc:Depends},
          python (>= 2.7),
