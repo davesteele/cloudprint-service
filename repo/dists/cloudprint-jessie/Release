@@ -1,0 +1,45 @@
+Suite: stable
+Codename: cloudprint-jessie
+Date: Wed, 27 Apr 2016 02:17:55 UTC
+Architectures: amd64 i386 armhf armel
+Components: main
+Description: Apt repository for cloudprint on Jessie
+MD5Sum:
+ 57a4128de2c41c858fe68c015e7bd92f 1567 main/binary-amd64/Packages
+ 2435cbf57e9f8de5d5aba457cbed3938 760 main/binary-amd64/Packages.gz
+ 7dd7fb82173aa3a5bd6e6f542d0e2199 105 main/binary-amd64/Release
+ 57a4128de2c41c858fe68c015e7bd92f 1567 main/binary-i386/Packages
+ 2435cbf57e9f8de5d5aba457cbed3938 760 main/binary-i386/Packages.gz
+ 24e836e1fc91921516cd62df7a639e35 104 main/binary-i386/Release
+ 57a4128de2c41c858fe68c015e7bd92f 1567 main/binary-armhf/Packages
+ 2435cbf57e9f8de5d5aba457cbed3938 760 main/binary-armhf/Packages.gz
+ aabfa69f63e6ad2f5d8c63b0d5601d5c 105 main/binary-armhf/Release
+ 57a4128de2c41c858fe68c015e7bd92f 1567 main/binary-armel/Packages
+ 2435cbf57e9f8de5d5aba457cbed3938 760 main/binary-armel/Packages.gz
+ 0c62b16ea8ead47e22a7a4c83533cd1b 105 main/binary-armel/Release
+SHA1:
+ 57966f89c6ae6f2668d3fcf723882d0cf7be2982 1567 main/binary-amd64/Packages
+ 059c696ee9c49a6fc73e37fc196a613b66d3f3e9 760 main/binary-amd64/Packages.gz
+ 0bdbb4283ebecaa6e19eb3561be7a883cb0cf32e 105 main/binary-amd64/Release
+ 57966f89c6ae6f2668d3fcf723882d0cf7be2982 1567 main/binary-i386/Packages
+ 059c696ee9c49a6fc73e37fc196a613b66d3f3e9 760 main/binary-i386/Packages.gz
+ e69fc9f8acd92860491cd242587b2df26733b798 104 main/binary-i386/Release
+ 57966f89c6ae6f2668d3fcf723882d0cf7be2982 1567 main/binary-armhf/Packages
+ 059c696ee9c49a6fc73e37fc196a613b66d3f3e9 760 main/binary-armhf/Packages.gz
+ a80e95328aa905b78ff5f7ac909f3de69b99bb4e 105 main/binary-armhf/Release
+ 57966f89c6ae6f2668d3fcf723882d0cf7be2982 1567 main/binary-armel/Packages
+ 059c696ee9c49a6fc73e37fc196a613b66d3f3e9 760 main/binary-armel/Packages.gz
+ 00812bbc9ecc38c3053798acb2c8bd34cc86041a 105 main/binary-armel/Release
+SHA256:
+ 0a1cf5314743c4f65aa464ff63bda314df5e63ee38e3c1f21340ef2d11e2e3f9 1567 main/binary-amd64/Packages
+ cfeea7f22ba6994c5096a379ff7b2df4d04559864eb6b0d6919458a934166a8d 760 main/binary-amd64/Packages.gz
+ 593bfe099f4e6c5ee0a024aa40a96eee3f18a7f02e4a5eb8098b26d9f078735f 105 main/binary-amd64/Release
+ 0a1cf5314743c4f65aa464ff63bda314df5e63ee38e3c1f21340ef2d11e2e3f9 1567 main/binary-i386/Packages
+ cfeea7f22ba6994c5096a379ff7b2df4d04559864eb6b0d6919458a934166a8d 760 main/binary-i386/Packages.gz
+ e35d7e114770e071b69e900ce86e0469a3ce95f3ef2c0822cc0da6f7a3acba4f 104 main/binary-i386/Release
+ 0a1cf5314743c4f65aa464ff63bda314df5e63ee38e3c1f21340ef2d11e2e3f9 1567 main/binary-armhf/Packages
+ cfeea7f22ba6994c5096a379ff7b2df4d04559864eb6b0d6919458a934166a8d 760 main/binary-armhf/Packages.gz
+ 4367ac84e146fa76c012849b3dd34af348303f8d910b8b95b0ffc5d36601be02 105 main/binary-armhf/Release
+ 0a1cf5314743c4f65aa464ff63bda314df5e63ee38e3c1f21340ef2d11e2e3f9 1567 main/binary-armel/Packages
+ cfeea7f22ba6994c5096a379ff7b2df4d04559864eb6b0d6919458a934166a8d 760 main/binary-armel/Packages.gz
+ 15e1a32f6fa325376f6a951c12ca486abc765e00f97c06697029e9874d564170 105 main/binary-armel/Release

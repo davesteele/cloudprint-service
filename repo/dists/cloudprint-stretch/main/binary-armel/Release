@@ -1,0 +1,4 @@
+Archive: testing
+Component: main
+Architecture: armel
+Description: Apt repository for cloudprint on Stretch

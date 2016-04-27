@@ -1,0 +1,4 @@
+Archive: testing
+Component: main
+Architecture: i386
+Description: Apt repository for cloudprint on Stretch
