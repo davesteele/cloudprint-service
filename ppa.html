@@ -46,8 +46,8 @@ deb http://davesteele.github.io/cloudprint-service/repo cloudprint-stretch main
 </pre>
 Add the repository key to your apt key ring:<br><br>
 <pre>
-# wget https://davesteele.github.io/key-366150CE.pub.txt
-# sudo apt-key add key-366150CE.pub.txt
+$ wget https://davesteele.github.io/key-366150CE.pub.txt
+$ sudo apt-key add key-366150CE.pub.txt
 </pre>
 Install the packages with :<br><br>
 <pre>
@@ -56,12 +56,12 @@ $ sudo apt-get install cloudprint cloudprint-service
 </pre>
 The packages will be updated with every 'apt-get upgrade'.
 <br><br>
-Login to Cloud Print (a browser window will appear):<br><br>
+Login to Cloud Print (copy the provided URL to a browser window):<br><br>
 <pre>
-# cps-auth <account name>
+$ sudo cps-auth
 ...
-# sudo systemctl start cloudprintd.service
-# systemctl status cloudprintd.service
+$ sudo systemctl start cloudprintd.service
+$ systemctl status cloudprintd.service
 </pre>
 
 The service will start automatically from this point on.
