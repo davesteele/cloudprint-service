@@ -22,3 +22,5 @@ cd ..
 cd man
 ./makeman
 cd ..
+
+./updaterepo.py
