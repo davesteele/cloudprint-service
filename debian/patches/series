@@ -4,5 +4,5 @@
 0004-Allow-older-python-requests.patch
 0005-Revert-Update-for-new-python-deamon.patch
 0006-setup.py-specify-old-version-of-python-daemon.patch
-0006-Use-ConfigArgParse-to-support-config-files.patch
+0007-Use-ConfigArgParse-to-support-config-files.patch
 0008-Add-sitename-support.patch
