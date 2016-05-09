@@ -50,9 +50,6 @@ verbose logging.
 \fB\-x\fR \fIregexp\fR, \fB\-\-exclude\fR \fIregexp\fR
 exclude local printers matching regular expression from the start of the printer name.
 .TP
-\fB\-s\fR \fIsitename\fR, \fB\-\-sitename\fR \fIsitename\fR
-define a site name to be prepended to all printer names.
-.TP
 \fB\-h\fR, \fB\-\-help\fR
 display help
 .PP
