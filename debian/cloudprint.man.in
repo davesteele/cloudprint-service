@@ -21,49 +21,47 @@ package.
 
 .SH OPTIONS
 .TP
-\fB\-a\fR \fI<account_file>\fR, \fB\-\-account_file\fR \fI<account_file>\fR
+\fB\-a\fR \fI<account_file>\fR
 path to Google account ident data (default \fI~/.cloudprintauth\fP). The format of the file is not public.
 .TP
-\fB\-c\fR, \fB\-\-credentials\fR
+\fB\-c\fR
 establish credentials to the service, then exit.
 .TP
-\fB\-d\fR, \fB\-\-daemon\fR
+\fB\-d\fR
 run in daemon mode.
 .TP
-\fB\-f\fR, \fB\-\-fastpoll\fR
+\fB\-f\fR
 fast poll, if notifications aren't working.
 .TP
-\fB\-i\fR \fIregexp\fR, \fB\-\-include\fR \fIregexp\fR
+\fB\-i\fR \fIregexp\fR
 include local printers matching regular expression from the start of the printer name.
 .TP
-\fB\-l\fR, \fB\-\-logout\fR
+\fB\-l\fR
 log out of the Google account. This deletes the account identification file, requiring reauthentication the next time
 PROG is run.
 .TP
-\fB\-p\fR \fI<pid_file>\fR, \fB\-\-pidfile\fR \fI<pid_file>\fR
+\fB\-p\fR \fI<pid_file>\fR
 path to PID file in daemon mode (default \fIcloudprint.pid\fP).
 .TP
+\fB\-u\fR
+store username/password in addition to login token to avoid authentication expiration.
 .TP
-\fB\-v\fR, \fB\-\-verbose\fR
+\fB\-v\fR
 verbose logging.
 .TP
-\fB\-x\fR \fIregexp\fR, \fB\-\-exclude\fR \fIregexp\fR
+\fB\-x\fR \fIregexp\fR
 exclude local printers matching regular expression from the start of the printer name.
 .TP
-\fB\-h\fR, \fB\-\-help\fR
+\fB\-h\fR
 display help
 .PP
-\fBcloudprint\fR will provide a URL to claim the printer, if credentials have not
-been established.
+\fBPROG\fR will prompt for a username and password if the information has not been provided.
 
 
 .SH FILES
 .TP
 \fI~/.cloudprintauth.json\fR
 Default location for storing account authentication credentials
-.TP
-\fI/etc/cloudprint.conf\fR, \fI~/.cloudprint.conf\fR
-Configuration file containing additional command-line parameters for \fBcloudprint\fR.
 
 .SH SEE ALSO
 .BR cloudprint-service(7), cloudprintd(8), cloudprint(1)
