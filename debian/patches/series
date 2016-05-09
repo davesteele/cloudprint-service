@@ -6,3 +6,4 @@
 0006-setup.py-specify-old-version-of-python-daemon.patch
 0007-Use-ConfigArgParse-to-support-config-files.patch
 0008-Add-sitename-support.patch
+0009-Reduce-the-xmpp-keepalive-to-55-sec.patch

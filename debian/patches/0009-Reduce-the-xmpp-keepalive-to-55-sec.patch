@@ -1,0 +1,38 @@
+From: David Steele <dsteele@gmail.com>
+Date: Sun, 8 May 2016 17:59:38 -0400
+Subject: Reduce the xmpp keepalive to 55 sec
+
+I was seeing broken connections with external linux masquerading and
+hotel wifi involved. Reducing the xmpp keepalive timeout improves
+reliability and recovery.
+---
+ cloudprint/cloudprint.py | 2 +-
+ cloudprint/xmpp.py       | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index cb68dcf..0b5ce7c 100755
+--- a/cloudprint/cloudprint.py
++++ b/cloudprint/cloudprint.py
+@@ -54,7 +54,7 @@ FAST_POLL_PERIOD = 30.0
+ FAIL_RETRY = 60
+ 
+ # how often, in seconds, to send a keepalive character over xmpp
+-KEEPALIVE = 600.0
++KEEPALIVE = 55.0
+ 
+ # failed job retries
+ RETRIES = 1
+diff --git a/cloudprint/xmpp.py b/cloudprint/xmpp.py
+index eca6199..7e74f27 100644
+--- a/cloudprint/xmpp.py
++++ b/cloudprint/xmpp.py
+@@ -119,7 +119,7 @@ class XmppConnection(object):
+         return(self._handler.get_elem() is not None)
+ 
+     def _send_keepalive(self):
+-        LOGGER.info("Sending XMPP keepalive")
++        LOGGER.debug("Sending XMPP keepalive")
+         self._write_socket(" ")
+ 
+     def connect(self, host, port, auth):
