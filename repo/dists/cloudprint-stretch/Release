@@ -1,6 +1,6 @@
 Suite: testing
 Codename: cloudprint-stretch
-Date: Wed, 27 Apr 2016 02:17:59 UTC
+Date: Tue, 10 May 2016 00:50:14 UTC
 Architectures: amd64 i386 armhf armel
 Components: main
 Description: Apt repository for cloudprint on Stretch

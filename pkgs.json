@@ -8,6 +8,8 @@
         "cloudprint_0.14-2_all.deb", 
         "cloudprint-service_0.14-1_all.deb", 
         "cloudprint_0.14-1_all.deb", 
+        "cloudprint-service_0.13-1+deb8u1+ppa2_all.deb", 
+        "cloudprint_0.13-1+deb8u1+ppa2_all.deb", 
         "cloudprint-service_0.13-1+deb8u1+ppa1_all.deb", 
         "cloudprint_0.13-1+deb8u1+ppa1_all.deb", 
         "cloudprint-service_0.13-1_all.deb", 
@@ -68,7 +70,7 @@
         "cloudprint_0.14-5_all.deb"
     ], 
     "latest_stable": [
-        "cloudprint-service_0.13-1+deb8u1+ppa1_all.deb", 
-        "cloudprint_0.13-1+deb8u1+ppa1_all.deb"
+        "cloudprint-service_0.13-1+deb8u1+ppa2_all.deb", 
+        "cloudprint_0.13-1+deb8u1+ppa2_all.deb"
     ]
 }
