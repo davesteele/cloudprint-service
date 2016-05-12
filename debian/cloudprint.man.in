@@ -64,9 +64,6 @@ been established.
 .TP
 \fI~/.cloudprintauth\fR
 Default location for storing account authentication credentials
-.TP
-\fI/etc/cloudprint.conf\fR, \fI~/.cloudprint.conf\fR
-Configuration file containing additional command-line parameters for \fBcloudprint\fR.
 
 .SH SEE ALSO
 .BR cloudprint-service(7), cps-auth(1)

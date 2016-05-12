@@ -3,8 +3,7 @@
 0003-Specify-dev-log-as-the-logging-target-for-daemon.patch
 0004-Exit-on-login-failure.patch
 0005-Add-cps-auth-hint-on-login-failure.patch
-0006-Use-ConfigArgParse-to-support-config-files.patch
 0007-Remove-version-on-setup.py-requests-depends.patch
 0008-Add-site-name-prefix-for-multi-site-support.patch
 0009-Add-tests-from-upstream.patch
-0010-Revert-Update-for-new-python-deamon.patch
+0009-Revert-Update-for-new-python-deamon.patch
