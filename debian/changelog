@@ -1,3 +1,9 @@
+cloudprint (0.14-5+deb8u1+ppa1) UNRELEASED; urgency=medium
+
+  * Revert python-daemon 2.0 for Jessie compatibility
+
+ -- David Steele <dsteele@gmail.com>  Wed, 11 May 2016 19:53:22 -0400
+
 cloudprint (0.14-5) unstable; urgency=low
 
   * Add site name prefix support.
