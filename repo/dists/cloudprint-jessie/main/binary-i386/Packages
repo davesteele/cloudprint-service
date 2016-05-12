@@ -1,17 +1,17 @@
 Package: cloudprint
-Version: 0.13-1+deb8u1+ppa2
+Version: 0.14-5+deb8u1+ppa1
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
-Installed-Size: 59
-Depends: python-cups, cups, python-daemon (<< 2.0), python (>= 2.7), python-pkg-resources, rsyslog | system-log-daemon, python-requests
+Installed-Size: 61
+Depends: python-cups, cups, openssl, python-daemon (<< 2.0), python (>= 2.7), python-pkg-resources, rsyslog | system-log-daemon, python-requests
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint_0.13-1+deb8u1+ppa2_all.deb
-Size: 13758
-SHA256: 4903a5cb85308a8394505b04417b2b542f2c6e56b291517415d61976ceb31a35
-SHA1: 9c8be694d6e11ab3ebb8e013885b4d8fc9786807
-MD5sum: edcebe1a7cefd27402c5d29f7a40701b
+Filename: pool/main/c/cloudprint/cloudprint_0.14-5+deb8u1+ppa1_all.deb
+Size: 14050
+SHA256: d4a133d1cf219b2743e5c386d46e96687d653db2783f06b805c91b52c4f8f2b2
+SHA1: db46dfdb18070d002a86a1a63240f9e1a0e95f63
+MD5sum: 2fd779f36937c053f193b3b05e1e12d4
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
@@ -19,20 +19,20 @@ Description: Google Cloud Print proxy
 
 Package: cloudprint-service
 Source: cloudprint
-Version: 0.13-1+deb8u1+ppa2
+Version: 0.14-5+deb8u1+ppa1
 Architecture: all
 Maintainer: David Steele <dsteele@gmail.com>
-Installed-Size: 41
-Depends: cloudprint, python (>= 2.7)
+Installed-Size: 35
+Depends: cloudprint, init-system-helpers (>= 1.18~), systemd
 Provides: cloudprintd
 Homepage: https://pypi.python.org/pypi/cloudprint/
 Priority: optional
 Section: net
-Filename: pool/main/c/cloudprint/cloudprint-service_0.13-1+deb8u1+ppa2_all.deb
-Size: 10552
-SHA256: 4d45afb8dd6fdf1efa262e16e568b1e897f8f42b5170bbfc9b6516dad1301c91
-SHA1: 823da297e862b773c1c70a7ebdb75f2c968fe500
-MD5sum: c4dcfcdc7602e87a82e7be4d14747e52
+Filename: pool/main/c/cloudprint/cloudprint-service_0.14-5+deb8u1+ppa1_all.deb
+Size: 8688
+SHA256: 8c7f31845b3213eb6bf1c7531f5b8f20c11cd4a89d976f411920371401218cc3
+SHA1: 0bd168045d8a14b65746a9a5f306a1a1767dfd3d
+MD5sum: 7bca06ec32463e4b9b25bdf47aba1e79
 Description: provide a service for sharing printers on Google Cloud Print
  Share locally-defined CUPS printers with the Google Cloud Print service.
  The printers can be accessed locally or remotely by authorized users via
