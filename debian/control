@@ -9,7 +9,6 @@ Build-Depends: python-setuptools,
                dh-systemd,
                dh-python,
                python-requests-mock,
-               python-configargparse,
                python-cups,
 Standards-Version: 3.9.6
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
@@ -28,7 +27,6 @@ Depends: python-cups,
          python-pkg-resources,
          rsyslog | system-log-daemon,
          python-requests,
-         python-configargparse,
 Description: Google Cloud Print proxy
  Worker script to support a Google Cloud Print proxy. This can make
  locally-configured printers to be accessed by local or remote users over
