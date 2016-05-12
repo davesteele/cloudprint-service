@@ -68,8 +68,8 @@
         "cloudprint_0.10-1_all.deb"
     ], 
     "latest_pkgs": [
-        "cloudprint-service_0.14-5+deb8u1+ppa1_all.deb", 
-        "cloudprint_0.14-5+deb8u1+ppa1_all.deb"
+        "cloudprint-service_0.14-5_all.deb", 
+        "cloudprint_0.14-5_all.deb"
     ], 
     "latest_stable": [
         "cloudprint-service_0.14-5+deb8u1+ppa1_all.deb", 
