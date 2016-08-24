@@ -1,3 +1,11 @@
+cloudprint (0.14-6) unstable; urgency=medium
+
+  * Increase the login restart time to 5 minutes.
+  * Documentation fixes.
+  * Changes indicated by a cme run.
+
+ -- David Steele <steele@debian.org>  Wed, 24 Aug 2016 14:00:58 -0400
+
 cloudprint (0.14-5) unstable; urgency=low
 
   * Add site name prefix support.
