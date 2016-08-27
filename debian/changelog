@@ -3,6 +3,8 @@ cloudprint (0.14-6) unstable; urgency=medium
   * Increase the login restart time to 5 minutes.
   * Documentation fixes.
   * Changes indicated by a cme run.
+  * Update for new Debian Standards version.
+  * Add build dependencies for test in gbp.
 
  -- David Steele <steele@debian.org>  Wed, 24 Aug 2016 14:00:58 -0400
 
