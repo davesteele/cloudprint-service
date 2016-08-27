@@ -1,6 +1,6 @@
 Suite: stable
 Codename: cloudprint-jessie
-Date: Thu, 12 May 2016 02:08:30 UTC
+Date: Sat, 27 Aug 2016 16:00:42 UTC
 Architectures: amd64 i386 armhf armel
 Components: main
 Description: Apt repository for cloudprint on Jessie
