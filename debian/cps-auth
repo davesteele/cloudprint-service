@@ -3,7 +3,13 @@
 AUTHDIR=/var/lib/cloudprintd
 AUTHFILE=$AUTHDIR/authfile.json
 
+ACTIVE=`systemctl is-active cloudprintd >/dev/null`
+
 if [ ! -w $AUTHDIR ] ; then echo "Must run as root" ; exit 1 ; fi
+
+if $ACTIVE ; then systemctl stop cloudprintd ; fi
 
 rm -f $AUTHFILE
 cloudprint -c -a $AUTHFILE
+
+if $ACTIVE ; then systemctl start cloudprintd ; fi
