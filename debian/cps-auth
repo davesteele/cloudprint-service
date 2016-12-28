@@ -8,9 +8,9 @@ ACTIVE=$?
 
 if [ ! -w $AUTHDIR ] ; then echo "Must run as root" ; exit 1 ; fi
 
-if $ACTIVE ; then systemctl stop cloudprintd ; fi
+if [ $ACTIVE -eq 0 ] ; then systemctl stop cloudprintd ; fi
 
 rm -f $AUTHFILE
 cloudprint -c -a $AUTHFILE
 
-if $ACTIVE ; then systemctl start cloudprintd ; fi
+if [ $ACTIVE -eq 0 ] ; then systemctl start cloudprintd ; fi
