@@ -1,3 +1,9 @@
+cloudprint (0.14-7) unstable; urgency=medium
+
+  * Enhance cps-auth to restart the service if necessary. 
+
+ -- David Steele <steele@debian.org>  Wed, 28 Dec 2016 13:12:05 -0500
+
 cloudprint (0.14-6) unstable; urgency=medium
 
   * Increase the login restart time to 5 minutes.
