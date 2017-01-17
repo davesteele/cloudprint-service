@@ -22,7 +22,7 @@ package.
 .SH OPTIONS
 .TP
 \fB\-a\fR \fI<account_file>\fR, \fB\-\-account_file\fR \fI<account_file>\fR
-path to Google account ident data (default \fI~/.cloudprintauth\fP). The format of the file is not public.
+path to Google account ident data (default \fI~/.cloudprintauth.json\fP).
 .TP
 \fB\-c\fR, \fB\-\-credentials\fR
 establish credentials to the service, then exit.
