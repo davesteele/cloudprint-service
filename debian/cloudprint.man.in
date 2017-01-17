@@ -53,6 +53,9 @@ exclude local printers matching regular expression from the start of the printer
 \fB\-s\fR \fIsitename\fR, \fB\-\-sitename\fR \fIsitename\fR
 define a site name to be prepended to all printer names.
 .TP
+\fB\-\-syslog-address\fR \fISYSLOG_ADDRESS\fR
+syslog address to use in daemon mode (default \fIstdout\fR).
+.TP
 \fB\-h\fR, \fB\-\-help\fR
 display help
 .PP
