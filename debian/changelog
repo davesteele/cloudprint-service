@@ -1,3 +1,9 @@
+cloudprint (0.14-8) UNRELEASED; urgency=medium
+
+  *  Fix bug in sitename support (Closes: 851689).
+
+ -- David Steele <steele@debian.org>  Tue, 17 Jan 2017 16:56:24 -0500
+
 cloudprint (0.14-7) unstable; urgency=medium
 
   * Enhance cps-auth to restart the service if necessary. 

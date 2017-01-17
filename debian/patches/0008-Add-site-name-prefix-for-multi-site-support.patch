@@ -20,7 +20,7 @@ index 93f3410..e99c40e 100644
  
  Google accounts with 2 step verification enabled need to use an
 diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
-index 30bcf88..aa30736 100755
+index 30bcf88..1bd07c4 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -210,6 +210,7 @@ class CloudPrintProxy(object):
@@ -67,7 +67,7 @@ index 30bcf88..aa30736 100755
          help='syslog address to use in daemon mode',
      )
 +    parser.add_argument(
-+        '-s',
++        '-s', '--sitename',
 +        metavar='sitename',
 +        dest='site',
 +        default='',
