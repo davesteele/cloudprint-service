@@ -1,3 +1,9 @@
+cloudprint (0.14-9) UNRELEASED; urgency=medium
+
+  * Depend on network-online.target (Closes: 875972).
+
+ -- David Steele <steele@debian.org>  Wed, 15 Nov 2017 16:02:17 -0500
+
 cloudprint (0.14-8) unstable; urgency=medium
 
   * Fix bug in sitename support (Closes: 851689).
