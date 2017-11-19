@@ -1,12 +1,10 @@
 Source: cloudprint
 Maintainer: David Steele <steele@debian.org>
 Section: net
-Testsuite: autopkgtest
 Priority: optional
 Build-Depends: python-setuptools,
                python,
-               debhelper (>= 7.4.3),
-               dh-systemd,
+               debhelper (>= 9.20160709),
                dh-python,
                python-pytest,
                python-mock,
@@ -14,7 +12,7 @@ Build-Depends: python-setuptools,
                python-requests-mock,
                python-configargparse,
                python-cups,
-Standards-Version: 3.9.8
+Standards-Version: 4.1.1
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
 Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b master
 Homepage: https://pypi.python.org/pypi/cloudprint/
