@@ -3,7 +3,7 @@ Hash: SHA256
 
 Suite: stable
 Codename: cloudprint-jessie
-Date: Sat, 27 Aug 2016 16:00:42 UTC
+Date: Sun, 19 Nov 2017 05:00:27 UTC
 Architectures: amd64 i386 armhf armel
 Components: main
 Description: Apt repository for cloudprint on Jessie
@@ -47,19 +47,18 @@ SHA256:
  8227698f47aea1dd53e5bf807f139bf4db4879ddd9022224cf69947b3203d76b 793 main/binary-armel/Packages.gz
  15e1a32f6fa325376f6a951c12ca486abc765e00f97c06697029e9874d564170 105 main/binary-armel/Release
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2
 
-iQIcBAEBCAAGBQJXwbkuAAoJEGJ+uykKgXqC1acQAJvEkErXq9/QQEVPG94SMYBT
-N6240kPRnDo6gH5mZns7j7KOU5zdukgYFdJDum6CotSGPyXMhzci9xYJ6c+WQy3Z
-izllov8dKE29REaRAYmuEFbFYX0wgYn89Up2/Y0y+KEp7Y+YkF3hQoBDqDaI2LBU
-W596k+CasapZscqjKYLb7l+1zPyFUhzoY3wi7UeIy5lQCdLUvg5nUFdlPpUS3Hqs
-/3Y+wNTjMw2EcoGSWAl4iWxaTjmyvaXqpfp/EIQ3QY44Vzy6AAJSu1xiyUof92XF
-QwXdGtOIK8gOAVdAIz5jGO5CrSUi1f5THWvIy+xg2lKSIk2GZvK0qOePuaJaiJ9w
-02mb9apX8wqZXAhQbL3FdGz91FPjV+dlV0uxmbfFacOsqCIqvNVmW0GelHeuuGN9
-TWGBomfLo0bB7UEd8aHy6WqWpL7UzI7+6HstVtPkci2j6uaalb5CCH4054PTONzk
-iebxff68wJuBeG2+1pkM/l9TIh5ZY3+7skDYwsFdfjHpeAXXRac3TvGf/k9E9Eyo
-k85+XcbkzYQutaHY0F5Be5F9SIBUzlspSUKO+nbUhz1WbZQzMzUxEVndEcKdqt20
-pLq9o2eLIaf68Gd9P+qQw33iqZwiSANn/IOzPqVfTsohQv5CGOg0BsQDMJ47ImY3
-Xyess0YLqbzFtRAK6yCx
-=EDmm
+iQIzBAEBCAAdFiEEFsJFjKR5Lf0iLhKW539ua4FQpagFAloRD+sACgkQ539ua4FQ
+pai9Rw/9ERVfVNfL+4sMG1YJLxGUF/8bARw6Xxmun3GBknxr+pPJZ4ZpBbLycxVd
+DELoBPmTYagbrUax3uGDoLwF8mRJ9kDg5YG/lCTygD/E7sWtEgEE1tj0l+emeHSq
+PnrmJLBFNMQ7cJklE1Ayr7pbDQfulWVXdHFoWx3AtVSjQuWFjPNgRqjZiiN0GhoC
+R+J2G1+dh2Au+Yab6yBc3YWxtjEcePVtwYIgVZK8IunnDV2utgH+I3Z+TMLOCxbd
+7jyPBABv6J13ubI2DonJ4if5ckx2oMv9Fjx+gaOl1jAQoS+7ILZI3b4wymdZR/6n
+0Th2FjnHfbwG1UnFotWizkd7HHuXiPXNQzz+w8zP1KEtXeSFdVsnTQ4ZFKqgVaJ1
+gaUi/AxnpsHass11P6iPY8O1PIk8k1hCWZkH4WzPG823fix7ECwzJ5/kz8olfh+D
+ZAQrGl8sljSs/lmrHmy5S8yDmQsx4KIEs/08sCZWayseWaGKJc75iFjQI2/OCyAL
+W+LqyQbIeaPRpaWfj1WOj4gL7rbaNJCSG+EmdN9mhoDrMp3B0Bl0eTfP4vAHmkh7
+btRzDF/IvUWfaewYxVSKTTuogBQzl0gS4xeHKBl+0eIK5bVuvhXn1fqv7+QUaoS0
+cfZUonzhTl1DLCoUiNhWAtdLeeeXOkVFUkD4u8ahGycR+DpsVzg=
+=ts8b
 -----END PGP SIGNATURE-----
