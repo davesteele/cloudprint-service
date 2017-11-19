@@ -1,8 +1,8 @@
-cloudprint (0.14-9) UNRELEASED; urgency=medium
+cloudprint (0.14-9) unstable; urgency=medium
 
   * Depend on network-online.target (Closes: 875972).
 
- -- David Steele <steele@debian.org>  Wed, 15 Nov 2017 16:02:17 -0500
+ -- David Steele <steele@debian.org>  Sat, 18 Nov 2017 23:57:43 -0500
 
 cloudprint (0.14-8) unstable; urgency=medium
 
