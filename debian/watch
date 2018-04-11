@@ -1,2 +1,4 @@
 version=4
-https://pypi.python.org/pypi/cloudprint/ .+cloudprint-(.+)@ARCHIVE_EXT@
+
+opts=pgpmode=none \
+https://pypi.debian.net/@PACKAGE@/@PACKAGE@-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
