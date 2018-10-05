@@ -16,7 +16,6 @@ Standards-Version: 4.1.1
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
 Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b master
 Homepage: https://pypi.python.org/pypi/cloudprint/
-X-Python-Version: >= 2.7
 
 Package: cloudprint
 Architecture: all
