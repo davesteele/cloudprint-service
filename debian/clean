@@ -1,3 +1,4 @@
 cloudprint.egg-info/*
 debian/cloudprint.1
 debian/cloudprintd.8
+.pytest_cache/
