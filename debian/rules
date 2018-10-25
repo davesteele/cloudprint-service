@@ -3,12 +3,6 @@
 export PYBUILD_NAME=cloudprint
 export PYBUILD_TEST_PYTEST=1
 
-PKD = $(word 1,$(abspath $(dir $(MAKEFILE_LIST))))
-PKG = $(shell dpkg-parsechangelog -l$(PKD)/changelog --show-field=Source)
-VER ?= $(shell (dpkg-parsechangelog -l$(PKD)/changelog| grep Version | \
-                 sed 's/Version..//' | sed 's/-.\+//'))
-
-
 %:
 	dh $@ --with python2,systemd --buildsystem=pybuild
 
@@ -29,8 +23,3 @@ override_dh_systemd_enable:
 override_dh_clean:
 	dh_clean
 	rm -rf .cache
-
-.PHONY get_orig_source:
-get-orig-source:  $(info I: $(PKG)_$(VER))
-	@echo "# Downloading..."
-	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(VER) $(PKD)
