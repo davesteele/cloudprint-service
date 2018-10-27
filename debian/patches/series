@@ -7,3 +7,4 @@
 0007-Remove-version-on-setup.py-requests-depends.patch
 0008-Add-site-name-prefix-for-multi-site-support.patch
 0009-Add-tests-from-upstream.patch
+0010-Python3.patch
