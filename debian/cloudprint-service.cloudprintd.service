@@ -2,6 +2,7 @@
 Description=Google Cloud Print proxy service
 Wants=network-online.target
 After=cups.service network.target network-online.target
+Documentation=man:cloudprint-service
 
 [Service]
 ExecStart=/usr/sbin/cloudprintd -a /var/lib/cloudprintd/authfile.json
