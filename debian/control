@@ -12,7 +12,7 @@ Build-Depends: python3-setuptools,
                python3-requests-mock,
                python3-configargparse,
                python3-cups,
-Standards-Version: 4.1.1
+Standards-Version: 4.2.1
 Vcs-Browser: https://github.com/davesteele/cloudprint-service
 Vcs-Git: https://github.com/davesteele/cloudprint-service.git -b master
 Homepage: https://pypi.python.org/pypi/cloudprint/
