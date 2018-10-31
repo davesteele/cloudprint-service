@@ -1,3 +1,9 @@
+cloudprint (0.14-12) unstable; urgency=medium
+
+  * Eliminate Python 2 autopkgtests.
+
+ -- David Steele <steele@debian.org>  Tue, 30 Oct 2018 23:20:33 -0400
+
 cloudprint (0.14-11) unstable; urgency=medium
 
   * Switch to Python 3.
