@@ -1,3 +1,8 @@
+Author: David Steele <steele@debian.org>
+Subject: Make changes required for Python 3
+Forwarded: no
+
+
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -1,4 +1,4 @@
