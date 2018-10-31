@@ -20,4 +20,4 @@ override_dh_auto_build:
 
 override_dh_installsystemd:
 	dh_installsystemd
-	ln -s cloudprint-service.service debian/cloudprint-service/lib/systemd/system/cloudprintd.service 
+	ln -s cloudprint-service.service debian/cloudprint-service/lib/systemd/system/cloudprintd.service
