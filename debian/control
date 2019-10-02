@@ -24,6 +24,7 @@ Depends: python3-cups,
          openssl,
          python3-daemon (>= 2.0),
          ${misc:Depends},
+         ${python3:Depends},
          python3,
          python3-pkg-resources,
          rsyslog | system-log-daemon,
@@ -37,6 +38,7 @@ Package: cloudprint-service
 Architecture: all
 Depends: cloudprint,
          ${misc:Depends},
+         ${python3:Depends},
          systemd
 Provides: cloudprintd
 Description: provide a service for sharing printers on Google Cloud Print
