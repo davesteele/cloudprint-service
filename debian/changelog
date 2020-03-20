@@ -1,3 +1,9 @@
+cloudprint (0.14-14) UNRELEASED; urgency=medium
+
+  * Don't requre a logging daemon (Closes: 954309).
+
+ -- David Steele <steele@debian.org>  Thu, 19 Mar 2020 22:26:21 -0400
+
 cloudprint (0.14-13) unstable; urgency=medium
 
   * Test fixes.
