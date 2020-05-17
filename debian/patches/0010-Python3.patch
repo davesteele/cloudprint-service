@@ -1,8 +1,15 @@
-Author: David Steele <steele@debian.org>
+From: David Steele <steele@debian.org>
+Date: Sun, 17 May 2020 12:29:58 -0400
 Subject: Make changes required for Python 3
+
 Forwarded: no
+---
+ cloudprint/cloudprint.py | 2 +-
+ setup.py                 | 1 -
+ 2 files changed, 1 insertion(+), 2 deletions(-)
 
-
+diff --git a/cloudprint/cloudprint.py b/cloudprint/cloudprint.py
+index 1bd07c4..285323b 100755
 --- a/cloudprint/cloudprint.py
 +++ b/cloudprint/cloudprint.py
 @@ -1,4 +1,4 @@
@@ -11,9 +18,11 @@ Forwarded: no
  # Copyright 2014 Jason Michalski <armooo@armooo.net>
  #
  # This file is part of cloudprint.
+diff --git a/setup.py b/setup.py
+index 74e535a..84f1a38 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -29,7 +29,6 @@
+@@ -29,7 +29,6 @@ setup(
          ],
      },
      install_requires=[

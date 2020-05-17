@@ -8,3 +8,4 @@
 0008-Add-site-name-prefix-for-multi-site-support.patch
 0009-Add-tests-from-upstream.patch
 0010-Python3.patch
+0011-Add-an-install-requirement-on-configargparse.patch

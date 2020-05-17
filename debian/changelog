@@ -1,6 +1,7 @@
 cloudprint (0.14-14) unstable; urgency=medium
 
   * Don't requre a logging daemon (Closes: 954309).
+  * Add install dep on python3-configargparse (Closes: 960852).
 
  -- David Steele <steele@debian.org>  Fri, 17 Apr 2020 19:23:55 -0400
 
