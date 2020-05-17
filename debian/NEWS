@@ -1,4 +1,11 @@
-cloudprint (0.14-13) UNRELEASED; urgency=medium
+cloudprint (0.14-14) unstable; urgency=medium
+
+        The Google Cloudprint service is slated to go offline in December
+        2020. This package will no longer work after that date.
+
+ -- David Steele <steele@debian.org>  Sun, 19 Apr 2020 07:39:20 -0400
+
+cloudprint (0.14-13) unstable; urgency=medium
 
         The Google Cloudprint service is slated to go offline in December
         2020. This package will no longer work after that date.
